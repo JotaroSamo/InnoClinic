@@ -316,3 +316,159 @@ System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport 
 2024-09-16 12:45:42.819 +03:00 [DBG] Authentication of the HTTPS connection timed out.
 2024-09-16 12:45:42.820 +03:00 [DBG] Connection id "0HN6M6H78PIQN" stopped.
 2024-09-16 12:45:42.822 +03:00 [DBG] Connection id "0HN6M6H78PIQN" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-09-16 11:45:05.125 +00:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-09-16 11:45:05.393 +00:00 [DBG] Hosting starting
+2024-09-16 11:45:05.460 +00:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2024-09-16 11:45:05.462 +00:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2024-09-16 11:45:05.496 +00:00 [DBG] Repository contains no viable default key. Caller should generate a key with immediate activation.
+2024-09-16 11:45:05.499 +00:00 [DBG] Policy resolution states that a new key should be added to the key ring.
+2024-09-16 11:45:05.505 +00:00 [INF] Creating key {dbae6d20-69c5-4765-9762-0f5c6116420f} with creation date 2024-09-16 11:45:05Z, activation date 2024-09-16 11:45:05Z, and expiration date 2024-12-15 11:45:05Z.
+2024-09-16 11:45:05.581 +00:00 [DBG] Descriptor deserializer type for key {dbae6d20-69c5-4765-9762-0f5c6116420f} is 'Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'.
+2024-09-16 11:45:05.593 +00:00 [DBG] No key escrow sink found. Not writing key {dbae6d20-69c5-4765-9762-0f5c6116420f} to escrow.
+2024-09-16 11:45:05.595 +00:00 [WRN] No XML encryptor configured. Key {dbae6d20-69c5-4765-9762-0f5c6116420f} may be persisted to storage in unencrypted form.
+2024-09-16 11:45:05.598 +00:00 [DBG] Key cache expiration token triggered by 'CreateNewKey' operation.
+2024-09-16 11:45:05.617 +00:00 [DBG] Found key {dbae6d20-69c5-4765-9762-0f5c6116420f}.
+2024-09-16 11:45:05.653 +00:00 [DBG] Considering key {dbae6d20-69c5-4765-9762-0f5c6116420f} with expiration date 2024-12-15 11:45:05Z as default key.
+2024-09-16 11:45:05.685 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-09-16 11:45:05.698 +00:00 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2024-09-16 11:45:05.705 +00:00 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2024-09-16 11:45:05.768 +00:00 [DBG] Using key {dbae6d20-69c5-4765-9762-0f5c6116420f} as the default key.
+2024-09-16 11:45:05.783 +00:00 [DBG] Key ring with default key {dbae6d20-69c5-4765-9762-0f5c6116420f} was loaded during application startup.
+2024-09-16 11:45:06.173 +00:00 [DBG] Using development certificate: CN=localhost (Thumbprint: C642C2C87225D7E761F2C7EBC1EFD0479CA0DDE2)
+2024-09-16 11:45:06.348 +00:00 [DBG] Connection id "0HN6M8K18KMD5" accepted.
+2024-09-16 11:45:06.357 +00:00 [DBG] Connection id "0HN6M8K18KMD5" started.
+2024-09-16 11:45:06.358 +00:00 [DBG] Connection id "0HN6M8K18KMD6" accepted.
+2024-09-16 11:45:06.395 +00:00 [DBG] Connection id "0HN6M8K18KMD6" started.
+2024-09-16 11:45:06.529 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:32770/ - null null
+2024-09-16 11:45:06.534 +00:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-09-16 11:45:06.575 +00:00 [DBG] No candidates found for the request path '/'
+2024-09-16 11:45:06.578 +00:00 [DBG] Request did not match any endpoints
+2024-09-16 11:45:06.705 +00:00 [DBG] The request path  does not match the path filter
+2024-09-16 11:45:06.723 +00:00 [DBG] Https port '32771' loaded from configuration.
+2024-09-16 11:45:06.785 +00:00 [DBG] Redirecting to 'https://localhost:32771/'.
+2024-09-16 11:45:06.836 +00:00 [DBG] Connection id "0HN6M8K18KMD5" completed keep alive response.
+2024-09-16 11:45:06.854 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:32770/ - 307 0 null 334.9496ms
+2024-09-16 11:45:07.433 +00:00 [INF] Now listening on: http://[::]:8080
+2024-09-16 11:45:07.434 +00:00 [INF] Now listening on: https://[::]:8081
+2024-09-16 11:45:07.435 +00:00 [DBG] Loaded hosting startup assembly Auth_API
+2024-09-16 11:45:07.439 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-16 11:45:07.441 +00:00 [INF] Hosting environment: Development
+2024-09-16 11:45:07.448 +00:00 [INF] Content root path: /app
+2024-09-16 11:45:07.450 +00:00 [DBG] Hosting started
+2024-09-16 11:45:08.407 +00:00 [DBG] Connection id "0HN6M8K18KMD7" accepted.
+2024-09-16 11:45:08.475 +00:00 [DBG] Connection id "0HN6M8K18KMD7" started.
+2024-09-16 11:45:08.500 +00:00 [DBG] Connection id "0HN6M8K18KMD8" accepted.
+2024-09-16 11:45:08.559 +00:00 [DBG] Connection id "0HN6M8K18KMD8" started.
+2024-09-16 11:45:08.641 +00:00 [DBG] Connection id "0HN6M8K18KMD9" accepted.
+2024-09-16 11:45:08.644 +00:00 [DBG] Connection id "0HN6M8K18KMD7" received FIN.
+2024-09-16 11:45:08.644 +00:00 [DBG] Connection id "0HN6M8K18KMD8" received FIN.
+2024-09-16 11:45:08.651 +00:00 [DBG] Connection id "0HN6M8K18KMD9" started.
+2024-09-16 11:45:08.739 +00:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-09-16 11:45:08.751 +00:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-09-16 11:45:08.758 +00:00 [DBG] Connection 0HN6M8K18KMD9 established using the following protocol: "Tls13"
+2024-09-16 11:45:08.853 +00:00 [DBG] Connection id "0HN6M8K18KMD8" stopped.
+2024-09-16 11:45:08.853 +00:00 [DBG] Connection id "0HN6M8K18KMD7" stopped.
+2024-09-16 11:45:08.908 +00:00 [DBG] Connection id "0HN6M8K18KMD8" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-09-16 11:45:08.921 +00:00 [DBG] Connection id "0HN6M8K18KMD7" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-09-16 11:45:09.037 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32771/swagger - null null
+2024-09-16 11:45:09.038 +00:00 [DBG] No candidates found for the request path '/swagger'
+2024-09-16 11:45:09.051 +00:00 [DBG] Request did not match any endpoints
+2024-09-16 11:45:09.101 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32771/swagger - 301 0 null 63.9862ms
+2024-09-16 11:45:09.192 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32771/swagger/index.html - null null
+2024-09-16 11:45:09.200 +00:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-09-16 11:45:09.203 +00:00 [DBG] Request did not match any endpoints
+2024-09-16 11:45:09.604 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32771/swagger/index.html - 200 null text/html;charset=utf-8 413.0404ms
+2024-09-16 11:45:09.649 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32771/swagger/swagger-ui.css - null null
+2024-09-16 11:45:09.651 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32771/swagger/swagger-ui-bundle.js - null null
+2024-09-16 11:45:09.651 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32771/swagger/swagger-ui-standalone-preset.js - null null
+2024-09-16 11:45:09.664 +00:00 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2024-09-16 11:45:09.667 +00:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-bundle.js'
+2024-09-16 11:45:09.684 +00:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js'
+2024-09-16 11:45:09.774 +00:00 [DBG] Request did not match any endpoints
+2024-09-16 11:45:09.815 +00:00 [DBG] Request did not match any endpoints
+2024-09-16 11:45:09.821 +00:00 [DBG] Request did not match any endpoints
+2024-09-16 11:45:10.379 +00:00 [DBG] Connection id "0HN6M8K18KMD6" received FIN.
+2024-09-16 11:45:10.386 +00:00 [DBG] Connection id "0HN6M8K18KMD5" received FIN.
+2024-09-16 11:45:10.387 +00:00 [DBG] Connection id "0HN6M8K18KMD6" disconnecting.
+2024-09-16 11:45:10.389 +00:00 [DBG] Connection id "0HN6M8K18KMD6" stopped.
+2024-09-16 11:45:10.390 +00:00 [DBG] Connection id "0HN6M8K18KMD5" disconnecting.
+2024-09-16 11:45:10.402 +00:00 [DBG] Connection id "0HN6M8K18KMD5" stopped.
+2024-09-16 11:45:10.407 +00:00 [DBG] Connection id "0HN6M8K18KMD6" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-09-16 11:45:10.417 +00:00 [DBG] Connection id "0HN6M8K18KMD5" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-09-16 11:45:10.454 +00:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-09-16 11:45:10.472 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32771/swagger/swagger-ui.css - 200 143943 text/css 823.4328ms
+2024-09-16 11:45:11.134 +00:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-09-16 11:45:11.152 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32771/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 1500.4386ms
+2024-09-16 11:45:11.463 +00:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-09-16 11:45:11.465 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32771/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 1813.6655ms
+2024-09-16 11:45:11.672 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32771/swagger/favicon-32x32.png - null null
+2024-09-16 11:45:11.680 +00:00 [DBG] No candidates found for the request path '/swagger/favicon-32x32.png'
+2024-09-16 11:45:11.687 +00:00 [DBG] Request did not match any endpoints
+2024-09-16 11:45:11.691 +00:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-09-16 11:45:11.714 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32771/swagger/favicon-32x32.png - 200 628 image/png 43.1178ms
+2024-09-16 11:45:11.843 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32771/swagger/v1/swagger.json - null null
+2024-09-16 11:45:11.865 +00:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-09-16 11:45:11.869 +00:00 [DBG] Request did not match any endpoints
+2024-09-16 11:45:12.231 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32771/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 388.6519ms
+2024-09-16 11:45:14.626 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32771/ - null null
+2024-09-16 11:45:14.634 +00:00 [DBG] No candidates found for the request path '/'
+2024-09-16 11:45:14.637 +00:00 [DBG] Request did not match any endpoints
+2024-09-16 11:45:14.639 +00:00 [DBG] The request path  does not match the path filter
+2024-09-16 11:45:14.837 +00:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-09-16 11:45:14.841 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32771/ - 404 0 null 214.737ms
+2024-09-16 11:45:14.848 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:32771/, Response status code: 404
+2024-09-16 11:45:16.229 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32771/ - null null
+2024-09-16 11:45:16.230 +00:00 [DBG] No candidates found for the request path '/'
+2024-09-16 11:45:16.233 +00:00 [DBG] Request did not match any endpoints
+2024-09-16 11:45:16.243 +00:00 [DBG] The request path  does not match the path filter
+2024-09-16 11:45:16.253 +00:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-09-16 11:45:16.262 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32771/ - 404 0 null 32.7785ms
+2024-09-16 11:45:16.270 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:32771/, Response status code: 404
+2024-09-16 11:45:20.403 +00:00 [DBG] Connection id "0HN6M8K18KMD9" received FIN.
+2024-09-16 11:45:20.408 +00:00 [DBG] The connection queue processing loop for 0HN6M8K18KMD9 completed.
+2024-09-16 11:45:20.412 +00:00 [DBG] Connection id "0HN6M8K18KMD9" is closed. The last processed stream ID was 17.
+2024-09-16 11:45:20.414 +00:00 [DBG] Connection id "0HN6M8K18KMD9" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-09-16 11:45:20.419 +00:00 [DBG] Connection id "0HN6M8K18KMD9" stopped.
+2024-09-16 11:45:29.027 +00:00 [DBG] Connection id "0HN6M8K18KMDA" accepted.
+2024-09-16 11:45:29.029 +00:00 [DBG] Connection id "0HN6M8K18KMDA" started.
+2024-09-16 11:45:29.045 +00:00 [DBG] Connection id "0HN6M8K18KMDA" received FIN.
+2024-09-16 11:45:29.049 +00:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-09-16 11:45:29.065 +00:00 [DBG] Connection id "0HN6M8K18KMDB" accepted.
+2024-09-16 11:45:29.066 +00:00 [DBG] Connection id "0HN6M8K18KMDA" stopped.
+2024-09-16 11:45:29.078 +00:00 [DBG] Connection id "0HN6M8K18KMDB" started.
+2024-09-16 11:45:29.081 +00:00 [DBG] Connection id "0HN6M8K18KMDA" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-09-16 11:45:29.095 +00:00 [DBG] Connection id "0HN6M8K18KMDB" received FIN.
+2024-09-16 11:45:29.101 +00:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-09-16 11:45:29.102 +00:00 [DBG] Connection id "0HN6M8K18KMDC" accepted.
+2024-09-16 11:45:29.109 +00:00 [DBG] Connection id "0HN6M8K18KMDB" stopped.
+2024-09-16 11:45:29.111 +00:00 [DBG] Connection id "0HN6M8K18KMDC" started.
+2024-09-16 11:45:29.113 +00:00 [DBG] Connection id "0HN6M8K18KMDB" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-09-16 11:45:29.130 +00:00 [DBG] Connection 0HN6M8K18KMDC established using the following protocol: "Tls13"
+2024-09-16 11:45:29.149 +00:00 [INF] Request starting HTTP/2 GET https://localhost:32771/ - null null
+2024-09-16 11:45:29.175 +00:00 [DBG] No candidates found for the request path '/'
+2024-09-16 11:45:29.178 +00:00 [DBG] Request did not match any endpoints
+2024-09-16 11:45:29.182 +00:00 [DBG] The request path  does not match the path filter
+2024-09-16 11:45:29.186 +00:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-09-16 11:45:29.191 +00:00 [INF] Request finished HTTP/2 GET https://localhost:32771/ - 404 0 null 41.4489ms
+2024-09-16 11:45:29.193 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:32771/, Response status code: 404
+2024-09-16 11:45:30.418 +00:00 [DBG] Connection id "0HN6M8K18KMDC" received FIN.
+2024-09-16 11:45:30.422 +00:00 [DBG] Connection id "0HN6M8K18KMDC" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-09-16 11:45:30.422 +00:00 [DBG] Connection id "0HN6M8K18KMDC" is closed. The last processed stream ID was 1.
+2024-09-16 11:45:30.428 +00:00 [DBG] The connection queue processing loop for 0HN6M8K18KMDC completed.
+2024-09-16 11:45:30.435 +00:00 [DBG] Connection id "0HN6M8K18KMDC" stopped.
