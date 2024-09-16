@@ -21,3 +21,16 @@ FROM [Offices] AS [o]
 2024-09-13 14:58:10.063 +03:00 [INF] Executed action Office_API.Controllers.OfficeController.GetAllOffices (Office_API) in 4347.0769ms
 2024-09-13 14:58:10.067 +03:00 [INF] Executed endpoint 'Office_API.Controllers.OfficeController.GetAllOffices (Office_API)'
 2024-09-13 14:58:10.121 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7055/api/Office/GetAllOffices - 200 null application/json; charset=utf-8 4464.0696ms
+2024-09-16 12:45:32.420 +03:00 [INF] Now listening on: https://localhost:7055
+2024-09-16 12:45:32.461 +03:00 [INF] Now listening on: http://localhost:5051
+2024-09-16 12:45:32.638 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-16 12:45:32.816 +03:00 [INF] Hosting environment: Development
+2024-09-16 12:45:32.832 +03:00 [INF] Content root path: C:\Users\HONOR\Source\Repos\InnoClinic\OfficeAPI\Office_API
+2024-09-16 12:45:33.191 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7055/swagger/index.html - null null
+2024-09-16 12:45:33.840 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7055/swagger/index.html - 200 null text/html;charset=utf-8 658.8939ms
+2024-09-16 12:45:34.247 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7055/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-16 12:45:34.247 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7055/_vs/browserLink - null null
+2024-09-16 12:45:34.263 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7055/_framework/aspnetcore-browser-refresh.js - 200 13755 application/javascript; charset=utf-8 16.1767ms
+2024-09-16 12:45:34.525 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7055/_vs/browserLink - 200 null text/javascript; charset=UTF-8 278.0226ms
+2024-09-16 12:45:34.852 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7055/swagger/v1/swagger.json - null null
+2024-09-16 12:45:35.173 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7055/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 320.8299ms
