@@ -1,0 +1,230 @@
+2024-09-09 15:13:54.487 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-09-09 15:13:55.061 +03:00 [DBG] Hosting starting
+2024-09-09 15:13:55.265 +03:00 [INF] User profile is available. Using 'C:\Users\HONOR\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-09 15:13:55.296 +03:00 [DBG] Reading data from file 'C:\Users\HONOR\AppData\Local\ASP.NET\DataProtection-Keys\key-1f0fb92a-53a3-4b50-9cbc-67b4aaaa11fc.xml'.
+2024-09-09 15:13:56.488 +03:00 [DBG] Reading data from file 'C:\Users\HONOR\AppData\Local\ASP.NET\DataProtection-Keys\key-94d38a1a-98f5-4adc-b518-97226d91b272.xml'.
+2024-09-09 15:13:56.596 +03:00 [DBG] Reading data from file 'C:\Users\HONOR\AppData\Local\ASP.NET\DataProtection-Keys\key-9613504d-1c46-49b9-b775-1671ba264c50.xml'.
+2024-09-09 15:13:56.601 +03:00 [DBG] Reading data from file 'C:\Users\HONOR\AppData\Local\ASP.NET\DataProtection-Keys\key-9eb758b3-3963-43eb-bfeb-ef3440b3abae.xml'.
+2024-09-09 15:13:56.604 +03:00 [DBG] Reading data from file 'C:\Users\HONOR\AppData\Local\ASP.NET\DataProtection-Keys\key-d2db69fb-1c58-4ee1-a6c9-3beb254e7838.xml'.
+2024-09-09 15:13:56.613 +03:00 [DBG] Found key {1f0fb92a-53a3-4b50-9cbc-67b4aaaa11fc}.
+2024-09-09 15:13:56.644 +03:00 [DBG] Found key {94d38a1a-98f5-4adc-b518-97226d91b272}.
+2024-09-09 15:13:56.658 +03:00 [DBG] Found key {9613504d-1c46-49b9-b775-1671ba264c50}.
+2024-09-09 15:13:56.661 +03:00 [DBG] Found key {9eb758b3-3963-43eb-bfeb-ef3440b3abae}.
+2024-09-09 15:13:56.662 +03:00 [DBG] Found key {d2db69fb-1c58-4ee1-a6c9-3beb254e7838}.
+2024-09-09 15:13:56.672 +03:00 [DBG] Considering key {94d38a1a-98f5-4adc-b518-97226d91b272} with expiration date 2024-12-08 07:32:33Z as default key.
+2024-09-09 15:13:56.922 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-09-09 15:13:56.927 +03:00 [DBG] Decrypting secret element using Windows DPAPI.
+2024-09-09 15:13:56.933 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-09-09 15:13:56.973 +03:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-09-09 15:13:57.015 +03:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-09-09 15:13:57.018 +03:00 [DBG] Using key {94d38a1a-98f5-4adc-b518-97226d91b272} as the default key.
+2024-09-09 15:13:57.020 +03:00 [DBG] Key ring with default key {94d38a1a-98f5-4adc-b518-97226d91b272} was loaded during application startup.
+2024-09-09 15:13:58.735 +03:00 [INF] Now listening on: https://localhost:7079
+2024-09-09 15:13:58.736 +03:00 [INF] Now listening on: http://localhost:5151
+2024-09-09 15:13:58.737 +03:00 [DBG] Loaded hosting startup assembly Auth_API
+2024-09-09 15:13:58.738 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2024-09-09 15:13:58.739 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-09-09 15:13:58.740 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-09-09 15:13:58.918 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-09 15:13:58.924 +03:00 [INF] Hosting environment: Development
+2024-09-09 15:13:58.925 +03:00 [INF] Content root path: C:\Users\HONOR\Source\Repos\InnoClinic\Auth_API
+2024-09-09 15:13:58.926 +03:00 [DBG] Hosting started
+2024-09-09 15:13:59.264 +03:00 [DBG] Connection id "0HN6GP3H8O5MK" accepted.
+2024-09-09 15:13:59.271 +03:00 [DBG] Connection id "0HN6GP3H8O5MK" started.
+2024-09-09 15:13:59.280 +03:00 [DBG] Connection id "0HN6GP3H8O5MK" received FIN.
+2024-09-09 15:13:59.372 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-09-09 15:13:59.748 +03:00 [DBG] Connection id "0HN6GP3H8O5ML" accepted.
+2024-09-09 15:13:59.835 +03:00 [DBG] Connection id "0HN6GP3H8O5ML" started.
+2024-09-09 15:13:59.839 +03:00 [DBG] Connection id "0HN6GP3H8O5MK" stopped.
+2024-09-09 15:13:59.849 +03:00 [DBG] Connection id "0HN6GP3H8O5MK" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-09-09 15:13:59.920 +03:00 [DBG] Connection id "0HN6GP3H8O5ML" received FIN.
+2024-09-09 15:13:59.921 +03:00 [DBG] Connection id "0HN6GP3H8O5MM" accepted.
+2024-09-09 15:13:59.923 +03:00 [DBG] Connection id "0HN6GP3H8O5MM" started.
+2024-09-09 15:13:59.924 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-09-09 15:13:59.934 +03:00 [DBG] Connection id "0HN6GP3H8O5MM" received FIN.
+2024-09-09 15:13:59.936 +03:00 [DBG] Connection id "0HN6GP3H8O5MN" accepted.
+2024-09-09 15:13:59.936 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-09-09 15:13:59.936 +03:00 [DBG] Connection id "0HN6GP3H8O5ML" stopped.
+2024-09-09 15:13:59.954 +03:00 [DBG] Connection id "0HN6GP3H8O5MN" started.
+2024-09-09 15:13:59.955 +03:00 [DBG] Connection id "0HN6GP3H8O5ML" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-09-09 15:13:59.962 +03:00 [DBG] Connection id "0HN6GP3H8O5MM" stopped.
+2024-09-09 15:13:59.967 +03:00 [DBG] Connection id "0HN6GP3H8O5MM" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-09-09 15:13:59.980 +03:00 [DBG] Connection 0HN6GP3H8O5MN established using the following protocol: "Tls13"
+2024-09-09 15:14:00.371 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7079/swagger/index.html - null null
+2024-09-09 15:14:01.365 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-09-09 15:14:01.416 +03:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-09-09 15:14:01.418 +03:00 [DBG] Request did not match any endpoints
+2024-09-09 15:14:01.885 +03:00 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-09-09 15:14:01.888 +03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-09-09 15:14:01.967 +03:00 [DBG] Response markup was updated to include Browser Link script injection.
+2024-09-09 15:14:01.969 +03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2024-09-09 15:14:01.977 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7079/swagger/index.html - 200 null text/html;charset=utf-8 1617.5024ms
+2024-09-09 15:14:02.270 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7079/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-09 15:14:02.271 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7079/_vs/browserLink - null null
+2024-09-09 15:14:02.474 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7079/_framework/aspnetcore-browser-refresh.js - 200 13751 application/javascript; charset=utf-8 25.7163ms
+2024-09-09 15:14:02.604 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7079/_vs/browserLink - 200 null text/javascript; charset=UTF-8 332.6381ms
+2024-09-09 15:14:02.910 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7079/swagger/v1/swagger.json - null null
+2024-09-09 15:14:03.073 +03:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-09-09 15:14:03.079 +03:00 [DBG] Request did not match any endpoints
+2024-09-09 15:14:03.240 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7079/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 329.5199ms
+2024-09-09 15:14:04.498 +03:00 [DBG] Connection id "0HN6GP3H8O5MN" received FIN.
+2024-09-09 15:14:04.602 +03:00 [DBG] The connection queue processing loop for 0HN6GP3H8O5MN completed.
+2024-09-09 15:14:04.605 +03:00 [DBG] Connection id "0HN6GP3H8O5MN" is closed. The last processed stream ID was 7.
+2024-09-09 15:14:04.613 +03:00 [DBG] Connection id "0HN6GP3H8O5MN" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-09-09 15:14:04.626 +03:00 [DBG] Connection id "0HN6GP3H8O5MN" stopped.
+2024-09-09 15:14:18.796 +03:00 [DBG] Connection id "0HN6GP3H8O5MO" accepted.
+2024-09-09 15:14:18.814 +03:00 [DBG] Connection id "0HN6GP3H8O5MO" started.
+2024-09-09 15:14:18.817 +03:00 [DBG] Connection id "0HN6GP3H8O5MO" received FIN.
+2024-09-09 15:14:18.818 +03:00 [DBG] Connection id "0HN6GP3H8O5MP" accepted.
+2024-09-09 15:14:18.820 +03:00 [DBG] Connection id "0HN6GP3H8O5MP" started.
+2024-09-09 15:14:18.826 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090326): Получено непредвиденное сообщение или оно имеет неправильный формат.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-09-09 15:14:18.830 +03:00 [DBG] Connection 0HN6GP3H8O5MP established using the following protocol: "Tls13"
+2024-09-09 15:14:18.831 +03:00 [DBG] Connection id "0HN6GP3H8O5MO" stopped.
+2024-09-09 15:14:18.835 +03:00 [DBG] Connection id "0HN6GP3H8O5MO" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-09-09 15:14:18.835 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7079/api/Auth/login - multipart/form-data; boundary=----WebKitFormBoundarytBhvf2jijVYv8CYD 249
+2024-09-09 15:14:18.845 +03:00 [DBG] 1 candidate(s) found for the request path '/api/Auth/login'
+2024-09-09 15:14:18.850 +03:00 [DBG] Endpoint 'Auth_API.Controllers.AuthController.Login (Auth_API)' with route pattern 'api/Auth/login' is valid for the request path '/api/Auth/login'
+2024-09-09 15:14:18.851 +03:00 [DBG] Request matched endpoint 'Auth_API.Controllers.AuthController.Login (Auth_API)'
+2024-09-09 15:14:18.857 +03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-09-09 15:14:19.030 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '09.09.2024 11:21:03', Current time (UTC): '09.09.2024 12:14:19'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-09-09 15:14:19.034 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '09.09.2024 11:21:03', Current time (UTC): '09.09.2024 12:14:19'.
+2024-09-09 15:14:19.037 +03:00 [INF] Executing endpoint 'Auth_API.Controllers.AuthController.Login (Auth_API)'
+2024-09-09 15:14:19.081 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Auth_API.Contract.UserLoginRequest) on controller Auth_API.Controllers.AuthController (Auth_API).
+2024-09-09 15:14:19.084 +03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-09-09 15:14:19.085 +03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-09-09 15:14:19.086 +03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-09-09 15:14:19.092 +03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-09-09 15:14:19.094 +03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-09-09 15:14:19.098 +03:00 [DBG] Executing controller factory for controller Auth_API.Controllers.AuthController (Auth_API)
+2024-09-09 15:14:19.302 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-09-09 15:14:19.536 +03:00 [DBG] Executed controller factory for controller Auth_API.Controllers.AuthController (Auth_API)
+2024-09-09 15:14:19.569 +03:00 [DBG] Connection id "0HN6GP3H8O5MP", Request id "0HN6GP3H8O5MP:00000001": started reading request body.
+2024-09-09 15:14:19.570 +03:00 [DBG] Connection id "0HN6GP3H8O5MP", Request id "0HN6GP3H8O5MP:00000001": done reading request body.
+2024-09-09 15:14:19.613 +03:00 [DBG] Attempting to bind parameter 'model' of type 'Auth_API.Contract.UserLoginRequest' ...
+2024-09-09 15:14:19.618 +03:00 [DBG] Attempting to bind parameter 'model' of type 'Auth_API.Contract.UserLoginRequest' using the name '' in request data ...
+2024-09-09 15:14:19.626 +03:00 [DBG] Attempting to bind property 'Auth_API.Contract.UserLoginRequest.Email' of type 'System.String' using the name 'Email' in request data ...
+2024-09-09 15:14:19.646 +03:00 [DBG] Done attempting to bind property 'Auth_API.Contract.UserLoginRequest.Email' of type 'System.String'.
+2024-09-09 15:14:19.650 +03:00 [DBG] Attempting to bind property 'Auth_API.Contract.UserLoginRequest.Password' of type 'System.String' using the name 'Password' in request data ...
+2024-09-09 15:14:19.726 +03:00 [DBG] Done attempting to bind property 'Auth_API.Contract.UserLoginRequest.Password' of type 'System.String'.
+2024-09-09 15:14:19.732 +03:00 [DBG] Done attempting to bind parameter 'model' of type 'Auth_API.Contract.UserLoginRequest'.
+2024-09-09 15:14:19.733 +03:00 [DBG] Done attempting to bind parameter 'model' of type 'Auth_API.Contract.UserLoginRequest'.
+2024-09-09 15:14:19.735 +03:00 [DBG] Attempting to validate the bound parameter 'model' of type 'Auth_API.Contract.UserLoginRequest' ...
+2024-09-09 15:14:19.766 +03:00 [DBG] Done attempting to validate the bound parameter 'model' of type 'Auth_API.Contract.UserLoginRequest'.
+2024-09-09 15:14:19.770 +03:00 [INF] Logging in user with email 1@mail.ru
+2024-09-09 15:14:20.666 +03:00 [DBG] Entity Framework Core 8.0.8 initialized 'AuthDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.8' with options: MigrationsAssembly=Auth_API.DataAccess 
+2024-09-09 15:14:20.737 +03:00 [DBG] Compiling query expression: 
+'DbSet<UserEntity>()
+    .FirstOrDefault(u => u.Email == __email_0)'
+2024-09-09 15:14:20.995 +03:00 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<UserEntity>(
+    asyncEnumerable: new SingleQueryingEnumerable<UserEntity>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: UserEntity.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: UserEntity.Email (string) Required Index MaxLength(256), 1], [Property: UserEntity.HashPassword (string) Required MaxLength(256), 2], [Property: UserEntity.RefreshToken (string) Required, 3], [Property: UserEntity.Role (Role) Required, 4] }
+            SELECT TOP(1) u.Id, u.Email, u.HashPassword, u.RefreshToken, u.Role
+            FROM Users AS u
+            WHERE u.Email == @__email_0), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, UserEntity>, 
+        Auth_API.DataAccess.AuthDBContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2024-09-09 15:14:21.043 +03:00 [DBG] Creating DbConnection.
+2024-09-09 15:14:21.078 +03:00 [DBG] Created DbConnection. (26ms).
+2024-09-09 15:14:21.085 +03:00 [DBG] Opening connection to database 'AuthDB' on server '(localdb)\MSSQLLocalDB'.
+2024-09-09 15:14:25.233 +03:00 [DBG] Opened connection to database 'AuthDB' on server '(localdb)\MSSQLLocalDB'.
+2024-09-09 15:14:25.240 +03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-09-09 15:14:25.291 +03:00 [DBG] Created DbCommand for 'ExecuteReader' (50ms).
+2024-09-09 15:14:25.314 +03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (74ms).
+2024-09-09 15:14:25.333 +03:00 [DBG] Executing DbCommand [Parameters=[@__email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[HashPassword], [u].[RefreshToken], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2024-09-09 15:14:25.530 +03:00 [INF] Executed DbCommand (202ms) [Parameters=[@__email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[HashPassword], [u].[RefreshToken], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2024-09-09 15:14:25.633 +03:00 [DBG] Context 'AuthDBContext' started tracking 'UserEntity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-09-09 15:14:25.682 +03:00 [DBG] Closing data reader to 'AuthDB' on server '(localdb)\MSSQLLocalDB'.
+2024-09-09 15:14:25.698 +03:00 [DBG] A data reader for 'AuthDB' on server '(localdb)\MSSQLLocalDB' is being disposed after spending 157ms reading results.
+2024-09-09 15:14:25.707 +03:00 [DBG] Closing connection to database 'AuthDB' on server '(localdb)\MSSQLLocalDB'.
+2024-09-09 15:14:25.724 +03:00 [DBG] Closed connection to database 'AuthDB' on server '(localdb)\MSSQLLocalDB' (17ms).
+2024-09-09 15:14:26.712 +03:00 [DBG] SaveChanges starting for 'AuthDBContext'.
+2024-09-09 15:14:26.727 +03:00 [DBG] DetectChanges starting for 'AuthDBContext'.
+2024-09-09 15:14:26.746 +03:00 [DBG] The unchanged property 'UserEntity.RefreshToken' was detected as changed and will be marked as modified. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2024-09-09 15:14:26.758 +03:00 [DBG] An entity of type 'UserEntity' tracked by 'AuthDBContext' changed state from '"Unchanged"' to '"Modified"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-09-09 15:14:26.765 +03:00 [DBG] DetectChanges completed for 'AuthDBContext'.
+2024-09-09 15:14:26.862 +03:00 [DBG] Opening connection to database 'AuthDB' on server '(localdb)\MSSQLLocalDB'.
+2024-09-09 15:14:26.868 +03:00 [DBG] Opened connection to database 'AuthDB' on server '(localdb)\MSSQLLocalDB'.
+2024-09-09 15:14:26.873 +03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-09-09 15:14:26.880 +03:00 [DBG] Created DbCommand for 'ExecuteReader' (7ms).
+2024-09-09 15:14:26.882 +03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (9ms).
+2024-09-09 15:14:26.884 +03:00 [DBG] Executing DbCommand [Parameters=[@p1='?' (DbType = Guid), @p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [RefreshToken] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2024-09-09 15:14:26.914 +03:00 [INF] Executed DbCommand (31ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [RefreshToken] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2024-09-09 15:14:26.935 +03:00 [DBG] Closing data reader to 'AuthDB' on server '(localdb)\MSSQLLocalDB'.
+2024-09-09 15:14:26.939 +03:00 [DBG] A data reader for 'AuthDB' on server '(localdb)\MSSQLLocalDB' is being disposed after spending 13ms reading results.
+2024-09-09 15:14:26.946 +03:00 [DBG] Closing connection to database 'AuthDB' on server '(localdb)\MSSQLLocalDB'.
+2024-09-09 15:14:26.948 +03:00 [DBG] Closed connection to database 'AuthDB' on server '(localdb)\MSSQLLocalDB' (2ms).
+2024-09-09 15:14:26.958 +03:00 [DBG] An entity of type 'UserEntity' tracked by 'AuthDBContext' changed state from '"Modified"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-09-09 15:14:26.966 +03:00 [DBG] SaveChanges completed for 'AuthDBContext' with 1 entities written to the database.
+2024-09-09 15:14:26.972 +03:00 [INF] User logged in successfully with email 1@mail.ru
+2024-09-09 15:14:26.985 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-09-09 15:14:26.993 +03:00 [INF] Executed action Auth_API.Controllers.AuthController.Login (Auth_API) in 7892.7119ms
+2024-09-09 15:14:26.996 +03:00 [INF] Executed endpoint 'Auth_API.Controllers.AuthController.Login (Auth_API)'
+2024-09-09 15:14:27.001 +03:00 [DBG] 'AuthDBContext' disposed.
+2024-09-09 15:14:27.012 +03:00 [DBG] Disposing connection to database 'AuthDB' on server '(localdb)\MSSQLLocalDB'.
+2024-09-09 15:14:27.016 +03:00 [DBG] Disposed connection to database '' on server '' (5ms).
+2024-09-09 15:14:27.019 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7079/api/Auth/login - 200 0 null 8184.458ms
+2024-09-09 15:14:29.512 +03:00 [DBG] Connection id "0HN6GP3H8O5MP" received FIN.
+2024-09-09 15:14:29.514 +03:00 [DBG] Connection id "0HN6GP3H8O5MP" is closed. The last processed stream ID was 1.
+2024-09-09 15:14:29.514 +03:00 [DBG] The connection queue processing loop for 0HN6GP3H8O5MP completed.
+2024-09-09 15:14:29.516 +03:00 [DBG] Connection id "0HN6GP3H8O5MP" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-09-09 15:14:29.523 +03:00 [DBG] Connection id "0HN6GP3H8O5MP" stopped.
+2024-09-11 11:15:27.758 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-09-11 11:15:28.256 +03:00 [DBG] Entity Framework Core 8.0.8 initialized 'AuthDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.8' with options: MigrationsAssembly=Auth_API.DataAccess 
+2024-09-11 11:15:28.274 +03:00 [DBG] 'AuthDBContext' disposed.
+2024-09-11 11:19:07.702 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-09-11 11:19:08.128 +03:00 [DBG] Entity Framework Core 8.0.8 initialized 'AuthDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.8' with options: MigrationsAssembly=Auth_API.DataAccess 
+2024-09-11 11:19:08.674 +03:00 [DBG] 'AuthDBContext' disposed.
+2024-09-11 11:19:34.331 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-09-11 11:19:34.947 +03:00 [DBG] Entity Framework Core 8.0.8 initialized 'AuthDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.8' with options: MigrationsAssembly=Auth_API.DataAccess 
+2024-09-11 11:19:35.527 +03:00 [DBG] 'AuthDBContext' disposed.

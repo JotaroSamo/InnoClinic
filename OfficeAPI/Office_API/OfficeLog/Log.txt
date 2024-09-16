@@ -1,0 +1,23 @@
+2024-09-13 14:57:57.950 +03:00 [INF] Now listening on: https://localhost:7055
+2024-09-13 14:57:57.980 +03:00 [INF] Now listening on: http://localhost:5051
+2024-09-13 14:57:58.096 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-13 14:57:58.097 +03:00 [INF] Hosting environment: Development
+2024-09-13 14:57:58.098 +03:00 [INF] Content root path: C:\Users\HONOR\Source\Repos\InnoClinic\Office_API
+2024-09-13 14:57:58.858 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7055/swagger/index.html - null null
+2024-09-13 14:57:59.560 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7055/swagger/index.html - 200 null text/html;charset=utf-8 709.492ms
+2024-09-13 14:57:59.844 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7055/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-13 14:57:59.844 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7055/_vs/browserLink - null null
+2024-09-13 14:57:59.858 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7055/_framework/aspnetcore-browser-refresh.js - 200 13755 application/javascript; charset=utf-8 14.0864ms
+2024-09-13 14:57:59.990 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7055/_vs/browserLink - 200 null text/javascript; charset=UTF-8 145.8611ms
+2024-09-13 14:58:00.239 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7055/swagger/v1/swagger.json - null null
+2024-09-13 14:58:00.480 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7055/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 242.358ms
+2024-09-13 14:58:05.657 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7055/api/Office/GetAllOffices - null null
+2024-09-13 14:58:05.671 +03:00 [INF] Executing endpoint 'Office_API.Controllers.OfficeController.GetAllOffices (Office_API)'
+2024-09-13 14:58:05.710 +03:00 [INF] Route matched with {action = "GetAllOffices", controller = "Office"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOffices() on controller Office_API.Controllers.OfficeController (Office_API).
+2024-09-13 14:58:09.861 +03:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[City], [o].[HouseNumber], [o].[IsActive], [o].[OfficeNumber], [o].[PhotoId], [o].[PhotoUrl], [o].[RegistryPhoneNumber], [o].[Street]
+FROM [Offices] AS [o]
+2024-09-13 14:58:10.011 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Office_API.Domain.Model.Office, Office_API.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-13 14:58:10.063 +03:00 [INF] Executed action Office_API.Controllers.OfficeController.GetAllOffices (Office_API) in 4347.0769ms
+2024-09-13 14:58:10.067 +03:00 [INF] Executed endpoint 'Office_API.Controllers.OfficeController.GetAllOffices (Office_API)'
+2024-09-13 14:58:10.121 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7055/api/Office/GetAllOffices - 200 null application/json; charset=utf-8 4464.0696ms
