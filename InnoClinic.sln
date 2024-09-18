@@ -26,7 +26,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OfficeAPI", "OfficeAPI", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProfileAPI", "ProfileAPI", "{364B5EB1-A199-497C-9E0A-B2A8FBDC12B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Profilr_API", "ProfileAPI\Profile_API\Profile_API.csproj", "{CF813C5B-4220-4446-9240-72AE1160FD06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Profile_API", "ProfileAPI\Profile_API\Profile_API.csproj", "{CF813C5B-4220-4446-9240-72AE1160FD06}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
