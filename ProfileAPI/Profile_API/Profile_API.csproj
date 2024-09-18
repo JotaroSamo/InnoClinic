@@ -17,4 +17,8 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Profile_API.Infrastructure\Profile_API.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

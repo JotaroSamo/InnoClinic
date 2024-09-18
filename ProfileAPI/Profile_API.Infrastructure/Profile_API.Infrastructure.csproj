@@ -6,4 +6,16 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Validator\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Profile_API.Domain\Profile_API.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
