@@ -17,12 +17,13 @@ public class Account
     public string PhoneNumber { get; set; } = string.Empty;
     [Required]
     public bool IsEmailVerified { get; set; }
-    public string PhotoId { get; set; } = string.Empty;
+  
 
     public string CreatedBy { get; set; } = string.Empty;
     public DateTime CreatedAt { get; set; }
     public string UpdatedBy { get; set; } = string.Empty;
     public DateTime UpdatedAt { get; set; }
+    public string PhotoId { get; set; } = string.Empty;
     public string PhotoUrl { get; set; } = string.Empty;
 
     public Receptionist? Receptionist { get; set; }
