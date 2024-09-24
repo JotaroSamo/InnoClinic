@@ -14,10 +14,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <Folder Include="Contract\Response\" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Profile_API.Application\Profile_API.Application.csproj" />
+    <ProjectReference Include="..\Profile_API.DataAccess\Profile_API.DataAccess.csproj" />
     <ProjectReference Include="..\Profile_API.Infrastructure\Profile_API.Infrastructure.csproj" />
   </ItemGroup>
 

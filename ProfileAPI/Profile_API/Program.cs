@@ -1,4 +1,8 @@
 using FluentValidation.AspNetCore;
+using Profile_API.Application.Service;
+using Profile_API.DataAccess.Repositories;
+using Profile_API.Domain.Abstract.IRepository;
+using Profile_API.Domain.Abstract.IService;
 using Profile_API.Infrastructure.Validator;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +20,16 @@ builder.Services.AddControllers()
                               // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<IDoctorService, DoctorService>();
+builder.Services.AddScoped<IReceptionistService, ReceptionistSevice>();
+builder.Services.AddScoped<IPatientService, PatientService>();
+builder.Services.AddScoped<IAccountRepository, AccountRepository>();
+builder.Services.AddScoped<IDoctorRepository, DoctorRepository>();
+builder.Services.AddScoped<IReceptionistRepository, ReceptionistRepository>();
+builder.Services.AddScoped<IPatientRepository, PatientRepository>();
+builder.Services.AddScoped<ISpecializationRepository, SpecializationRepository>();
+
 
 
 var app = builder.Build();

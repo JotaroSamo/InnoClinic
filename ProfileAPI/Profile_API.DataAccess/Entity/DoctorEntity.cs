@@ -24,7 +24,8 @@ namespace Profile_API.DataAccess.Entity
         [Required]
         public Status Status { get; set; }
         public Guid SpecializationId { get; set; }
-        public string SpecializationName { get; set; } = string.Empty;
+        [Required]
+        public SpecializationEntity Specialization { get; set; }
         public Guid OfficeId { get; set; }
         public string OfficeAddress { get; set; } = string.Empty;
         public string OfficeRegistryPhoneNumber { get; set; } = string.Empty;

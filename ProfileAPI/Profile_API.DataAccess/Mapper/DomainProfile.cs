@@ -17,6 +17,7 @@ namespace Profile_API.DataAccess.Mapper
             CreateMap<Doctor, DoctorEntity>().ReverseMap();
             CreateMap<Patient, PatientEntity>().ReverseMap();
             CreateMap<Receptionist, ReceptionistEntity>().ReverseMap();
+            CreateMap<Specialization, SpecializationEntity>().ReverseMap();
         }
     }
 }

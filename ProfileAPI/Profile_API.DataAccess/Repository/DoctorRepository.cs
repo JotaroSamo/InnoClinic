@@ -24,13 +24,17 @@ namespace Profile_API.DataAccess.Repositories
 
         public async Task<List<Doctor>> GetAllDoctorsAsync()
         {
-            var doctors = await _context.Doctors.Include(d => d.Account).ToListAsync();
+            var doctors = await _context.Doctors.Include(d => d.Account)
+                .Include(s=>s.Specialization)
+                .ToListAsync();
             return _mapper.Map<List<Doctor>>(doctors);
         }
 
         public async Task<Doctor> GetDoctorByIdAsync(Guid id)
         {
-            var doctor = await _context.Doctors.Include(d => d.Account).FirstOrDefaultAsync(d => d.Id == id);
+            var doctor = await _context.Doctors.Include(d => d.Account)
+                .Include(s => s.Specialization).
+                FirstOrDefaultAsync(d => d.Id == id);
             if (doctor == null) throw new Exception("Doctor not found");
             return _mapper.Map<Doctor>(doctor);
         }
@@ -42,6 +46,20 @@ namespace Profile_API.DataAccess.Repositories
             await _context.SaveChangesAsync();
 
             return _mapper.Map<Doctor>(doctorEntity);
+        }
+
+        public async Task<Doctor> GetDoctorByNameAsync(string firstName, string lastName, string midleName)
+        {
+            var doctorEntity = await _context.Doctors.FirstOrDefaultAsync(n =>
+                n.FirstName == firstName &&
+                    n.LastName == lastName && n.MiddleName == midleName);
+            return _mapper.Map<Doctor>(doctorEntity);
+        }
+
+        public async Task<List<Doctor>> GetDoctorListBySpecializationAsync(Guid specId)
+        {
+            var doctorEntity = await _context.Doctors.Where(i => i.SpecializationId == specId).ToListAsync();
+            return _mapper.Map<List<Doctor>>(doctorEntity);
         }
 
         public async Task<Doctor> UpdateDoctorAsync(Guid id, Doctor doctor)

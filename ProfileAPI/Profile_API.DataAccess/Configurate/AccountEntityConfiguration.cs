@@ -42,10 +42,8 @@ namespace Profile_API.DataAccess.Configurate
                    .HasMaxLength(100);
 
             // Время создания и обновления
-            builder.Property(a => a.CreatedAt)
-                   .IsRequired();
-            builder.Property(a => a.UpdatedAt)
-                   .IsRequired();
+            builder.Property(a => a.CreatedAt);
+            builder.Property(a => a.UpdatedAt);
 
             // Конфигурация для фотографий
             builder.Property(a => a.PhotoId)

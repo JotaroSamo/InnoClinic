@@ -18,6 +18,8 @@ namespace Profile_API.DataAccess
         public DbSet<DoctorEntity> Doctors { get; set; }
         public DbSet<PatientEntity> Patients { get; set; }
         public DbSet<ReceptionistEntity> Receptionists { get; set; }
+
+        public DbSet<SpecializationEntity> Specializations { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ProfileDbContext).Assembly);

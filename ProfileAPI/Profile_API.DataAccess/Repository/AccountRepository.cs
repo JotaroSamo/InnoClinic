@@ -25,13 +25,17 @@ namespace Profile_API.DataAccess.Repositories
 
         public async Task<List<Account>> GetAllAccountsAsync()
         {
-            var accountsEntities = await _context.Accounts.Include(d => d.Doctor).Include(p => p.Patient).Include(r => r.Receptionist).ToListAsync();
+            var accountsEntities = await _context.Accounts
+                .Include(d => d.Doctor)
+                .Include(p => p.Patient).Include(r => r.Receptionist).ToListAsync();
             return _mapper.Map<List<Account>>(accountsEntities);
         }
 
         public async Task<Account> GetAccountByIdAsync(Guid id)
         {
-            var accountEntity = await _context.Accounts.Include(d=>d.Doctor).Include(p => p.Patient).Include(r => r.Receptionist).FirstOrDefaultAsync(i=>i.Id == id);
+            var accountEntity = await _context.Accounts
+                .Include(d=>d.Doctor)
+                .Include(p => p.Patient).Include(r => r.Receptionist).FirstOrDefaultAsync(i=>i.Id == id);
             if (accountEntity == null) throw new Exception("Account not found");
             return _mapper.Map<Account>(accountEntity);
         }
@@ -50,7 +54,9 @@ namespace Profile_API.DataAccess.Repositories
 
         public async Task<Account> UpdateAccountAsync(Guid id, Account account)
         {
-            var accountEntity = await _context.Accounts.Include(d => d.Doctor).Include(p => p.Patient).Include(r => r.Receptionist).FirstOrDefaultAsync(i => i.Id == id);
+            var accountEntity = await _context.Accounts.Include(d => d.Doctor)
+                .Include(p => p.Patient)
+                .Include(r => r.Receptionist).FirstOrDefaultAsync(i => i.Id == id);
             if (account == null) throw new Exception("Account not found");
 
             _mapper.Map(account, account);
@@ -64,7 +70,9 @@ namespace Profile_API.DataAccess.Repositories
 
         public async Task DeleteAccountAsync(Guid id)
         {
-            var accountEntity = await _context.Accounts.Include(d => d.Doctor).Include(p => p.Patient).Include(r => r.Receptionist).FirstOrDefaultAsync(i => i.Id == id);
+            var accountEntity = await _context.Accounts
+                .Include(d => d.Doctor)
+                .Include(p => p.Patient).Include(r => r.Receptionist).FirstOrDefaultAsync(i => i.Id == id);
             if (accountEntity == null) throw new Exception("Account not found");
 
             _context.Accounts.Remove(accountEntity);

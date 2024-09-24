@@ -12,6 +12,8 @@ namespace Profile_API.Domain.Abstract.IRepository
         Task<List<Doctor>> GetAllDoctorsAsync();
         Task<Doctor> GetDoctorByIdAsync(Guid id);
         Task<Doctor> CreateDoctorAsync(Doctor doctor);
+        Task<Doctor> GetDoctorByNameAsync(string firstName, string lastName, string midleName);
+        Task<List<Doctor>> GetDoctorListBySpecializationAsync(Guid specId);
         Task<Doctor> UpdateDoctorAsync(Guid id, Doctor doctor);
         Task DeleteDoctorAsync(Guid id);
     }

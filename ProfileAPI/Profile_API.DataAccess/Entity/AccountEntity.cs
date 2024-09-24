@@ -12,6 +12,8 @@ namespace Profile_API.DataAccess.Entity
         [Required]
         public Guid Id { get; set; }
         [Required]
+        public Guid UserId { get; set; }
+        [Required]
         [EmailAddress]
         public string Email { get; set; } = string.Empty;
         [Required]

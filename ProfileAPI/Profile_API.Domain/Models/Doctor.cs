@@ -8,6 +8,8 @@ public class Doctor
     [Required]
     public Guid Id { get; set; }
     [Required]
+    public Guid UserId { get; set; }
+    [Required]
     public string FirstName { get; set; } = string.Empty;
     [Required]
     public string LastName { get; set; } = string.Empty;
@@ -19,7 +21,8 @@ public class Doctor
     [Required]
     public Status Status { get; set; }
     public Guid SpecializationId { get; set; }
-    public string SpecializationName { get; set; } = string.Empty;
+    [Required]
+    public Specialization Specialization { get; set; }
     public Guid OfficeId { get; set; }
     public string OfficeAddress { get; set; } = string.Empty;
     public string OfficeRegistryPhoneNumber { get; set; } = string.Empty;

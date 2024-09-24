@@ -7,6 +7,9 @@ public class Account
 {
     [Required]
     public Guid Id { get; set; }
+
+    public Guid UserId { get; set; }
+
     [Required]
     [EmailAddress]
     public string Email { get; set; } = string.Empty;
