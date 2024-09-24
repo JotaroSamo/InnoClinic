@@ -19,7 +19,7 @@ namespace Profile_API.DataAccess.Entity
         public string MiddleName { get; set; } = string.Empty;
         public bool IsLinkedToAccount { get; set; }
         public DateTime DateOfBirth { get; set; }
-        public int AccountId { get; set; }
+        public Guid AccountId { get; set; }
         public AccountEntity Account { get; set; }
     }
 }

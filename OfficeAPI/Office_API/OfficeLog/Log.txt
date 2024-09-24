@@ -47,3 +47,16 @@ FROM [Offices] AS [o]
 2024-09-18 12:25:19.866 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7055/_vs/browserLink - 200 null text/javascript; charset=UTF-8 199.865ms
 2024-09-18 12:25:19.957 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7055/swagger/v1/swagger.json - null null
 2024-09-18 12:25:20.207 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7055/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 250.9345ms
+2024-09-24 14:32:12.323 +03:00 [INF] Now listening on: https://localhost:7055
+2024-09-24 14:32:12.349 +03:00 [INF] Now listening on: http://localhost:5051
+2024-09-24 14:32:12.459 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-24 14:32:12.462 +03:00 [INF] Hosting environment: Development
+2024-09-24 14:32:12.464 +03:00 [INF] Content root path: C:\Users\HONOR\Source\Repos\InnoClinic\OfficeAPI\Office_API
+2024-09-24 14:32:13.743 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7055/swagger/index.html - null null
+2024-09-24 14:32:14.207 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7055/swagger/index.html - 200 null text/html;charset=utf-8 470.9433ms
+2024-09-24 14:32:14.591 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7055/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-24 14:32:14.591 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7055/_vs/browserLink - null null
+2024-09-24 14:32:14.622 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7055/_framework/aspnetcore-browser-refresh.js - 200 13755 application/javascript; charset=utf-8 31.4615ms
+2024-09-24 14:32:14.794 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7055/_vs/browserLink - 200 null text/javascript; charset=UTF-8 202.8614ms
+2024-09-24 14:32:15.076 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7055/swagger/v1/swagger.json - null null
+2024-09-24 14:32:15.385 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7055/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 308.982ms

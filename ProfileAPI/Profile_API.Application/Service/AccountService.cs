@@ -12,14 +12,21 @@ namespace Profile_API.Application.Service
     public class AccountService : IAccountService
     {
         private readonly IAccountRepository _accountRepository;
+        private readonly IEmailService _emailService;
 
-        public AccountService(IAccountRepository accountRepository)
+        public AccountService(IAccountRepository accountRepository, IEmailService emailService)
         {
             _accountRepository = accountRepository;
+            _emailService = emailService;
         }
         public async Task<Account> CreateAccountAsync(Account account)
         {
-            return await _accountRepository.CreateAccountAsync(account);
+            account = await _accountRepository.CreateAccountAsync(account);
+            var verificationLink = $"https://localhost:7246/api/account/verify-email?userId={account.Id}";
+
+            await _emailService.SendVerificationEmail(account.Email, verificationLink);
+            return account;
+            
         }
 
         public async Task DeleteAccountAsync(Guid id)
@@ -40,6 +47,11 @@ namespace Profile_API.Application.Service
         public async Task<Account> UpdateAccountAsync(Guid id, Account account)
         {
            return await _accountRepository.UpdateAccountAsync(id, account);
+        }
+
+        public async Task<Account> VerificateEmail(Guid id)
+        {
+          return await _accountRepository.VerificateEmail(id);
         }
     }
 }

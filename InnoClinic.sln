@@ -27,14 +27,17 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProfileAPI", "ProfileAPI", "{364B5EB1-A199-497C-9E0A-B2A8FBDC12B5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Profile_API", "ProfileAPI\Profile_API\Profile_API.csproj", "{CF813C5B-4220-4446-9240-72AE1160FD06}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6275F0A8-B3D2-4286-B13C-116518877205} = {6275F0A8-B3D2-4286-B13C-116518877205}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Profile_API.Domain", "ProfileAPI\Profile_API.Domain\Profile_API.Domain.csproj", "{6275F0A8-B3D2-4286-B13C-116518877205}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Profile_API.Infrastructure", "ProfileAPI\Profile_API.Infrastructure\Profile_API.Infrastructure.csproj", "{927ABC22-D64E-4B0F-935D-8D6D97555993}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Profile_API.Infrastructure", "ProfileAPI\Profile_API.Infrastructure\Profile_API.Infrastructure.csproj", "{927ABC22-D64E-4B0F-935D-8D6D97555993}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Profile_API.DataAccess", "ProfileAPI\Profile_API.DataAccess\Profile_API.DataAccess.csproj", "{07E65F73-8A49-4AD8-BD9B-330386D46DA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Profile_API.DataAccess", "ProfileAPI\Profile_API.DataAccess\Profile_API.DataAccess.csproj", "{07E65F73-8A49-4AD8-BD9B-330386D46DA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Profile_API.Application", "ProfileAPI\Profile_API.Application\Profile_API.Application.csproj", "{848D7B1E-1B0B-4620-852B-224F9F3B2A39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Profile_API.Application", "ProfileAPI\Profile_API.Application\Profile_API.Application.csproj", "{848D7B1E-1B0B-4620-852B-224F9F3B2A39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

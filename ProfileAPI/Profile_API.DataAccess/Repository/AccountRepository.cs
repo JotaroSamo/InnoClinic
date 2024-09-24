@@ -78,5 +78,14 @@ namespace Profile_API.DataAccess.Repositories
             _context.Accounts.Remove(accountEntity);
             await _context.SaveChangesAsync();
         }
+
+        public async Task<Account> VerificateEmail(Guid id)
+        {
+            var accountEntity = await _context.Accounts.FindAsync(id);
+            if (accountEntity == null) throw new Exception("Account not found");
+            accountEntity.IsEmailVerified = true;
+            await _context.SaveChangesAsync();
+            return _mapper.Map<Account>( accountEntity);
+        }
     }
 }

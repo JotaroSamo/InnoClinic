@@ -37,6 +37,16 @@ namespace Profile_API.Application.Service
             return await _doctorRepository.GetDoctorByIdAsync(id);
         }
 
+        public Task<Doctor> GetDoctorByNameAsync(string firstName, string lastName, string midleName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<Doctor>> GetDoctorListBySpecializationAsync(Guid specId)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<Doctor> UpdateDoctorAsync(Guid id, Doctor doctor)
         {
             return await _doctorRepository.UpdateDoctorAsync(id, doctor);

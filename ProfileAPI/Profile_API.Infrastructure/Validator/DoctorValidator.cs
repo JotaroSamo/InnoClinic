@@ -15,9 +15,6 @@ public class DoctorValidator : AbstractValidator<Doctor>
         RuleFor(x => x.MiddleName)
             .NotEmpty().WithMessage("Middle name is required.");
 
-        RuleFor(x => x.SpecializationName)
-            .NotEmpty().WithMessage("Specialization name is required.");
-
 
         RuleFor(x => x.Status)
             .NotEmpty().WithMessage("Status is required.");

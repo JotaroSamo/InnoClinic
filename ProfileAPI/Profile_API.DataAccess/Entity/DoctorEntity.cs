@@ -1,4 +1,5 @@
-﻿using Office_API.Domain.Enums;
+﻿
+using Profile_API.Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

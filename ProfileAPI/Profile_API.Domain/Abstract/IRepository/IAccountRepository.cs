@@ -14,5 +14,7 @@ namespace Profile_API.Domain.Abstract.IRepository
         Task<Account> CreateAccountAsync(Account account);
         Task<Account> UpdateAccountAsync(Guid id, Account account);
         Task DeleteAccountAsync(Guid id);
+
+        Task<Account> VerificateEmail(Guid id);
     }
 }

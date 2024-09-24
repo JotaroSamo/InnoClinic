@@ -1,5 +1,8 @@
 using FluentValidation.AspNetCore;
+using Microsoft.EntityFrameworkCore;
 using Profile_API.Application.Service;
+using Profile_API.DataAccess;
+using Profile_API.DataAccess.Mapper;
 using Profile_API.DataAccess.Repositories;
 using Profile_API.Domain.Abstract.IRepository;
 using Profile_API.Domain.Abstract.IService;
@@ -20,7 +23,12 @@ builder.Services.AddControllers()
                               // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddDbContext<ProfileDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SQLConnection"),
+        b => b.MigrationsAssembly("Profile_API.DataAccess")));
+builder.Services.AddAutoMapper(typeof(DomainProfile));
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IDoctorService, DoctorService>();
 builder.Services.AddScoped<IReceptionistService, ReceptionistSevice>();
 builder.Services.AddScoped<IPatientService, PatientService>();

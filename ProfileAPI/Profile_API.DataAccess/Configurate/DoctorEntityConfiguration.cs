@@ -41,10 +41,6 @@ namespace Profile_API.DataAccess.Configurate
             builder.Property(d => d.Status)
                    .IsRequired();
 
-            // Конфигурация для SpecializationId и SpecializationName
-
-            builder.Property(d => d.SpecializationName)
-                   .HasMaxLength(255).IsRequired(); // указать максимальную длину для названия специализации
 
             builder.Property(r => r.OfficeAddress)
                .HasMaxLength(255); // указать максимальную длину для адреса офиса

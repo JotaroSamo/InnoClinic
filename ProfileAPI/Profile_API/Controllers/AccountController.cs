@@ -5,6 +5,8 @@ using Profile_API.Domain.Models;
 
 namespace Profile_API.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class AccountController : Controller
     {
         private readonly IAccountService _accountService;
@@ -13,7 +15,7 @@ namespace Profile_API.Controllers
         {
             _accountService = accountService;
         }
-
+        [HttpPost("Create")]
         public async Task<ActionResult> Create([FromBody] CreateAccountRequest createAccountRequest)
         {
             if (createAccountRequest == null)
@@ -39,5 +41,48 @@ namespace Profile_API.Controllers
             return Ok(account);
 
         }
+        [HttpGet("verify-email")]
+        public async Task<ActionResult> VerifyEmail(Guid userId)
+        {
+            var account = await _accountService.GetAccountByIdAsync(userId);
+            if (account == null)
+            {
+                return NotFound();
+            }
+
+            if (account.IsEmailVerified)
+            {
+                return BadRequest("Email уже подтвержден.");
+            }
+
+            account =  await _accountService.VerificateEmail(userId);
+
+            return Ok(account);
+        }
+        [HttpPut("Update")]
+        public async Task<ActionResult> Update([FromBody] UpdateAccountRequest updateAccountRequest)
+        {
+            if (updateAccountRequest == null)
+            {
+                return BadRequest();
+            }
+
+            var account = new Account()
+            {
+                Id = updateAccountRequest.Id,
+                UserId = updateAccountRequest.UserId,
+                Email = updateAccountRequest.Email,
+                Password = updateAccountRequest.Password,
+                PhoneNumber = updateAccountRequest.PhoneNumber,
+
+            };
+            if (!TryValidateModel(account))
+            {
+                return BadRequest();
+            }
+            account = await _accountService.UpdateAccountAsync(account.Id,account);
+            return Ok(account);
+        }
+
     }
 }
