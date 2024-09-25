@@ -2,6 +2,7 @@
 {
     public interface IEmailService
     {
-        Task SendVerificationEmail(string email, string verificationLink);
+        Task SendCredentialsToEmail(string email);
+        Task SendConfirmationLink(string email, Guid accountId);
     }
 }

@@ -21,11 +21,11 @@ namespace Profile_API.DataAccess.Entity
         public string MiddleName { get; set; } = string.Empty;
         [Required]
         public DateTime DateOfBirth { get; set; }
-        public Guid CareerStartYear { get; set; }
+        public DateTime CareerStartYear { get; set; }
         [Required]
         public Status Status { get; set; }
-        public Guid SpecializationId { get; set; }
         [Required]
+        public Guid SpecializationId { get; set; }
         public SpecializationEntity Specialization { get; set; }
         public Guid OfficeId { get; set; }
         public string OfficeAddress { get; set; } = string.Empty;

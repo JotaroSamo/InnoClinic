@@ -1,20 +1,15 @@
-﻿using Profile_API.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CSharpFunctionalExtensions;
+using Profile_API.Domain.Models;
 
-namespace Profile_API.Domain.Abstract.IService
-
+namespace Profile_API.Application.Service
 {
     public interface IAccountService
     {
-        Task<List<Account>> GetAllAccountsAsync();
-        Task<Account> GetAccountByIdAsync(Guid id);
-        Task<Account> CreateAccountAsync(Account account);
-        Task<Account> UpdateAccountAsync(Guid id, Account account);
-        Task DeleteAccountAsync(Guid id);
-        Task<Account> VerificateEmail(Guid id);
+        Task<Result<Account>> CreateAccountAsync(Account account);
+        Task<Result> DeleteAccountAsync(Guid id);
+        Task<Result<Account>> GetAccountByIdAsync(Guid id);
+        Task<Result<List<Account>>> GetAllAccountsAsync();
+        Task<Result<Account>> UpdateAccountAsync(Guid id, Account account);
+        Task<Result> VerificateEmail(Guid id, string email);
     }
 }

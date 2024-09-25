@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
+using CSharpFunctionalExtensions;
 using Microsoft.EntityFrameworkCore;
 using Profile_API.DataAccess.Entity;
-using Profile_API.Domain.Abstract.IRepository;
 using Profile_API.Domain.Models;
 using System;
 using System.Collections.Generic;
@@ -22,48 +22,63 @@ namespace Profile_API.DataAccess.Repositories
             _mapper = mapper;
         }
 
-        public async Task<List<Patient>> GetAllPatientsAsync()
+        public async Task<Result<List<Patient>>> GetAllPatientsAsync()
         {
-            var patients = await _context.Patients.Include(p => p.Account).ToListAsync();
-            return _mapper.Map<List<Patient>>(patients);
+            var patientsEntities = await _context.Patients.Include(p => p.Account).ToListAsync();
+            var patients = _mapper.Map<List<Patient>>(patientsEntities);
+            return Result.Success(patients);
         }
 
-        public async Task<Patient> GetPatientByIdAsync(int id)
+        public async Task<Result<Patient>> GetPatientByIdAsync(int id)
         {
-            var patient = await _context.Patients.Include(p => p.Account).FirstOrDefaultAsync(p => p.Id == id);
-            if (patient == null) throw new Exception("Patient not found");
-            return _mapper.Map<Patient>(patient);
+            var patientEntity = await _context.Patients.Include(p => p.Account)
+                .FirstOrDefaultAsync(p => p.Id == id);
+
+            if (patientEntity == null)
+                return Result.Failure<Patient>("Patient not found");
+
+            var patient = _mapper.Map<Patient>(patientEntity);
+            return Result.Success(patient);
         }
 
-        public async Task<Patient> CreatePatientAsync(Patient patient)
+        public async Task<Result<Patient>> CreatePatientAsync(Patient patient)
         {
             var patientEntity = _mapper.Map<PatientEntity>(patient);
             _context.Patients.Add(patientEntity);
             await _context.SaveChangesAsync();
 
-            return _mapper.Map<Patient>(patientEntity);
+            var createdPatient = _mapper.Map<Patient>(patientEntity);
+            return Result.Success(createdPatient);
         }
 
-        public async Task<Patient> UpdatePatientAsync(int id, Patient patient)
+        public async Task<Result<Patient>> UpdatePatientAsync(int id, Patient patient)
         {
             var patientEntity = await _context.Patients.FindAsync(id);
-            if (patientEntity == null) throw new Exception("Patient not found");
+
+            if (patientEntity == null)
+                return Result.Failure<Patient>("Patient not found");
 
             _mapper.Map(patient, patientEntity);
             _context.Patients.Update(patientEntity);
             await _context.SaveChangesAsync();
 
-            return _mapper.Map<Patient>(patientEntity);
+            var updatedPatient = _mapper.Map<Patient>(patientEntity);
+            return Result.Success(updatedPatient);
         }
 
-        public async Task DeletePatientAsync(int id)
+        public async Task<Result> DeletePatientAsync(int id)
         {
             var patientEntity = await _context.Patients.FindAsync(id);
-            if (patientEntity == null) throw new Exception("Patient not found");
+
+            if (patientEntity == null)
+                return Result.Failure("Patient not found");
 
             _context.Patients.Remove(patientEntity);
             await _context.SaveChangesAsync();
+
+            return Result.Success();
         }
     }
+
 
 }

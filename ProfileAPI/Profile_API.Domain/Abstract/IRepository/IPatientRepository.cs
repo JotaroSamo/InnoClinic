@@ -1,13 +1,14 @@
-﻿using Profile_API.Domain.Models;
+﻿using CSharpFunctionalExtensions;
+using Profile_API.Domain.Models;
 
-namespace Profile_API.Domain.Abstract.IRepository
+namespace Profile_API.DataAccess.Repositories
 {
     public interface IPatientRepository
     {
-        Task<Patient> CreatePatientAsync(Patient patient);
-        Task DeletePatientAsync(int id);
-        Task<List<Patient>> GetAllPatientsAsync();
-        Task<Patient> GetPatientByIdAsync(int id);
-        Task<Patient> UpdatePatientAsync(int id, Patient patient);
+        Task<Result<Patient>> CreatePatientAsync(Patient patient);
+        Task<Result> DeletePatientAsync(int id);
+        Task<Result<List<Patient>>> GetAllPatientsAsync();
+        Task<Result<Patient>> GetPatientByIdAsync(int id);
+        Task<Result<Patient>> UpdatePatientAsync(int id, Patient patient);
     }
 }

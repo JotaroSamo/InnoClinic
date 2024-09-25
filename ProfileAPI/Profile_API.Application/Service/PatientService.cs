@@ -1,4 +1,5 @@
-﻿using Profile_API.Domain.Abstract.IRepository;
+﻿using CSharpFunctionalExtensions;
+using Profile_API.DataAccess.Repositories;
 using Profile_API.Domain.Abstract.IService;
 using Profile_API.Domain.Models;
 using System;
@@ -17,29 +18,48 @@ namespace Profile_API.Application.Service
         {
             _patientRepository = patientRepository;
         }
-        public async Task<Patient> CreatePatientAsync(Patient patient)
+
+        public async Task<Result<Patient>> CreatePatientAsync(Patient patient)
         {
-           return await _patientRepository.CreatePatientAsync(patient);
+            var creationResult = await _patientRepository.CreatePatientAsync(patient);
+            if (creationResult.IsFailure)
+                return Result.Failure<Patient>("Failed to create patient");
+
+            return Result.Success(creationResult.Value);
         }
 
-        public async Task DeletePatientAsync(int id)
+        public async Task<Result> DeletePatientAsync(int id)
         {
-           await _patientRepository.DeletePatientAsync(id);
+            var deleteResult = await _patientRepository.DeletePatientAsync(id);
+            if (deleteResult.IsFailure)
+                return Result.Failure("Failed to delete patient");
+
+            return Result.Success();
         }
 
-        public async Task<List<Patient>> GetAllPatientsAsync()
+        public async Task<Result<List<Patient>>> GetAllPatientsAsync()
         {
-            return await _patientRepository.GetAllPatientsAsync();
+            var patientsResult = await _patientRepository.GetAllPatientsAsync();
+            return Result.Success(patientsResult.Value);
         }
 
-        public async Task<Patient> GetPatientByIdAsync(int id)
+        public async Task<Result<Patient>> GetPatientByIdAsync(int id)
         {
-          return await _patientRepository.GetPatientByIdAsync(id);
+            var patientResult = await _patientRepository.GetPatientByIdAsync(id);
+            if (patientResult.IsFailure)
+                return Result.Failure<Patient>("Patient not found");
+
+            return Result.Success(patientResult.Value);
         }
 
-        public async Task<Patient> UpdatePatientAsync(int id, Patient patient)
+        public async Task<Result<Patient>> UpdatePatientAsync(int id, Patient patient)
         {
-           return await _patientRepository.UpdatePatientAsync(id, patient);
+            var updateResult = await _patientRepository.UpdatePatientAsync(id, patient);
+            if (updateResult.IsFailure)
+                return Result.Failure<Patient>("Failed to update patient");
+
+            return Result.Success(updateResult.Value);
         }
     }
+
 }

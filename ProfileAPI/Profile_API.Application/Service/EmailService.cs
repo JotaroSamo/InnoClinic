@@ -6,49 +6,55 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using Profile_API.Domain.Abstract.IService;
+using Profile_API.Domain.Models;
 
 namespace Profile_API.Application.Service
 {
     public class EmailService : IEmailService
     {
-        public async Task SendVerificationEmail(string recipientEmail, string verificationLink)
+        private const string SENDER_EMAIL = "smpttest9@gmail.com"; // Ваш email
+        private const string PASSWORD = "qwerty1212_"; // Пароль от email
+        private const string SMTP_SERVER = "smtp.gmail.com";
+        private const int SMTP_PORT = 587;
+
+        public async Task SendCredentialsToEmail(string email)
         {
-            string smtpServer = "smtp.gmail.com";
-            int smtpPort = 587;
+            MailAddress from = new MailAddress(SENDER_EMAIL, "InnoClinic");
+            MailAddress to = new MailAddress(email);
+            MailMessage m = new MailMessage(from, to);
+            m.Subject = "InnoClinic account confirmation";
+            m.IsBodyHtml = true;
+            m.Body = $"<h3>Hello, dear user!</h3>" +
+                    $"<p>Congratulations! Now you have an account.<br>" +
+                    $"Your credentials:</p>" +
+                    $"<h3>email: {email}<br/>"+
+                    $"Thanks!";
 
-            // Убедитесь, что здесь используется ваш email как отправитель
-            var message = new MailMessage
+            using (SmtpClient smtp = new SmtpClient(SMTP_SERVER, SMTP_PORT))
             {
-                From = new MailAddress("smpttest9@gmail.com"), // Ваш email
-                Subject = "Email Verification",
-                Body = $"Please verify your email by clicking on the following link: {verificationLink}",
-                IsBodyHtml = true
-            };
+                smtp.Credentials = new NetworkCredential(SENDER_EMAIL, PASSWORD);
+                smtp.EnableSsl = true;
+                await smtp.SendMailAsync(m);
+            }
+        }
 
-            // Добавьте адрес получателя
-            message.To.Add(recipientEmail);
-
-            using (var client = new SmtpClient(smtpServer, smtpPort))
+        public async Task SendConfirmationLink(string email, Guid accountId)
+        {
+            MailAddress from = new MailAddress(SENDER_EMAIL, "InnoClinic");
+            MailAddress to = new MailAddress(email);
+            MailMessage m = new MailMessage(from, to);
+            m.Subject = "InnoClinic account confirmation";
+            m.IsBodyHtml = true;
+            m.Body = $"<h3>Hello, dear user!</h3>" +
+                    $"<p>Congratulations! Now you have an account.<br>" +
+                    $"To confirm your email follow this: " +
+                    $"<a target=\"_self\" href=\"https://localhost:7246/api/account/verify-email?userId={accountId}\">link</a></p>" +
+                    $"Thanks!";
+            using (SmtpClient smtp = new SmtpClient(SMTP_SERVER, SMTP_PORT))
             {
-                client.Credentials = new NetworkCredential("smpttest9@gmail.com", "qwerty12_");
-                client.EnableSsl = true;
-
-                try
-                {
-                    await client.SendMailAsync(message);
-                }
-                catch (SmtpException ex)
-                {
-                    // Обработка ошибок SMTP
-                    Console.WriteLine($"SMTP Exception: {ex.Message}");
-                    throw;
-                }
-                catch (Exception ex)
-                {
-                    // Обработка других ошибок
-                    Console.WriteLine($"Exception: {ex.Message}");
-                    throw;
-                }
+                smtp.Credentials = new NetworkCredential(SENDER_EMAIL, PASSWORD);
+                smtp.EnableSsl = true;
+                await smtp.SendMailAsync(m);
             }
         }
     }

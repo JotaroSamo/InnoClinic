@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Profile_API.Contract.Request;
+using Profile_API.Application.Service;
+using Profile_API.Contract.Request.Create;
+using Profile_API.Contract.Request.Update;
 using Profile_API.Domain.Abstract.IService;
 using Profile_API.Domain.Models;
 
@@ -38,8 +40,13 @@ namespace Profile_API.Controllers
             {
                 return BadRequest();
             }
-            account = await _accountService.CreateAccountAsync(account);
-            return Ok(account);
+            var createAccount = await _accountService.CreateAccountAsync(account);
+            if (createAccount.IsFailure)
+            {
+                return BadRequest(createAccount.Error);
+            }
+
+            return Ok(createAccount.Value);
 
         }
         [HttpGet("GetById")]
@@ -52,25 +59,29 @@ namespace Profile_API.Controllers
         public async Task<ActionResult> GetAll()
         {
             var accounts = await _accountService.GetAllAccountsAsync();
-            return Ok(accounts);
+            return Ok(accounts.Value);
         }
         [HttpGet("verify-email")]
         public async Task<ActionResult> VerifyEmail(Guid userId)
         {
             var account = await _accountService.GetAccountByIdAsync(userId);
-            if (account == null)
+            if (account.IsFailure)
             {
-                return NotFound();
+                return NotFound(account.Error);
             }
 
-            if (account.IsEmailVerified)
+            if (account.Value.IsEmailVerified)
             {
                 return BadRequest("Email уже подтвержден.");
             }
 
-            account =  await _accountService.VerificateEmail(userId);
+           var verivicateAccount =  await _accountService.VerificateEmail(userId, account.Value.Email);
+            if (verivicateAccount.IsFailure)
+            {
+                return BadRequest(verivicateAccount.Error);
+            }
 
-            return Ok(account);
+            return Ok(verivicateAccount);
         }
         [HttpPut("Update")]
         public async Task<ActionResult> Update([FromBody] UpdateAccountRequest updateAccountRequest)
@@ -93,8 +104,12 @@ namespace Profile_API.Controllers
             {
                 return BadRequest();
             }
-            account = await _accountService.UpdateAccountAsync(account.Id,account);
-            return Ok(account);
+          var  updateAccount = await _accountService.UpdateAccountAsync(account.Id,account);
+            if (updateAccount.IsFailure)
+            {
+                return BadRequest(updateAccount.Error);
+            }
+            return Ok(updateAccount.Value);
         }
         [HttpDelete("Delete")]
         public async Task<ActionResult> Delete(Guid id)

@@ -1,20 +1,16 @@
-﻿using Profile_API.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CSharpFunctionalExtensions;
+using Profile_API.Domain.Models;
 
-namespace Profile_API.Domain.Abstract.IService
+namespace Profile_API.Application.Service
 {
     public interface IDoctorService
     {
-        Task<List<Doctor>> GetAllDoctorsAsync();
-        Task<Doctor> GetDoctorByIdAsync(Guid id);
-        Task<List<Doctor>> GetDoctorListBySpecializationAsync(Guid specId);
-        Task<Doctor> GetDoctorByNameAsync(string firstName, string lastName, string midleName);
-        Task<Doctor> CreateDoctorAsync(Doctor doctor);
-        Task<Doctor> UpdateDoctorAsync(Guid id, Doctor doctor);
-        Task DeleteDoctorAsync(Guid id);
+        Task<Result<Doctor>> CreateDoctorAsync(Doctor doctor);
+        Task<Result> DeleteDoctorAsync(Guid id);
+        Task<Result<List<Doctor>>> GetAllDoctorsAsync();
+        Task<Result<Doctor>> GetDoctorByIdAsync(Guid id);
+        Task<Result<Doctor>> GetDoctorByNameAsync(string firstName, string lastName, string middleName);
+        Task<Result<List<Doctor>>> GetDoctorListBySpecializationAsync(Guid specId);
+        Task<Result<Doctor>> UpdateDoctorAsync(Guid id, Doctor doctor);
     }
 }

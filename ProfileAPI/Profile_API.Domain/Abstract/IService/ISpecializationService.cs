@@ -1,9 +1,9 @@
 ﻿using CSharpFunctionalExtensions;
 using Profile_API.Domain.Models;
 
-namespace Profile_API.DataAccess.Repositories
+namespace Profile_API.Application.Service
 {
-    public interface ISpecializationRepository
+    public interface ISpecializationService
     {
         Task<Result<Specialization>> CreateSpecializationAsync(Specialization specialization);
         Task<Result> DeleteSpecializationAsync(Guid id);

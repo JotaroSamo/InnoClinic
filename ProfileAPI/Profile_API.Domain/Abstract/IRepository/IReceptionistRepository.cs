@@ -1,13 +1,14 @@
-﻿using Profile_API.Domain.Models;
+﻿using CSharpFunctionalExtensions;
+using Profile_API.Domain.Models;
 
-namespace Profile_API.Domain.Abstract.IRepository
+namespace Profile_API.DataAccess.Repositories
 {
     public interface IReceptionistRepository
     {
-        Task<Receptionist> CreateReceptionistAsync(Receptionist receptionist);
-        Task DeleteReceptionistAsync(Guid id);
-        Task<List<Receptionist>> GetAllReceptionistsAsync();
-        Task<Receptionist> GetReceptionistByIdAsync(Guid id);
-        Task<Receptionist> UpdateReceptionistAsync(Guid id, Receptionist receptionist);
+        Task<Result<Receptionist>> CreateReceptionistAsync(Receptionist receptionist);
+        Task<Result> DeleteReceptionistAsync(Guid id);
+        Task<Result<List<Receptionist>>> GetAllReceptionistsAsync();
+        Task<Result<Receptionist>> GetReceptionistByIdAsync(Guid id);
+        Task<Result<Receptionist>> UpdateReceptionistAsync(Guid id, Receptionist receptionist);
     }
 }

@@ -1,4 +1,6 @@
-﻿using Profile_API.Domain.Abstract.IRepository;
+﻿
+using CSharpFunctionalExtensions;
+using Profile_API.DataAccess.Repositories;
 using Profile_API.Domain.Abstract.IService;
 using Profile_API.Domain.Models;
 using System;
@@ -19,39 +21,62 @@ namespace Profile_API.Application.Service
             _accountRepository = accountRepository;
             _emailService = emailService;
         }
-        public async Task<Account> CreateAccountAsync(Account account)
-        {
-            account = await _accountRepository.CreateAccountAsync(account);
-            var verificationLink = $"https://localhost:7246/api/account/verify-email?userId={account.Id}";
 
-            await _emailService.SendVerificationEmail(account.Email, verificationLink);
-            return account;
-            
+        public async Task<Result<Account>> CreateAccountAsync(Account account)
+        {
+            var creationResult = await _accountRepository.CreateAccountAsync(account);
+            if (creationResult.IsFailure)
+                return Result.Failure<Account>("Failed to create account");
+
+            //await _emailService.SendConfirmationLink(creationResult.Value.Email, creationResult.Value.Id);
+            return Result.Success(creationResult.Value);
         }
 
-        public async Task DeleteAccountAsync(Guid id)
+        public async Task<Result> DeleteAccountAsync(Guid id)
         {
-            await _accountRepository.DeleteAccountAsync(id);
+            var deleteResult = await _accountRepository.DeleteAccountAsync(id);
+            if (deleteResult.IsFailure)
+                return Result.Failure("Failed to delete account");
+
+            return Result.Success();
         }
 
-        public async Task<Account> GetAccountByIdAsync(Guid id)
+        public async Task<Result<Account>> GetAccountByIdAsync(Guid id)
         {
-            return await _accountRepository.GetAccountByIdAsync(id);
+            var accountResult = await _accountRepository.GetAccountByIdAsync(id);
+            if (accountResult.IsFailure)
+                return Result.Failure<Account>("Account not found");
+
+            return Result.Success(accountResult.Value);
         }
 
-        public async Task<List<Account>> GetAllAccountsAsync()
+        public async Task<Result<List<Account>>> GetAllAccountsAsync()
         {
-            return await _accountRepository.GetAllAccountsAsync();
+            var accountsResult = await _accountRepository.GetAllAccountsAsync();
+            return Result.Success(accountsResult.Value);
         }
 
-        public async Task<Account> UpdateAccountAsync(Guid id, Account account)
+        public async Task<Result<Account>> UpdateAccountAsync(Guid id, Account account)
         {
-           return await _accountRepository.UpdateAccountAsync(id, account);
+            var updateResult = await _accountRepository.UpdateAccountAsync(id, account);
+            if (updateResult.IsFailure)
+                return Result.Failure<Account>("Failed to update account");
+
+            return Result.Success(updateResult.Value);
         }
 
-        public async Task<Account> VerificateEmail(Guid id)
+        public async Task<Result> VerificateEmail(Guid id, string email)
         {
-          return await _accountRepository.VerificateEmail(id);
+            //await _emailService.SendCredentialsToEmail(email);
+            //if (emailResult.IsFailure)
+            //    return Result.Failure("Failed to send email credentials");
+
+            var verificationResult = await _accountRepository.VerificateEmail(id);
+            if (verificationResult.IsFailure)
+                return Result.Failure("Email verification failed");
+
+            return Result.Success();
         }
     }
+
 }

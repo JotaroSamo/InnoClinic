@@ -8,6 +8,7 @@ using Auth_API.Domain.Abstract.Service;
 using Auth_API.Extensions;
 using Auth_API.Infrastructure;
 using Auth_API.Middleware;
+using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
@@ -39,6 +40,15 @@ builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection(nameof(J
 builder.Services.AddScoped<IJwtProvider, JwtProvider>();
 builder.Services.AddAutoMapper(typeof(DomainProfile));
 builder.Services.AddApiAuthentication(builder.Configuration);
+builder.Services.AddMassTransit(x =>
+{
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        cfg.Host("rabbitmq://localhost"); // Укажите ваш RabbitMQ сервер
+    });
+});
+
+builder.Services.AddMassTransitHostedService();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

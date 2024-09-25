@@ -1,10 +1,11 @@
 using FluentValidation.AspNetCore;
+using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using Profile_API.Application.Service;
+using Profile_API.Consumer;
 using Profile_API.DataAccess;
 using Profile_API.DataAccess.Mapper;
 using Profile_API.DataAccess.Repositories;
-using Profile_API.Domain.Abstract.IRepository;
 using Profile_API.Domain.Abstract.IService;
 using Profile_API.Infrastructure.Validator;
 
@@ -20,7 +21,7 @@ builder.Services.AddControllers()
 
     });
 #pragma warning restore CS0618 // Тип или член устарел
-                              // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ProfileDbContext>(options =>
@@ -30,15 +31,24 @@ builder.Services.AddAutoMapper(typeof(DomainProfile));
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IDoctorService, DoctorService>();
-builder.Services.AddScoped<IReceptionistService, ReceptionistSevice>();
-builder.Services.AddScoped<IPatientService, PatientService>();
+builder.Services.AddScoped<IReceptionistService, ReceptionistService>();
+builder.Services.AddScoped<ISpecializationService, SpecializationService>();
 builder.Services.AddScoped<IAccountRepository, AccountRepository>();
 builder.Services.AddScoped<IDoctorRepository, DoctorRepository>();
 builder.Services.AddScoped<IReceptionistRepository, ReceptionistRepository>();
 builder.Services.AddScoped<IPatientRepository, PatientRepository>();
 builder.Services.AddScoped<ISpecializationRepository, SpecializationRepository>();
+builder.Services.AddMassTransit(x =>
+{
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        cfg.Host("rabbitmq://localhost"); // Замените на адрес вашего RabbitMQ
+    });
 
+    x.AddConsumer<AccountCreatedConsumer>();
+});
 
+builder.Services.AddMassTransitHostedService();
 
 var app = builder.Build();
 
@@ -48,7 +58,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

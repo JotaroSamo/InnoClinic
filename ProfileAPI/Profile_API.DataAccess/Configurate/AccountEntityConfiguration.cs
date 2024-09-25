@@ -17,6 +17,8 @@ namespace Profile_API.DataAccess.Configurate
             builder.HasKey(a => a.Id);
 
             // Конфигурация для Email
+            builder.HasIndex(u => u.Email)
+            .IsUnique();
             builder.Property(a => a.Email)
                    .IsRequired()
                    .HasMaxLength(255);
