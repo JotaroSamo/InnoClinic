@@ -10,7 +10,7 @@ namespace Profile_API.DataAccess.Entity
     public class PatientEntity
     {
         [Required]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         [Required]
         public string FirstName { get; set; } = string.Empty;
         [Required]

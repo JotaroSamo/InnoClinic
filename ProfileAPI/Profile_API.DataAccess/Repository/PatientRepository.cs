@@ -29,7 +29,7 @@ namespace Profile_API.DataAccess.Repositories
             return Result.Success(patients);
         }
 
-        public async Task<Result<Patient>> GetPatientByIdAsync(int id)
+        public async Task<Result<Patient>> GetPatientByIdAsync(Guid id)
         {
             var patientEntity = await _context.Patients.Include(p => p.Account)
                 .FirstOrDefaultAsync(p => p.Id == id);
@@ -51,7 +51,7 @@ namespace Profile_API.DataAccess.Repositories
             return Result.Success(createdPatient);
         }
 
-        public async Task<Result<Patient>> UpdatePatientAsync(int id, Patient patient)
+        public async Task<Result<Patient>> UpdatePatientAsync(Guid id, Patient patient)
         {
             var patientEntity = await _context.Patients.FindAsync(id);
 
@@ -66,7 +66,7 @@ namespace Profile_API.DataAccess.Repositories
             return Result.Success(updatedPatient);
         }
 
-        public async Task<Result> DeletePatientAsync(int id)
+        public async Task<Result> DeletePatientAsync(Guid id)
         {
             var patientEntity = await _context.Patients.FindAsync(id);
 

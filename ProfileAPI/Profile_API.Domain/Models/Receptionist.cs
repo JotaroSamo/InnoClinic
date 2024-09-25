@@ -18,7 +18,6 @@ namespace Profile_API.Domain.Models
         public string LastName { get; set; } = string.Empty;
         [Required]
         public string MiddleName { get; set; } = string.Empty;
-        [Required]
 
         public Guid OfficeId { get; set; }
         public string OfficeAddress { get; set; } = string.Empty;

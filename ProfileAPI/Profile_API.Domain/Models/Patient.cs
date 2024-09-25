@@ -5,7 +5,7 @@ namespace Profile_API.Domain.Models;
 public class Patient
 {
     [Required]
-    public int Id { get; set; }
+    public Guid Id { get; set; }
     [Required]
     public string FirstName { get; set; } = string.Empty;
     [Required]

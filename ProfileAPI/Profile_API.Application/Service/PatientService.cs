@@ -28,7 +28,7 @@ namespace Profile_API.Application.Service
             return Result.Success(creationResult.Value);
         }
 
-        public async Task<Result> DeletePatientAsync(int id)
+        public async Task<Result> DeletePatientAsync(Guid id)
         {
             var deleteResult = await _patientRepository.DeletePatientAsync(id);
             if (deleteResult.IsFailure)
@@ -43,7 +43,7 @@ namespace Profile_API.Application.Service
             return Result.Success(patientsResult.Value);
         }
 
-        public async Task<Result<Patient>> GetPatientByIdAsync(int id)
+        public async Task<Result<Patient>> GetPatientByIdAsync(Guid id)
         {
             var patientResult = await _patientRepository.GetPatientByIdAsync(id);
             if (patientResult.IsFailure)
@@ -52,7 +52,7 @@ namespace Profile_API.Application.Service
             return Result.Success(patientResult.Value);
         }
 
-        public async Task<Result<Patient>> UpdatePatientAsync(int id, Patient patient)
+        public async Task<Result<Patient>> UpdatePatientAsync(Guid id, Patient patient)
         {
             var updateResult = await _patientRepository.UpdatePatientAsync(id, patient);
             if (updateResult.IsFailure)
