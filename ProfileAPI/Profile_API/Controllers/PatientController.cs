@@ -92,7 +92,7 @@ namespace Profile_API.Controllers
         }
 
         [HttpDelete("Delete/{id}")]
-        public async Task<ActionResult> Delete(int id)
+        public async Task<ActionResult> Delete(Guid id)
         {
             var result = await _patientService.DeletePatientAsync(id);
             if (result.IsFailure)

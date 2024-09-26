@@ -48,7 +48,7 @@ namespace Auth_API.Controllers
                 Password = user.Value.HashPassword,
             };
 
-            //await _bus.Publish(message); // Используйте _bus для отправки сообщения
+            await _bus.Publish(message); // Используйте _bus для отправки сообщения
             return Ok(user.Value);
         }
 

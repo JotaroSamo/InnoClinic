@@ -81,7 +81,7 @@ namespace Profile_API.Controllers
                 return BadRequest(verivicateAccount.Error);
             }
 
-            return Ok(verivicateAccount);
+            return Ok();
         }
         [HttpPut("Update")]
         public async Task<ActionResult> Update([FromBody] UpdateAccountRequest updateAccountRequest)

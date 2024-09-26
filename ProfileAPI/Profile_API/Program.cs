@@ -40,12 +40,17 @@ builder.Services.AddScoped<IPatientRepository, PatientRepository>();
 builder.Services.AddScoped<ISpecializationRepository, SpecializationRepository>();
 builder.Services.AddMassTransit(x =>
 {
+    x.AddConsumer<AccountCreatedConsumer>();
+
     x.UsingRabbitMq((context, cfg) =>
     {
-        cfg.Host("rabbitmq://localhost"); // Замените на адрес вашего RabbitMQ
-    });
+        cfg.Host("rabbitmq://localhost"); // Тот же хост RabbitMQ
 
-    x.AddConsumer<AccountCreatedConsumer>();
+        cfg.ReceiveEndpoint("account-created-queue", e =>
+        {
+            e.ConfigureConsumer<AccountCreatedConsumer>(context);
+        });
+    });
 });
 
 builder.Services.AddMassTransitHostedService();

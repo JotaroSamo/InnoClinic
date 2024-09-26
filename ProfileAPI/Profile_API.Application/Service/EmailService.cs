@@ -12,9 +12,9 @@ namespace Profile_API.Application.Service
 {
     public class EmailService : IEmailService
     {
-        private const string SENDER_EMAIL = "smpttest9@gmail.com"; // Ваш email
-        private const string PASSWORD = "qwerty1212_"; // Пароль от email
-        private const string SMTP_SERVER = "smtp.gmail.com";
+        private const string SENDER_EMAIL = "smttest9@mail.ru"; // Ваш email
+        private const string PASSWORD = "AbTPE2e14aV1ynPiE09m"; // Пароль от email
+        private const string SMTP_SERVER = "smtp.mail.ru";
         private const int SMTP_PORT = 587;
 
         public async Task SendCredentialsToEmail(string email)

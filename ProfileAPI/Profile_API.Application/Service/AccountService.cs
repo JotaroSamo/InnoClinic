@@ -28,7 +28,7 @@ namespace Profile_API.Application.Service
             if (creationResult.IsFailure)
                 return Result.Failure<Account>("Failed to create account");
 
-            //await _emailService.SendConfirmationLink(creationResult.Value.Email, creationResult.Value.Id);
+            await _emailService.SendConfirmationLink(creationResult.Value.Email, creationResult.Value.Id);
             return Result.Success(creationResult.Value);
         }
 
@@ -67,9 +67,8 @@ namespace Profile_API.Application.Service
 
         public async Task<Result> VerificateEmail(Guid id, string email)
         {
-            //await _emailService.SendCredentialsToEmail(email);
-            //if (emailResult.IsFailure)
-            //    return Result.Failure("Failed to send email credentials");
+            await _emailService.SendCredentialsToEmail(email);
+           
 
             var verificationResult = await _accountRepository.VerificateEmail(id);
             if (verificationResult.IsFailure)
