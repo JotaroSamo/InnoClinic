@@ -24,14 +24,14 @@ namespace Profile_API.DataAccess.Repositories
 
         public async Task<Result<List<Patient>>> GetAllPatientsAsync()
         {
-            var patientsEntities = await _context.Patients.Include(p => p.Account).ToListAsync();
+            var patientsEntities = await _context.Patients.Include(p => p.Account).AsNoTracking().ToListAsync();
             var patients = _mapper.Map<List<Patient>>(patientsEntities);
             return Result.Success(patients);
         }
 
         public async Task<Result<Patient>> GetPatientByIdAsync(Guid id)
         {
-            var patientEntity = await _context.Patients.Include(p => p.Account)
+            var patientEntity = await _context.Patients.Include(p => p.Account).AsNoTracking()
                 .FirstOrDefaultAsync(p => p.Id == id);
 
             if (patientEntity == null)

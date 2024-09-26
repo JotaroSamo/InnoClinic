@@ -26,14 +26,14 @@ namespace Profile_API.DataAccess.Repositories
 
         public async Task<Result<List<Receptionist>>> GetAllReceptionistsAsync()
         {
-            var receptionistsEntities = await _context.Receptionists.Include(r => r.Account).ToListAsync();
+            var receptionistsEntities = await _context.Receptionists.Include(r => r.Account).AsNoTracking().ToListAsync();
             var receptionists = _mapper.Map<List<Receptionist>>(receptionistsEntities);
             return Result.Success(receptionists);
         }
 
         public async Task<Result<Receptionist>> GetReceptionistByIdAsync(Guid id)
         {
-            var receptionistEntity = await _context.Receptionists.Include(r => r.Account)
+            var receptionistEntity = await _context.Receptionists.Include(r => r.Account).AsNoTracking()
                 .FirstOrDefaultAsync(r => r.Id == id);
 
             if (receptionistEntity == null)

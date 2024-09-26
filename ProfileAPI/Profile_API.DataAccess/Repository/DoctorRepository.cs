@@ -26,7 +26,7 @@ namespace Profile_API.DataAccess.Repositories
         {
             var doctorsEntities = await _context.Doctors
                 .Include(d => d.Account)
-                .Include(s => s.Specialization)
+                .Include(s => s.Specialization).AsNoTracking()
                 .ToListAsync();
 
             var doctors = _mapper.Map<List<Doctor>>(doctorsEntities);
@@ -37,7 +37,7 @@ namespace Profile_API.DataAccess.Repositories
         {
             var doctorEntity = await _context.Doctors
                 .Include(d => d.Account)
-                .Include(s => s.Specialization)
+                .Include(s => s.Specialization).AsNoTracking()
                 .FirstOrDefaultAsync(d => d.Id == id);
 
             if (doctorEntity == null)

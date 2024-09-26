@@ -25,7 +25,7 @@ namespace Auth_API.DataAccess.Repositories
         // Поиск по почте
         public async Task<User> GetByEmailAsync(string email)
         {
-            var userEntity = await _dbContext.Users.FirstOrDefaultAsync(u => u.Email == email);
+            var userEntity = await _dbContext.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Email == email);
             return _mapper.Map<User>(userEntity);
         }
 
@@ -39,7 +39,7 @@ namespace Auth_API.DataAccess.Repositories
 
         public async Task<List<User>> GetUsers()
         {
-            var userEntity = await _dbContext.Users.ToListAsync();
+            var userEntity = await _dbContext.Users.AsNoTracking().ToListAsync();
             return _mapper.Map<List<User>>(userEntity);
         }
 

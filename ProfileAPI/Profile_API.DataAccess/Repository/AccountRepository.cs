@@ -27,7 +27,7 @@ namespace Profile_API.DataAccess.Repositories
             var accountsEntities = await _context.Accounts
                 .Include(d => d.Doctor)
                 .Include(p => p.Patient)
-                .Include(r => r.Receptionist)
+                .Include(r => r.Receptionist).AsNoTracking()
                 .ToListAsync();
 
             var accounts = _mapper.Map<List<Account>>(accountsEntities);
@@ -39,7 +39,7 @@ namespace Profile_API.DataAccess.Repositories
             var accountEntity = await _context.Accounts
                 .Include(d => d.Doctor)
                 .Include(p => p.Patient)
-                .Include(r => r.Receptionist)
+                .Include(r => r.Receptionist).AsNoTracking()
                 .FirstOrDefaultAsync(i => i.Id == id);
 
             if (accountEntity == null)
@@ -56,7 +56,16 @@ namespace Profile_API.DataAccess.Repositories
             accountEntity.UpdatedAt = DateTime.UtcNow;
 
             _context.Accounts.Add(accountEntity);
-            await _context.SaveChangesAsync();
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+
+               return Result.Failure<Account>(ex.Message);
+            }
+          
 
             var createdAccount = _mapper.Map<Account>(accountEntity);
             return Result.Success(createdAccount);

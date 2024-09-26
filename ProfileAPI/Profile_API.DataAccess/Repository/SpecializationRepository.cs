@@ -21,7 +21,7 @@ public class SpecializationRepository : ISpecializationRepository
     public async Task<Result<List<Specialization>>> GetAllSpecializationsAsync()
     {
         var specializationsEntities = await _context.Specializations
-            .Include(d => d.Doctors)
+            .Include(d => d.Doctors).AsNoTracking()
             .ToListAsync();
 
         var specializations = _mapper.Map<List<Specialization>>(specializationsEntities);
@@ -31,7 +31,7 @@ public class SpecializationRepository : ISpecializationRepository
     public async Task<Result<Specialization>> GetSpecializationByIdAsync(Guid id)
     {
         var specializationEntity = await _context.Specializations
-            .Include(d => d.Doctors)
+            .Include(d => d.Doctors).AsNoTracking()
             .FirstOrDefaultAsync(i => i.Id == id);
 
         if (specializationEntity == null)

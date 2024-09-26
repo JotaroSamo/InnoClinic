@@ -47,7 +47,7 @@ namespace Office_API.DataAccess.Repositories
         }
         public async Task<List<Office>> GetAll()
         {
-            var offficeEntities = await _officeDbContext.Offices.ToListAsync();
+            var offficeEntities = await _officeDbContext.Offices.AsNoTracking().ToListAsync();
             return _mapper.Map<List<Office>>(offficeEntities);
         }
         public async Task<Office> ChangeStatus(Guid id, Status isActive)
