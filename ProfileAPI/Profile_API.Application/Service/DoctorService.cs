@@ -22,7 +22,7 @@ namespace Profile_API.Application.Service
 
         public async Task<Result<Doctor>> CreateDoctorAsync(Doctor doctor)
         {
-            var creationResult = await _doctorRepository.CreateDoctorAsync(doctor);
+            var creationResult = await _doctorRepository.Create(doctor);
             if (creationResult.IsFailure)
                 return Result.Failure<Doctor>("Failed to create doctor");
 
@@ -31,7 +31,7 @@ namespace Profile_API.Application.Service
 
         public async Task<Result> DeleteDoctorAsync(Guid id)
         {
-            var deleteResult = await _doctorRepository.DeleteDoctorAsync(id);
+            var deleteResult = await _doctorRepository.Delete(id);
             if (deleteResult.IsFailure)
                 return Result.Failure("Failed to delete doctor");
 
@@ -40,13 +40,13 @@ namespace Profile_API.Application.Service
 
         public async Task<Result<List<Doctor>>> GetAllDoctorsAsync()
         {
-            var doctorsResult = await _doctorRepository.GetAllDoctorsAsync();
+            var doctorsResult = await _doctorRepository.GetAll();
             return Result.Success(doctorsResult.Value);
         }
 
         public async Task<Result<Doctor>> GetDoctorByIdAsync(Guid id)
         {
-            var doctorResult = await _doctorRepository.GetDoctorByIdAsync(id);
+            var doctorResult = await _doctorRepository.GetById(id);
             if (doctorResult.IsFailure)
                 return Result.Failure<Doctor>("Doctor not found");
 
@@ -55,7 +55,7 @@ namespace Profile_API.Application.Service
 
         public async Task<Result<Doctor>> GetDoctorByNameAsync(string firstName, string lastName, string middleName)
         {
-            var doctorResult = await _doctorRepository.GetDoctorByNameAsync(firstName, lastName, middleName);
+            var doctorResult = await _doctorRepository.GetByName(firstName, lastName, middleName);
             if (doctorResult.IsFailure)
                 return Result.Failure<Doctor>("Doctor not found by name");
 
@@ -64,13 +64,13 @@ namespace Profile_API.Application.Service
 
         public async Task<Result<List<Doctor>>> GetDoctorListBySpecializationAsync(Guid specId)
         {
-            var doctorsResult = await _doctorRepository.GetDoctorListBySpecializationAsync(specId);
+            var doctorsResult = await _doctorRepository.GetBySpecialization(specId);
             return Result.Success(doctorsResult.Value);
         }
 
         public async Task<Result<Doctor>> UpdateDoctorAsync(Guid id, Doctor doctor)
         {
-            var updateResult = await _doctorRepository.UpdateDoctorAsync(id, doctor);
+            var updateResult = await _doctorRepository.Update(id, doctor);
             if (updateResult.IsFailure)
                 return Result.Failure<Doctor>("Failed to update doctor");
 

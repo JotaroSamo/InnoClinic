@@ -41,7 +41,7 @@ namespace Auth_API.Controllers
                 return BadRequest(user.Error);
             }
             _logger.LogInformation("User registered successfully with email {Email}", userRequest.Email);
-            var message = new AccountCreated
+            var message = new AccountDto
             {
                 UserId = user.Value.Id, // Предположим, что у вас есть Id пользователя
                 Email = user.Value.Email,

@@ -30,7 +30,7 @@ namespace Office_API.DataAccess.Repositories
             await _officeDbContext.SaveChangesAsync();
             return office;
         }
-        public async Task<bool> Deletete(Guid id)
+        public async Task<bool> Delete(Guid id)
         {
             var officeEntity = await _officeDbContext.Offices.FindAsync(id);
             if (officeEntity == null)

@@ -5,10 +5,10 @@ namespace Profile_API.DataAccess.Repositories
 {
     public interface IPatientRepository
     {
-        Task<Result<Patient>> CreatePatientAsync(Patient patient);
-        Task<Result> DeletePatientAsync(Guid id);
-        Task<Result<List<Patient>>> GetAllPatientsAsync();
-        Task<Result<Patient>> GetPatientByIdAsync(Guid id);
-        Task<Result<Patient>> UpdatePatientAsync(Guid id, Patient patient);
+        Task<Result<Patient>> Create(Patient patient);
+        Task<Result> Delete(Guid id);
+        Task<Result<List<Patient>>> GetAll();
+        Task<Result<Patient>> GetById(Guid id);
+        Task<Result<Patient>> Update(Guid id, Patient patient);
     }
 }

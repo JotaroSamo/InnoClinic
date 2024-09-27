@@ -49,6 +49,9 @@ namespace Profile_API.DataAccess.Configurate
             builder.Property(r => r.OfficeRegistryPhoneNumber)
                    .HasMaxLength(20); // указать максимальную длину для номера телефона
 
+            builder.HasOne(d => d.Specialization)
+                .WithMany(s => s.Doctors)
+                .HasForeignKey(d => d.SpecializationId);
             // Конфигурация для AccountId
             builder.HasOne(d => d.Account)
                    .WithOne(a => a.Doctor)

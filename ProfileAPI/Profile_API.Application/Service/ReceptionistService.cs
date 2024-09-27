@@ -21,7 +21,7 @@ namespace Profile_API.Application.Service
 
         public async Task<Result<Receptionist>> CreateReceptionistAsync(Receptionist receptionist)
         {
-            var creationResult = await _receptionistRepository.CreateReceptionistAsync(receptionist);
+            var creationResult = await _receptionistRepository.Create(receptionist);
             if (creationResult.IsFailure)
                 return Result.Failure<Receptionist>("Failed to create receptionist");
 
@@ -30,7 +30,7 @@ namespace Profile_API.Application.Service
 
         public async Task<Result> DeleteReceptionistAsync(Guid id)
         {
-            var deleteResult = await _receptionistRepository.DeleteReceptionistAsync(id);
+            var deleteResult = await _receptionistRepository.Delete(id);
             if (deleteResult.IsFailure)
                 return Result.Failure("Failed to delete receptionist");
 
@@ -39,13 +39,13 @@ namespace Profile_API.Application.Service
 
         public async Task<Result<List<Receptionist>>> GetAllReceptionistsAsync()
         {
-            var receptionistsResult = await _receptionistRepository.GetAllReceptionistsAsync();
+            var receptionistsResult = await _receptionistRepository.GetAll();
             return Result.Success(receptionistsResult.Value);
         }
 
         public async Task<Result<Receptionist>> GetReceptionistByIdAsync(Guid id)
         {
-            var receptionistResult = await _receptionistRepository.GetReceptionistByIdAsync(id);
+            var receptionistResult = await _receptionistRepository.GetById(id);
             if (receptionistResult.IsFailure)
                 return Result.Failure<Receptionist>("Receptionist not found");
 
@@ -54,7 +54,7 @@ namespace Profile_API.Application.Service
 
         public async Task<Result<Receptionist>> UpdateReceptionistAsync(Guid id, Receptionist receptionist)
         {
-            var updateResult = await _receptionistRepository.UpdateReceptionistAsync(id, receptionist);
+            var updateResult = await _receptionistRepository.Update(id, receptionist);
             if (updateResult.IsFailure)
                 return Result.Failure<Receptionist>("Failed to update receptionist");
 

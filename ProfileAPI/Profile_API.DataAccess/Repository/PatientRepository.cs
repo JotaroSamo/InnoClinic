@@ -22,14 +22,14 @@ namespace Profile_API.DataAccess.Repositories
             _mapper = mapper;
         }
 
-        public async Task<Result<List<Patient>>> GetAllPatientsAsync()
+        public async Task<Result<List<Patient>>> GetAll()
         {
             var patientsEntities = await _context.Patients.Include(p => p.Account).AsNoTracking().ToListAsync();
             var patients = _mapper.Map<List<Patient>>(patientsEntities);
             return Result.Success(patients);
         }
 
-        public async Task<Result<Patient>> GetPatientByIdAsync(Guid id)
+        public async Task<Result<Patient>> GetById(Guid id)
         {
             var patientEntity = await _context.Patients.Include(p => p.Account).AsNoTracking()
                 .FirstOrDefaultAsync(p => p.Id == id);
@@ -41,7 +41,7 @@ namespace Profile_API.DataAccess.Repositories
             return Result.Success(patient);
         }
 
-        public async Task<Result<Patient>> CreatePatientAsync(Patient patient)
+        public async Task<Result<Patient>> Create(Patient patient)
         {
             var patientEntity = _mapper.Map<PatientEntity>(patient);
             _context.Patients.Add(patientEntity);
@@ -51,7 +51,7 @@ namespace Profile_API.DataAccess.Repositories
             return Result.Success(createdPatient);
         }
 
-        public async Task<Result<Patient>> UpdatePatientAsync(Guid id, Patient patient)
+        public async Task<Result<Patient>> Update(Guid id, Patient patient)
         {
             var patientEntity = await _context.Patients.FindAsync(id);
 
@@ -66,7 +66,7 @@ namespace Profile_API.DataAccess.Repositories
             return Result.Success(updatedPatient);
         }
 
-        public async Task<Result> DeletePatientAsync(Guid id)
+        public async Task<Result> Delete(Guid id)
         {
             var patientEntity = await _context.Patients.FindAsync(id);
 

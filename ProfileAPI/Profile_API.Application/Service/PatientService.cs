@@ -21,7 +21,7 @@ namespace Profile_API.Application.Service
 
         public async Task<Result<Patient>> CreatePatientAsync(Patient patient)
         {
-            var creationResult = await _patientRepository.CreatePatientAsync(patient);
+            var creationResult = await _patientRepository.Create(patient);
             if (creationResult.IsFailure)
                 return Result.Failure<Patient>("Failed to create patient");
 
@@ -30,7 +30,7 @@ namespace Profile_API.Application.Service
 
         public async Task<Result> DeletePatientAsync(Guid id)
         {
-            var deleteResult = await _patientRepository.DeletePatientAsync(id);
+            var deleteResult = await _patientRepository.Delete(id);
             if (deleteResult.IsFailure)
                 return Result.Failure("Failed to delete patient");
 
@@ -39,13 +39,13 @@ namespace Profile_API.Application.Service
 
         public async Task<Result<List<Patient>>> GetAllPatientsAsync()
         {
-            var patientsResult = await _patientRepository.GetAllPatientsAsync();
+            var patientsResult = await _patientRepository.GetAll();
             return Result.Success(patientsResult.Value);
         }
 
         public async Task<Result<Patient>> GetPatientByIdAsync(Guid id)
         {
-            var patientResult = await _patientRepository.GetPatientByIdAsync(id);
+            var patientResult = await _patientRepository.GetById(id);
             if (patientResult.IsFailure)
                 return Result.Failure<Patient>("Patient not found");
 
@@ -54,7 +54,7 @@ namespace Profile_API.Application.Service
 
         public async Task<Result<Patient>> UpdatePatientAsync(Guid id, Patient patient)
         {
-            var updateResult = await _patientRepository.UpdatePatientAsync(id, patient);
+            var updateResult = await _patientRepository.Update(id, patient);
             if (updateResult.IsFailure)
                 return Result.Failure<Patient>("Failed to update patient");
 

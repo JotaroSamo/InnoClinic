@@ -5,12 +5,12 @@ namespace Profile_API.DataAccess.Repositories
 {
     public interface IDoctorRepository
     {
-        Task<Result<Doctor>> CreateDoctorAsync(Doctor doctor);
-        Task<Result> DeleteDoctorAsync(Guid id);
-        Task<Result<List<Doctor>>> GetAllDoctorsAsync();
-        Task<Result<Doctor>> GetDoctorByIdAsync(Guid id);
-        Task<Result<Doctor>> GetDoctorByNameAsync(string firstName, string lastName, string midleName);
-        Task<Result<List<Doctor>>> GetDoctorListBySpecializationAsync(Guid specId);
-        Task<Result<Doctor>> UpdateDoctorAsync(Guid id, Doctor doctor);
+        Task<Result<Doctor>> Create(Doctor doctor);
+        Task<Result> Delete(Guid id);
+        Task<Result<List<Doctor>>> GetAll();
+        Task<Result<Doctor>> GetById(Guid id);
+        Task<Result<Doctor>> GetByName(string firstName, string lastName, string midleName);
+        Task<Result<List<Doctor>>> GetBySpecialization(Guid specId);
+        Task<Result<Doctor>> Update(Guid id, Doctor doctor);
     }
 }

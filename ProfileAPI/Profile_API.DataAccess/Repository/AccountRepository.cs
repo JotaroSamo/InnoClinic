@@ -22,7 +22,7 @@ namespace Profile_API.DataAccess.Repositories
             _mapper = mapper;
         }
 
-        public async Task<Result<List<Account>>> GetAllAccountsAsync()
+        public async Task<Result<List<Account>>> GetAll()
         {
             var accountsEntities = await _context.Accounts
                 .Include(d => d.Doctor)
@@ -34,7 +34,7 @@ namespace Profile_API.DataAccess.Repositories
             return Result.Success(accounts);
         }
 
-        public async Task<Result<Account>> GetAccountByIdAsync(Guid id)
+        public async Task<Result<Account>> GetById(Guid id)
         {
             var accountEntity = await _context.Accounts
                 .Include(d => d.Doctor)
@@ -49,7 +49,7 @@ namespace Profile_API.DataAccess.Repositories
             return Result.Success(account);
         }
 
-        public async Task<Result<Account>> CreateAccountAsync(Account account)
+        public async Task<Result<Account>> Create(Account account)
         {
             var accountEntity = _mapper.Map<AccountEntity>(account);
             accountEntity.CreatedAt = DateTime.UtcNow;
@@ -71,7 +71,7 @@ namespace Profile_API.DataAccess.Repositories
             return Result.Success(createdAccount);
         }
 
-        public async Task<Result<Account>> UpdateAccountAsync(Guid id, Account account)
+        public async Task<Result<Account>> Update(Guid id, Account account)
         {
             var accountEntity = await _context.Accounts
                 .Include(d => d.Doctor)
@@ -92,7 +92,7 @@ namespace Profile_API.DataAccess.Repositories
             return Result.Success(updatedAccount);
         }
 
-        public async Task<Result> DeleteAccountAsync(Guid id)
+        public async Task<Result> Delete(Guid id)
         {
             var accountEntity = await _context.Accounts
                 .Include(d => d.Doctor)

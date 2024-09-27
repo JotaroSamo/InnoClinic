@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Global
+namespace Global.Dto
 {
-    public class AccountCreated
+    public class AccountDto
     {
         public Guid UserId { get; set; }
         public string Email { get; set; }

@@ -5,10 +5,10 @@ namespace Profile_API.DataAccess.Repositories
 {
     public interface IReceptionistRepository
     {
-        Task<Result<Receptionist>> CreateReceptionistAsync(Receptionist receptionist);
-        Task<Result> DeleteReceptionistAsync(Guid id);
-        Task<Result<List<Receptionist>>> GetAllReceptionistsAsync();
-        Task<Result<Receptionist>> GetReceptionistByIdAsync(Guid id);
-        Task<Result<Receptionist>> UpdateReceptionistAsync(Guid id, Receptionist receptionist);
+        Task<Result<Receptionist>> Create(Receptionist receptionist);
+        Task<Result> Delete(Guid id);
+        Task<Result<List<Receptionist>>> GetAll();
+        Task<Result<Receptionist>> GetById(Guid id);
+        Task<Result<Receptionist>> Update(Guid id, Receptionist receptionist);
     }
 }

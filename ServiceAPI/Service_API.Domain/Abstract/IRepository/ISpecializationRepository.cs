@@ -1,7 +1,12 @@
 ﻿using CSharpFunctionalExtensions;
-using Profile_API.Domain.Models;
+using Service_API.Domain.Model;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Profile_API.DataAccess.Repositories
+namespace Service_API.Domain.Abstract.IRepository
 {
     public interface ISpecializationRepository
     {
@@ -10,5 +15,6 @@ namespace Profile_API.DataAccess.Repositories
         Task<Result<List<Specialization>>> GetAll();
         Task<Result<Specialization>> GetById(Guid id);
         Task<Result<Specialization>> Update(Guid id, Specialization specialization);
+        Task<Result<Specialization>> ChangeStatus(Guid id, bool status);
     }
 }

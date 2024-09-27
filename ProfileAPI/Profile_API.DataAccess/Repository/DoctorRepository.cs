@@ -22,7 +22,7 @@ namespace Profile_API.DataAccess.Repositories
             _mapper = mapper;
         }
 
-        public async Task<Result<List<Doctor>>> GetAllDoctorsAsync()
+        public async Task<Result<List<Doctor>>> GetAll()
         {
             var doctorsEntities = await _context.Doctors
                 .Include(d => d.Account)
@@ -33,7 +33,7 @@ namespace Profile_API.DataAccess.Repositories
             return Result.Success(doctors);
         }
 
-        public async Task<Result<Doctor>> GetDoctorByIdAsync(Guid id)
+        public async Task<Result<Doctor>> GetById(Guid id)
         {
             var doctorEntity = await _context.Doctors
                 .Include(d => d.Account)
@@ -47,7 +47,7 @@ namespace Profile_API.DataAccess.Repositories
             return Result.Success(doctor);
         }
 
-        public async Task<Result<Doctor>> CreateDoctorAsync(Doctor doctor)
+        public async Task<Result<Doctor>> Create(Doctor doctor)
         {
             var doctorEntity = _mapper.Map<DoctorEntity>(doctor);
             _context.Doctors.Add(doctorEntity);
@@ -57,7 +57,7 @@ namespace Profile_API.DataAccess.Repositories
             return Result.Success(createdDoctor);
         }
 
-        public async Task<Result<Doctor>> GetDoctorByNameAsync(string firstName, string lastName, string midleName)
+        public async Task<Result<Doctor>> GetByName(string firstName, string lastName, string midleName)
         {
             var doctorEntity = await _context.Doctors
                 .FirstOrDefaultAsync(n => n.FirstName == firstName &&
@@ -71,7 +71,7 @@ namespace Profile_API.DataAccess.Repositories
             return Result.Success(doctor);
         }
 
-        public async Task<Result<List<Doctor>>> GetDoctorListBySpecializationAsync(Guid specId)
+        public async Task<Result<List<Doctor>>> GetBySpecialization(Guid specId)
         {
             var doctorEntities = await _context.Doctors
                 .Where(i => i.SpecializationId == specId)
@@ -81,7 +81,7 @@ namespace Profile_API.DataAccess.Repositories
             return Result.Success(doctors);
         }
 
-        public async Task<Result<Doctor>> UpdateDoctorAsync(Guid id, Doctor doctor)
+        public async Task<Result<Doctor>> Update(Guid id, Doctor doctor)
         {
             var doctorEntity = await _context.Doctors.FindAsync(id);
 
@@ -96,7 +96,7 @@ namespace Profile_API.DataAccess.Repositories
             return Result.Success(updatedDoctor);
         }
 
-        public async Task<Result> DeleteDoctorAsync(Guid id)
+        public async Task<Result> Delete(Guid id)
         {
             var doctorEntity = await _context.Doctors.FindAsync(id);
 

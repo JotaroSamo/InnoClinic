@@ -7,7 +7,7 @@ namespace Office_API.Domain.Abstract.Repositories
     {
         Task<Office> Add(Office office);
         Task<Office> ChangeStatus(Guid id, Status isActive);
-        Task<bool> Deletete(Guid id);
+        Task<bool> Delete(Guid id);
         Task<List<Office>> GetAll();
         Task<Office> GetById(Guid id);
         Task<Office> Update(Office office);

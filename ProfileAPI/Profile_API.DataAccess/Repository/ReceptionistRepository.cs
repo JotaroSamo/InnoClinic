@@ -24,14 +24,14 @@ namespace Profile_API.DataAccess.Repositories
             _mapper = mapper;
         }
 
-        public async Task<Result<List<Receptionist>>> GetAllReceptionistsAsync()
+        public async Task<Result<List<Receptionist>>> GetAll()
         {
             var receptionistsEntities = await _context.Receptionists.Include(r => r.Account).AsNoTracking().ToListAsync();
             var receptionists = _mapper.Map<List<Receptionist>>(receptionistsEntities);
             return Result.Success(receptionists);
         }
 
-        public async Task<Result<Receptionist>> GetReceptionistByIdAsync(Guid id)
+        public async Task<Result<Receptionist>> GetById(Guid id)
         {
             var receptionistEntity = await _context.Receptionists.Include(r => r.Account).AsNoTracking()
                 .FirstOrDefaultAsync(r => r.Id == id);
@@ -43,7 +43,7 @@ namespace Profile_API.DataAccess.Repositories
             return Result.Success(receptionist);
         }
 
-        public async Task<Result<Receptionist>> CreateReceptionistAsync(Receptionist receptionist)
+        public async Task<Result<Receptionist>> Create(Receptionist receptionist)
         {
             var receptionistEntity = _mapper.Map<ReceptionistEntity>(receptionist);
             _context.Receptionists.Add(receptionistEntity);
@@ -53,7 +53,7 @@ namespace Profile_API.DataAccess.Repositories
             return Result.Success(createdReceptionist);
         }
 
-        public async Task<Result<Receptionist>> UpdateReceptionistAsync(Guid id, Receptionist receptionist)
+        public async Task<Result<Receptionist>> Update(Guid id, Receptionist receptionist)
         {
             var receptionistEntity = await _context.Receptionists.FindAsync(id);
 
@@ -68,7 +68,7 @@ namespace Profile_API.DataAccess.Repositories
             return Result.Success(updatedReceptionist);
         }
 
-        public async Task<Result> DeleteReceptionistAsync(Guid id)
+        public async Task<Result> Delete(Guid id)
         {
             var receptionistEntity = await _context.Receptionists.FindAsync(id);
 

@@ -24,7 +24,7 @@ namespace Profile_API.Application.Service
 
         public async Task<Result<Account>> CreateAccountAsync(Account account)
         {
-            var creationResult = await _accountRepository.CreateAccountAsync(account);
+            var creationResult = await _accountRepository.Create(account);
             if (creationResult.IsFailure)
                 return Result.Failure<Account>("Failed to create account");
 
@@ -34,7 +34,7 @@ namespace Profile_API.Application.Service
 
         public async Task<Result> DeleteAccountAsync(Guid id)
         {
-            var deleteResult = await _accountRepository.DeleteAccountAsync(id);
+            var deleteResult = await _accountRepository.Delete(id);
             if (deleteResult.IsFailure)
                 return Result.Failure("Failed to delete account");
 
@@ -43,7 +43,7 @@ namespace Profile_API.Application.Service
 
         public async Task<Result<Account>> GetAccountByIdAsync(Guid id)
         {
-            var accountResult = await _accountRepository.GetAccountByIdAsync(id);
+            var accountResult = await _accountRepository.GetById(id);
             if (accountResult.IsFailure)
                 return Result.Failure<Account>("Account not found");
 
@@ -52,13 +52,13 @@ namespace Profile_API.Application.Service
 
         public async Task<Result<List<Account>>> GetAllAccountsAsync()
         {
-            var accountsResult = await _accountRepository.GetAllAccountsAsync();
+            var accountsResult = await _accountRepository.GetAll();
             return Result.Success(accountsResult.Value);
         }
 
         public async Task<Result<Account>> UpdateAccountAsync(Guid id, Account account)
         {
-            var updateResult = await _accountRepository.UpdateAccountAsync(id, account);
+            var updateResult = await _accountRepository.Update(id, account);
             if (updateResult.IsFailure)
                 return Result.Failure<Account>("Failed to update account");
 

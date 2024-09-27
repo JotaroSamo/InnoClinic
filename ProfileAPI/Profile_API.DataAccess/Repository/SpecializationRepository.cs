@@ -18,7 +18,7 @@ public class SpecializationRepository : ISpecializationRepository
         _mapper = mapper;
     }
 
-    public async Task<Result<List<Specialization>>> GetAllSpecializationsAsync()
+    public async Task<Result<List<Specialization>>> GetAll()
     {
         var specializationsEntities = await _context.Specializations
             .Include(d => d.Doctors).AsNoTracking()
@@ -28,7 +28,7 @@ public class SpecializationRepository : ISpecializationRepository
         return Result.Success(specializations);
     }
 
-    public async Task<Result<Specialization>> GetSpecializationByIdAsync(Guid id)
+    public async Task<Result<Specialization>> GetById(Guid id)
     {
         var specializationEntity = await _context.Specializations
             .Include(d => d.Doctors).AsNoTracking()
@@ -41,17 +41,25 @@ public class SpecializationRepository : ISpecializationRepository
         return Result.Success(specialization);
     }
 
-    public async Task<Result<Specialization>> CreateSpecializationAsync(Specialization specialization)
+    public async Task<Result<Specialization>> Create(Specialization specialization)
     {
         var specializationEntity = _mapper.Map<SpecializationEntity>(specialization);
         await _context.Specializations.AddAsync(specializationEntity);
-        await _context.SaveChangesAsync();
+        try
+        {
+            await _context.SaveChangesAsync();
+        }
+        catch (Exception ex)
+        {
+
+            return Result.Failure<Specialization>(ex.Message);
+        }
 
         var createdSpecialization = _mapper.Map<Specialization>(specializationEntity);
         return Result.Success(createdSpecialization);
     }
 
-    public async Task<Result<Specialization>> UpdateSpecializationAsync(Guid id, Specialization specialization)
+    public async Task<Result<Specialization>> Update(Guid id, Specialization specialization)
     {
         var specializationEntity = await _context.Specializations.FindAsync(id);
         if (specializationEntity == null)
@@ -65,7 +73,7 @@ public class SpecializationRepository : ISpecializationRepository
         return Result.Success(updatedSpecialization);
     }
 
-    public async Task<Result> DeleteSpecializationAsync(Guid id)
+    public async Task<Result> Delete(Guid id)
     {
         var specializationEntity = await _context.Specializations.FindAsync(id);
         if (specializationEntity == null)

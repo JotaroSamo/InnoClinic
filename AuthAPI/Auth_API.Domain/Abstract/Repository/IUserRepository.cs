@@ -4,9 +4,9 @@ namespace Auth_API.Domain.Abstract.Repository
 {
     public interface IUserRepository
     {
-        Task AddAsync(User user);
-        Task<User> GetByEmailAsync(string email);
-        Task<List<User>> GetUsers();
+        Task Create(User user);
+        Task<User> GetByEmail(string email);
+        Task<List<User>> GetAll();
         Task RefreshToken(Guid id, string refreshToken);
     }
 }

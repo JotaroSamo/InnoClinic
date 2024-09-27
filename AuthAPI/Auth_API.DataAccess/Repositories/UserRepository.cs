@@ -23,21 +23,21 @@ namespace Auth_API.DataAccess.Repositories
             _mapper = mapper;
         }
         // Поиск по почте
-        public async Task<User> GetByEmailAsync(string email)
+        public async Task<User> GetByEmail(string email)
         {
             var userEntity = await _dbContext.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Email == email);
             return _mapper.Map<User>(userEntity);
         }
 
         // Добавление пользователя
-        public async Task AddAsync(User user)
+        public async Task Create(User user)
         {
             var userEntity = _mapper.Map<UserEntity>(user);
             await _dbContext.Users.AddAsync(userEntity);
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task<List<User>> GetUsers()
+        public async Task<List<User>> GetAll()
         {
             var userEntity = await _dbContext.Users.AsNoTracking().ToListAsync();
             return _mapper.Map<List<User>>(userEntity);

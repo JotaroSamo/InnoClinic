@@ -22,27 +22,27 @@ namespace Profile_API.Controllers
             _specializationService = specializationService;
         }
 
-        [HttpPost("Create")]
-        public async Task<ActionResult<Specialization>> Create([FromBody] CreateSpecializationRequest createSpecializationRequest)
-        {
-            if (createSpecializationRequest == null)
-            {
-                return BadRequest("Specialization data is required.");
-            }
-            var specialization = new Specialization
-            {
-                SpecializationName = createSpecializationRequest.SpecializationName,
-                IsActive = createSpecializationRequest.IsActive
-            };
+        //[HttpPost("Create")]
+        //public async Task<ActionResult<Specialization>> Create([FromBody] CreateSpecializationRequest createSpecializationRequest)
+        //{
+        //    if (createSpecializationRequest == null)
+        //    {
+        //        return BadRequest("Specialization data is required.");
+        //    }
+        //    var specialization = new Specialization
+        //    {
+        //        SpecializationName = createSpecializationRequest.SpecializationName,
+        //        IsActive = createSpecializationRequest.IsActive
+        //    };
 
-            var result = await _specializationService.CreateSpecializationAsync(specialization);
-            if (result.IsFailure)
-            {
-                return BadRequest(result.Error);
-            }
+        //    var result = await _specializationService.CreateSpecializationAsync(specialization);
+        //    if (result.IsFailure)
+        //    {
+        //        return BadRequest(result.Error);
+        //    }
 
-            return CreatedAtAction(nameof(GetById), new { id = result.Value.Id }, result.Value);
-        }
+        //    return CreatedAtAction(nameof(GetById), new { id = result.Value.Id }, result.Value);
+        //}
 
         [HttpGet("GetById/{id}")]
         public async Task<ActionResult<Specialization>> GetById(Guid id)
@@ -68,39 +68,39 @@ namespace Profile_API.Controllers
             return Ok(result.Value);
         }
 
-        [HttpPut("Update")]
-        public async Task<ActionResult<Specialization>> Update([FromBody] UpdateSpecializationRequest updateSpecializationRequest)
-        {
-            if (updateSpecializationRequest == null)
-            {
-                return BadRequest("Specialization data is required.");
-            }
-            var specialization = new Specialization
-            {
-                Id = updateSpecializationRequest.Id,
-                SpecializationName = updateSpecializationRequest.SpecializationName,
-                IsActive = updateSpecializationRequest.IsActive
-            };
-            var result = await _specializationService.UpdateSpecializationAsync(updateSpecializationRequest.Id, specialization);
-            if (result.IsFailure)
-            {
-                return BadRequest(result.Error);
-            }
+        //[HttpPut("Update")]
+        //public async Task<ActionResult<Specialization>> Update([FromBody] UpdateSpecializationRequest updateSpecializationRequest)
+        //{
+        //    if (updateSpecializationRequest == null)
+        //    {
+        //        return BadRequest("Specialization data is required.");
+        //    }
+        //    var specialization = new Specialization
+        //    {
+        //        Id = updateSpecializationRequest.Id,
+        //        SpecializationName = updateSpecializationRequest.SpecializationName,
+        //        IsActive = updateSpecializationRequest.IsActive
+        //    };
+        //    var result = await _specializationService.UpdateSpecializationAsync(updateSpecializationRequest.Id, specialization);
+        //    if (result.IsFailure)
+        //    {
+        //        return BadRequest(result.Error);
+        //    }
 
-            return Ok(result.Value);
-        }
+        //    return Ok(result.Value);
+        //}
 
-        [HttpDelete("Delete/{id}")]
-        public async Task<ActionResult> Delete(Guid id)
-        {
-            var result = await _specializationService.DeleteSpecializationAsync(id);
-            if (result.IsFailure)
-            {
-                return NotFound(result.Error);
-            }
+        //[HttpDelete("Delete/{id}")]
+        //public async Task<ActionResult> Delete(Guid id)
+        //{
+        //    var result = await _specializationService.DeleteSpecializationAsync(id);
+        //    if (result.IsFailure)
+        //    {
+        //        return NotFound(result.Error);
+        //    }
 
-            return NoContent();
-        }
+        //    return NoContent();
+        //}
     }
 
 }

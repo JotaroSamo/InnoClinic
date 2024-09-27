@@ -1,11 +1,11 @@
 ﻿namespace Profile_API.Consumer
 {
-    using Global;
+    using Global.Dto;
     using MassTransit;
     using Profile_API.Application.Service;
     using Profile_API.Domain.Models;
 
-    public class AccountCreatedConsumer : IConsumer<AccountCreated>
+    public class AccountCreatedConsumer : IConsumer<AccountDto>
     {
         private readonly IAccountService _accountService;
 
@@ -14,7 +14,7 @@
             _accountService = accountService;
         }
 
-        public async Task Consume(ConsumeContext<AccountCreated> context)
+        public async Task Consume(ConsumeContext<AccountDto> context)
         {
             var message = context.Message;
 

@@ -20,7 +20,7 @@ namespace Profile_API.Application.Service
 
         public async Task<Result<Specialization>> CreateSpecializationAsync(Specialization specialization)
         {
-            var creationResult = await _specializationRepository.CreateSpecializationAsync(specialization);
+            var creationResult = await _specializationRepository.Create(specialization);
             if (creationResult.IsFailure)
                 return Result.Failure<Specialization>("Failed to create specialization");
 
@@ -29,7 +29,7 @@ namespace Profile_API.Application.Service
 
         public async Task<Result> DeleteSpecializationAsync(Guid id)
         {
-            var deleteResult = await _specializationRepository.DeleteSpecializationAsync(id);
+            var deleteResult = await _specializationRepository.Delete(id);
             if (deleteResult.IsFailure)
                 return Result.Failure("Failed to delete specialization");
 
@@ -38,13 +38,13 @@ namespace Profile_API.Application.Service
 
         public async Task<Result<List<Specialization>>> GetAllSpecializationsAsync()
         {
-            var specializationsResult = await _specializationRepository.GetAllSpecializationsAsync();
+            var specializationsResult = await _specializationRepository.GetAll();
             return Result.Success(specializationsResult.Value);
         }
 
         public async Task<Result<Specialization>> GetSpecializationByIdAsync(Guid id)
         {
-            var specializationResult = await _specializationRepository.GetSpecializationByIdAsync(id);
+            var specializationResult = await _specializationRepository.GetById(id);
             if (specializationResult.IsFailure)
                 return Result.Failure<Specialization>("Specialization not found");
 
@@ -53,7 +53,7 @@ namespace Profile_API.Application.Service
 
         public async Task<Result<Specialization>> UpdateSpecializationAsync(Guid id, Specialization specialization)
         {
-            var updateResult = await _specializationRepository.UpdateSpecializationAsync(id, specialization);
+            var updateResult = await _specializationRepository.Update(id, specialization);
             if (updateResult.IsFailure)
                 return Result.Failure<Specialization>("Failed to update specialization");
 

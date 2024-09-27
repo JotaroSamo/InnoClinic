@@ -41,7 +41,9 @@ builder.Services.AddScoped<ISpecializationRepository, SpecializationRepository>(
 builder.Services.AddMassTransit(x =>
 {
     x.AddConsumer<AccountCreatedConsumer>();
-
+    x.AddConsumer<CreateSpecializationConsumer>();
+    x.AddConsumer<UpdateSpecializationConsumer>();
+    x.AddConsumer<DeleteSpecializationConsumer>();
     x.UsingRabbitMq((context, cfg) =>
     {
         cfg.Host("rabbitmq://localhost"); // Тот же хост RabbitMQ
@@ -49,6 +51,20 @@ builder.Services.AddMassTransit(x =>
         cfg.ReceiveEndpoint("account-created-queue", e =>
         {
             e.ConfigureConsumer<AccountCreatedConsumer>(context);
+        });
+        cfg.ReceiveEndpoint("specialization_create_queue", e =>
+        {
+            e.ConfigureConsumer<CreateSpecializationConsumer>(context);
+        });
+
+        cfg.ReceiveEndpoint("specialization_update_queue", e =>
+        {
+            e.ConfigureConsumer<UpdateSpecializationConsumer>(context);
+        });
+
+        cfg.ReceiveEndpoint("specialization_delete_queue", e =>
+        {
+            e.ConfigureConsumer<DeleteSpecializationConsumer>(context);
         });
     });
 });
