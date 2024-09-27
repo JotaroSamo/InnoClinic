@@ -37,7 +37,7 @@ namespace Service_API.Controllers
                 return BadRequest(result.Error);
             }
 
-            _logger.LogInformation("Successfully retrieved all services: {Services}", JsonConvert.SerializeObject(result.Value));
+            _logger.LogInformation("Successfully retrieved all services: {Services}", JsonSerializer.Serialize(result.Value));
             return Ok(result.Value);
         }
 
@@ -51,7 +51,7 @@ namespace Service_API.Controllers
                 return NotFound(result.Error);
             }
 
-            _logger.LogInformation("Successfully retrieved service with ID {Id}: {Service}", id, JsonConvert.SerializeObject(result.Value));
+            _logger.LogInformation("Successfully retrieved service with ID {Id}: {Service}", id, JsonSerializer.Serialize(result.Value));
             return Ok(result.Value);
         }
 
@@ -71,7 +71,7 @@ namespace Service_API.Controllers
             var validationResult = await _serviceValidator.ValidateAsync(service);
             if (!validationResult.IsValid)
             {
-                _logger.LogError("Validation failed for service creation: {Errors}", JsonConvert.SerializeObject(validationResult.Errors));
+                _logger.LogError("Validation failed for service creation: {Errors}", JsonSerializer.Serialize(validationResult.Errors));
                 return BadRequest(validationResult.Errors);
             }
 
@@ -82,7 +82,7 @@ namespace Service_API.Controllers
                 return BadRequest(result.Error);
             }
 
-            _logger.LogInformation("Successfully created service: {Service}", JsonConvert.SerializeObject(result.Value));
+            _logger.LogInformation("Successfully created service: {Service}", JsonSerializer.Serialize(result.Value));
             return CreatedAtAction(nameof(GetById), new { id = result.Value.Id }, result.Value);
         }
 
@@ -102,7 +102,7 @@ namespace Service_API.Controllers
             var validationResult = await _serviceValidator.ValidateAsync(service);
             if (!validationResult.IsValid)
             {
-                _logger.LogError("Validation failed for service update: {Errors}", JsonConvert.SerializeObject(validationResult.Errors));
+                _logger.LogError("Validation failed for service update: {Errors}", JsonSerializer.Serialize(validationResult.Errors));
                 return BadRequest(validationResult.Errors);
             }
 
@@ -113,7 +113,7 @@ namespace Service_API.Controllers
                 return NotFound(result.Error);
             }
 
-            _logger.LogInformation("Successfully updated service: {Service}", JsonConvert.SerializeObject(result.Value));
+            _logger.LogInformation("Successfully updated service: {Service}", JsonSerializer.Serialize(result.Value));
             return Ok(result.Value);
         }
 
