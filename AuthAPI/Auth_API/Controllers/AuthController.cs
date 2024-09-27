@@ -9,6 +9,7 @@ using Microsoft.Extensions.Options;
 namespace Auth_API.Controllers
 {
     using Global;
+    using Global.Dto;
     using MassTransit;
     using Microsoft.Extensions.Logging;
 

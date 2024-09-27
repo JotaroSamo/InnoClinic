@@ -69,7 +69,9 @@ builder.Services.AddMassTransit(x =>
     });
 });
 
+#pragma warning disable CS0618 // Тип или член устарел
 builder.Services.AddMassTransitHostedService();
+#pragma warning restore CS0618 // Тип или член устарел
 
 var app = builder.Build();
 

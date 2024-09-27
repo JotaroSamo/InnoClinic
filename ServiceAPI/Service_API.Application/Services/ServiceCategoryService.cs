@@ -14,7 +14,7 @@ namespace Service_API.Application.Services
     {
         private readonly IServiceCategoryRepository _serviceCategoryRepository;
 
-        public ServiceCategoryService(IServiceCategoryRepository serviceCategoryRepository)
+        public ServiceCategoryService(IServiceCategoryRepository serviceCategoryRepository, )
         {
             _serviceCategoryRepository = serviceCategoryRepository;
         }

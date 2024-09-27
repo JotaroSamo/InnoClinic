@@ -34,30 +34,18 @@ namespace Service_API.Application.Services
         public async Task<Result<Specialization>> CreateSpecialization(Specialization specialization)
         {
             var result = await _specializationRepository.Create(specialization);
-            if (result.IsFailure)
-            {
-                return result;
-            }
             return result;
         }
 
         public async Task<Result> DeleteSpecialization(Guid id)
         {
             var result = await _specializationRepository.Delete(id);
-            if (result.IsFailure)
-            {
-                return result;
-            }
             return result;
         }
 
         public async Task<Result<Specialization>> UpdateSpecialization(Specialization specialization)
         {
             var result = await _specializationRepository.Update(specialization);
-            if (result.IsFailure)
-            {
-                return result;
-            }
             return result;
         }
     }

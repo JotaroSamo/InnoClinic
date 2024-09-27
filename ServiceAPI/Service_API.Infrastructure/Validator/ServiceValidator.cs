@@ -12,7 +12,7 @@ namespace Service_API.Infrastructure.Validator
     {
         public ServiceValidator()
         {
-            RuleFor(service => service.Id).NotEmpty().WithMessage("Service ID cannot be empty.");
+        
 
             RuleFor(service => service.ServiceName)
                 .NotEmpty().WithMessage("Service name is required.")
@@ -21,12 +21,6 @@ namespace Service_API.Infrastructure.Validator
 
             RuleFor(service => service.Price)
                 .GreaterThan(0).WithMessage("Service price must be greater than zero.");
-
-            RuleFor(service => service.CategoryId)
-                .NotEmpty().WithMessage("Category ID cannot be empty.");
-
-            RuleFor(service => service.SpecializationId)
-                .NotEmpty().WithMessage("Specialization ID cannot be empty.");
 
             RuleFor(service => service.IsActive)
                 .NotNull().WithMessage("Service status must be specified.");

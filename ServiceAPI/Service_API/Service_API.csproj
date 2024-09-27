@@ -10,11 +10,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MassTransit" Version="8.2.5" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.2.5" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.6" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Global\Global.csproj" />
     <ProjectReference Include="..\Service_API.Application\Service_API.Application.csproj" />
     <ProjectReference Include="..\Service_API.DataAccess\Service_API.DataAccess.csproj" />
     <ProjectReference Include="..\Service_API.Domain\Service_API.Domain.csproj" />
