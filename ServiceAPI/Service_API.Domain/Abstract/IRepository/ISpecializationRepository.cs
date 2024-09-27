@@ -10,11 +10,12 @@ namespace Service_API.Domain.Abstract.IRepository
 {
     public interface ISpecializationRepository
     {
+     
         Task<Result<Specialization>> Create(Specialization specialization);
         Task<Result> Delete(Guid id);
         Task<Result<List<Specialization>>> GetAll();
         Task<Result<Specialization>> GetById(Guid id);
-        Task<Result<Specialization>> Update(Guid id, Specialization specialization);
-        Task<Result<Specialization>> ChangeStatus(Guid id, bool status);
+        Task<Result<Specialization>> Update(Specialization specialization);
+       
     }
 }
