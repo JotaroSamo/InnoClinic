@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Service_API.DataAccess\Service_API.DataAccess.csproj" />
+    <ProjectReference Include="..\Service_API.Domain\Service_API.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -18,4 +18,8 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Service_API.Infrastructure\Service_API.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
