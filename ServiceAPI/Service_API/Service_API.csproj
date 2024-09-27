@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -15,10 +15,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\Service_API.Application\Service_API.Application.csproj" />
+    <ProjectReference Include="..\Service_API.DataAccess\Service_API.DataAccess.csproj" />
+    <ProjectReference Include="..\Service_API.Domain\Service_API.Domain.csproj" />
     <ProjectReference Include="..\Service_API.Infrastructure\Service_API.Infrastructure.csproj" />
   </ItemGroup>
 
