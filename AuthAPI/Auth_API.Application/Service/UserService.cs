@@ -28,12 +28,12 @@ namespace Auth_API.Application.Service
 
         public Task<List<User>> GetUsers()
         {
-           return _userRepository.GetUsers();
+           return _userRepository.GetAll();
         }
 
         public async Task<Result<(string AccessToken, string RefreshToken)>> LoginAsync(string email, string password)
         {
-            var user = await _userRepository.GetByEmailAsync(email);
+            var user = await _userRepository.GetByEmail(email);
             if (user == null)
             {
                 return Result.Failure<(string AccessToken, string RefreshToken)>("User not found!");
@@ -57,7 +57,7 @@ namespace Auth_API.Application.Service
             }
             string email = _jwtProvider.GetUserEmailFromExpiredToken(accessToken);
 
-            var user = await _userRepository.GetByEmailAsync(email);
+            var user = await _userRepository.GetByEmail(email);
             if (user == null)
             {
                 return Result.Failure<(string AccessToken, string RefreshToken)>("User not found!");
@@ -80,7 +80,7 @@ namespace Auth_API.Application.Service
             }
             var hashedpassword = _passwordHasher.Generate(password);
             var user = User.Create(Guid.NewGuid(),  email, hashedpassword);
-            await _userRepository.AddAsync(user.Value);
+            await _userRepository.Create(user.Value);
             return user;
         }
     }

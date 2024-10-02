@@ -70,7 +70,7 @@ namespace Office_API.Application.Service
 
         public async Task<Result<bool>> DeleteteOffice(Guid id)
         {
-            var office = await _officeRepositories.Deletete(id);
+            var office = await _officeRepositories.Delete(id);
             if (!office)
             {
                 return Result.Failure<bool>("Office not found.");

@@ -23,7 +23,7 @@ namespace Auth_API.Middleware
             if (!string.IsNullOrEmpty(accessToken) && jwtProvider.IsTokenExpired(accessToken) && !string.IsNullOrEmpty(refreshToken))
             {
                 var email = jwtProvider.GetUserEmailFromExpiredToken(accessToken);
-                var user = await userRepository.GetByEmailAsync(email);
+                var user = await userRepository.GetByEmail(email);
 
                 if (user != null && user.RefreshToken == refreshToken)
                 {

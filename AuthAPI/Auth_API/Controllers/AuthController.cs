@@ -8,6 +8,9 @@ using Microsoft.Extensions.Options;
 
 namespace Auth_API.Controllers
 {
+    using Global;
+    using Global.Dto;
+    using MassTransit;
     using Microsoft.Extensions.Logging;
 
     [ApiController]
@@ -17,12 +20,14 @@ namespace Auth_API.Controllers
         private readonly IUserService _userService;
         private readonly JwtOptions _jwtOptions;
         private readonly ILogger<AuthController> _logger;
+        private readonly IBus _bus;
 
-        public AuthController(IUserService userService, IOptions<JwtOptions> jwtOptions, ILogger<AuthController> logger)
+        public AuthController(IUserService userService, IOptions<JwtOptions> jwtOptions, ILogger<AuthController> logger, IBus bus)
         {
             _userService = userService;
             _jwtOptions = jwtOptions.Value;
             _logger = logger;
+            _bus = bus;
         }
 
         [HttpPost("register")]
@@ -37,6 +42,14 @@ namespace Auth_API.Controllers
                 return BadRequest(user.Error);
             }
             _logger.LogInformation("User registered successfully with email {Email}", userRequest.Email);
+            var message = new AccountDto
+            {
+                UserId = user.Value.Id, // Предположим, что у вас есть Id пользователя
+                Email = user.Value.Email,
+                Password = user.Value.HashPassword,
+            };
+
+            await _bus.Publish(message); // Используйте _bus для отправки сообщения
             return Ok(user.Value);
         }
 
