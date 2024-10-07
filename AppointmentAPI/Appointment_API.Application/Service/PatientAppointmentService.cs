@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Appointment_API.Application.Service
 {
-    public class PatientAppointmentService 
+    public class PatientAppointmentService : IPatientAppointmentService
     {
         private readonly IPatientRepository _patienRepository;
 
