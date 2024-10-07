@@ -1,4 +1,5 @@
 using Appointment_API.Application.Service;
+using Appointment_API.Consumer;
 using Appointment_API.DataAccess;
 using Appointment_API.DataAccess.IService;
 using Appointment_API.DataAccess.Repository;
@@ -59,44 +60,39 @@ builder.Services.AddScoped<IResultRepository, ResultRepository>();
 
 builder.Services.AddAutoMapper(typeof(DomainProfile));
 
-//builder.Services.AddMassTransit(x =>
-//{
-//    x.AddConsumer<AccountCreatedConsumer>();
+builder.Services.AddMassTransit(x =>
+{
+    x.AddConsumer<DoctorConsumer>();
 
-//    x.AddConsumer<CreateSpecializationConsumer>();
+    x.AddConsumer<PatientConsumer>();
 
-//    x.AddConsumer<UpdateSpecializationConsumer>();
+    x.AddConsumer<ServiceConsumer>();
 
-//    x.AddConsumer<DeleteSpecializationConsumer>();
 
-//    x.UsingRabbitMq((context, cfg) =>
-//    {
-//        cfg.Host("rabbitmq://localhost"); // Тот же хост RabbitMQ
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        cfg.Host("rabbitmq://localhost"); // Тот же хост RabbitMQ
 
-//        cfg.ReceiveEndpoint("account-created-queue", e =>
-//        {
-//            e.ConfigureConsumer<AccountCreatedConsumer>(context);
-//        });
-//        cfg.ReceiveEndpoint("specialization_create_queue", e =>
-//        {
-//            e.ConfigureConsumer<CreateSpecializationConsumer>(context);
-//        });
+        cfg.ReceiveEndpoint("doctor_queue", e =>
+        {
+            e.ConfigureConsumer<DoctorConsumer>(context);
+        });
+        cfg.ReceiveEndpoint("patient_queue", e =>
+        {
+            e.ConfigureConsumer<PatientConsumer>(context);
+        });
 
-//        cfg.ReceiveEndpoint("specialization_update_queue", e =>
-//        {
-//            e.ConfigureConsumer<UpdateSpecializationConsumer>(context);
-//        });
+        cfg.ReceiveEndpoint("service_queue", e =>
+        {
+            e.ConfigureConsumer<ServiceConsumer>(context);
+        });
 
-//        cfg.ReceiveEndpoint("specialization_delete_queue", e =>
-//        {
-//            e.ConfigureConsumer<DeleteSpecializationConsumer>(context);
-//        });
-//    });
-//});
+    });
+});
 
-//#pragma warning disable CS0618 // Тип или член устарел
-//builder.Services.AddMassTransitHostedService();
-//#pragma warning restore CS0618 // Тип или член устарел
+#pragma warning disable CS0618 // Тип или член устарел
+builder.Services.AddMassTransitHostedService();
+#pragma warning restore CS0618 // Тип или член устарел
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -8,7 +8,7 @@ namespace Appointment_API.Domain.Model
 {
     public class DoctorAppointment
     {
-        public Guid Guid { get; set; }
+        public Guid Id { get; set; }
         public string Doctro_Name { get; set; } = string.Empty;
         public string Specialization_Name { get; set; } = string.Empty;
 

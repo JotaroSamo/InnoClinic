@@ -10,7 +10,7 @@ namespace Appointment_API.DataAccess.Entity
     public class DoctorAppointmentEntity
     {
         [Key]
-        public Guid Guid { get; set; }
+        public Guid Id { get; set; }
         [Required]
         public string Doctro_Name { get; set; } = string.Empty;
         [Required]

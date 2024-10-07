@@ -14,7 +14,7 @@ namespace Appointment_API.DataAccess.Configuration
         public void Configure(EntityTypeBuilder<DoctorAppointmentEntity> builder)
         {
             // Установка ключа
-            builder.HasKey(d => d.Guid);
+            builder.HasKey(d => d.Id);
 
             // Установка ограничений на поля
             builder.Property(d => d.Doctro_Name)

@@ -44,7 +44,7 @@ builder.Services.AddScoped<IAccountService, AccountService>();
 
 builder.Services.AddScoped<IEmailService, EmailService>();
 
-builder.Services.AddScoped<IDoctorService, DoctorService>();
+builder.Services.AddScoped<IDoctorAppointmentService, DoctorService>();
 
 builder.Services.AddScoped<IReceptionistService, ReceptionistService>();
 

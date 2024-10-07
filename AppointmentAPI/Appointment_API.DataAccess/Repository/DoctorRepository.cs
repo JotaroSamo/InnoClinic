@@ -55,7 +55,7 @@ namespace Appointment_API.DataAccess.Repository
         {
             var doctorEntity = await _context.Doctors
                 .Include(d => d.Appointments)
-                .FirstOrDefaultAsync(d => d.Guid == doctor.Guid);
+                .FirstOrDefaultAsync(d => d.Id == doctor.Id);
 
             if (doctorEntity is null)
             {
