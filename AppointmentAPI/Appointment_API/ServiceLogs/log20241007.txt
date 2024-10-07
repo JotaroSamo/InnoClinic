@@ -1,0 +1,435 @@
+2024-10-07 13:53:47.058 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-10-07 13:53:47.806 +03:00 [DBG] Entity Framework Core 8.0.8 initialized 'AppointmentDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.8' with options: MigrationsAssembly=Appointment_API.DataAccess 
+2024-10-07 13:53:48.514 +03:00 [DBG] 'AppointmentDbContext' disposed.
+2024-10-07 13:54:24.099 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-10-07 13:54:24.652 +03:00 [DBG] Entity Framework Core 8.0.8 initialized 'AppointmentDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.8' with options: MigrationsAssembly=Appointment_API.DataAccess 
+2024-10-07 13:54:24.676 +03:00 [DBG] Creating DbConnection.
+2024-10-07 13:54:24.726 +03:00 [DBG] Created DbConnection. (47ms).
+2024-10-07 13:54:24.732 +03:00 [DBG] Migrating using database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:54:24.743 +03:00 [DBG] Opening connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:54:26.251 +03:00 [DBG] An error occurred using the connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:54:26.253 +03:00 [DBG] Opening connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:54:26.256 +03:00 [DBG] An error occurred using the connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:54:26.330 +03:00 [DBG] Creating DbConnection.
+2024-10-07 13:54:26.332 +03:00 [DBG] Created DbConnection. (1ms).
+2024-10-07 13:54:26.333 +03:00 [DBG] Opening connection to database 'master' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:54:26.358 +03:00 [DBG] Opened connection to database 'master' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:54:26.365 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-10-07 13:54:26.374 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (7ms).
+2024-10-07 13:54:26.378 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (15ms).
+2024-10-07 13:54:26.387 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [AppointmentDB];
+2024-10-07 13:54:26.517 +03:00 [INF] Executed DbCommand (131ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [AppointmentDB];
+2024-10-07 13:54:26.519 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-10-07 13:54:26.520 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-10-07 13:54:26.522 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (2ms).
+2024-10-07 13:54:26.523 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [AppointmentDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2024-10-07 13:54:26.581 +03:00 [INF] Executed DbCommand (58ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [AppointmentDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2024-10-07 13:54:26.586 +03:00 [DBG] Closing connection to database 'master' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:54:26.598 +03:00 [DBG] Closed connection to database 'master' on server '(localdb)\MSSQLLocalDB' (8ms).
+2024-10-07 13:54:26.602 +03:00 [DBG] Disposing connection to database 'master' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:54:26.610 +03:00 [DBG] Disposed connection to database '' on server '' (7ms).
+2024-10-07 13:54:26.612 +03:00 [DBG] Opening connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:54:26.655 +03:00 [DBG] Opened connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:54:26.657 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-10-07 13:54:26.659 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (1ms).
+2024-10-07 13:54:26.661 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (4ms).
+2024-10-07 13:54:26.666 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-10-07 13:54:26.680 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-10-07 13:54:26.683 +03:00 [DBG] Closing connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:54:26.685 +03:00 [DBG] Closed connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB' (1ms).
+2024-10-07 13:54:26.751 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-10-07 13:54:26.752 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (1ms).
+2024-10-07 13:54:26.753 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (2ms).
+2024-10-07 13:54:26.754 +03:00 [DBG] Opening connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:54:26.756 +03:00 [DBG] Opened connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:54:26.758 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2024-10-07 13:54:26.766 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2024-10-07 13:54:26.768 +03:00 [DBG] Closing connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:54:26.769 +03:00 [DBG] Closed connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB' (1ms).
+2024-10-07 13:54:26.772 +03:00 [DBG] Opening connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:54:26.773 +03:00 [DBG] Opened connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:54:26.774 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-10-07 13:54:26.775 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (1ms).
+2024-10-07 13:54:26.776 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (2ms).
+2024-10-07 13:54:26.778 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-10-07 13:54:26.780 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-10-07 13:54:26.782 +03:00 [DBG] Closing connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:54:26.784 +03:00 [DBG] Closed connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB' (1ms).
+2024-10-07 13:54:26.787 +03:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2024-10-07 13:54:26.788 +03:00 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2024-10-07 13:54:26.789 +03:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (1ms).
+2024-10-07 13:54:26.790 +03:00 [DBG] Opening connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:54:26.791 +03:00 [DBG] Opened connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:54:26.793 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-10-07 13:54:26.807 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-10-07 13:54:26.809 +03:00 [DBG] Closing connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:54:26.810 +03:00 [DBG] Closed connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB' (1ms).
+2024-10-07 13:54:26.815 +03:00 [DBG] Opening connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:54:26.816 +03:00 [DBG] Opened connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:54:26.818 +03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-10-07 13:54:26.820 +03:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2024-10-07 13:54:26.821 +03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (2ms).
+2024-10-07 13:54:26.823 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-10-07 13:54:26.831 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-10-07 13:54:26.836 +03:00 [DBG] Closing data reader to 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:54:26.838 +03:00 [DBG] A data reader for 'AppointmentDB' on server '(localdb)\MSSQLLocalDB' is being disposed after spending 3ms reading results.
+2024-10-07 13:54:26.840 +03:00 [DBG] Closing connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:54:26.841 +03:00 [DBG] Closed connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB' (1ms).
+2024-10-07 13:54:26.854 +03:00 [INF] Applying migration '20241007105348_Init'.
+2024-10-07 13:54:26.892 +03:00 [DBG] Opening connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:54:26.894 +03:00 [DBG] Opened connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:54:26.897 +03:00 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2024-10-07 13:54:26.904 +03:00 [DBG] Began transaction with isolation level 'ReadCommitted'.
+2024-10-07 13:54:26.906 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-10-07 13:54:26.907 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-10-07 13:54:26.910 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (3ms).
+2024-10-07 13:54:26.911 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Doctors] (
+    [Guid] uniqueidentifier NOT NULL,
+    [Doctro_Name] nvarchar(100) NOT NULL,
+    [Specialization_Name] nvarchar(100) NOT NULL,
+    CONSTRAINT [PK_Doctors] PRIMARY KEY ([Guid])
+);
+2024-10-07 13:54:26.918 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Doctors] (
+    [Guid] uniqueidentifier NOT NULL,
+    [Doctro_Name] nvarchar(100) NOT NULL,
+    [Specialization_Name] nvarchar(100) NOT NULL,
+    CONSTRAINT [PK_Doctors] PRIMARY KEY ([Guid])
+);
+2024-10-07 13:54:26.921 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-10-07 13:54:26.922 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (1ms).
+2024-10-07 13:54:26.924 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (2ms).
+2024-10-07 13:54:26.925 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Patients] (
+    [Id] uniqueidentifier NOT NULL,
+    [Patient_Name] nvarchar(100) NOT NULL,
+    [Number_Phone] nvarchar(15) NOT NULL,
+    CONSTRAINT [PK_Patients] PRIMARY KEY ([Id])
+);
+2024-10-07 13:54:26.930 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Patients] (
+    [Id] uniqueidentifier NOT NULL,
+    [Patient_Name] nvarchar(100) NOT NULL,
+    [Number_Phone] nvarchar(15) NOT NULL,
+    CONSTRAINT [PK_Patients] PRIMARY KEY ([Id])
+);
+2024-10-07 13:54:26.933 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-10-07 13:54:26.934 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-10-07 13:54:26.936 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (2ms).
+2024-10-07 13:54:26.937 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Services] (
+    [Id] uniqueidentifier NOT NULL,
+    [Service_Name] nvarchar(100) NOT NULL,
+    [Service_Price] real(10) NOT NULL,
+    CONSTRAINT [PK_Services] PRIMARY KEY ([Id])
+);
+2024-10-07 13:54:26.942 +03:00 [ERR] Failed executing DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Services] (
+    [Id] uniqueidentifier NOT NULL,
+    [Service_Name] nvarchar(100) NOT NULL,
+    [Service_Price] real(10) NOT NULL,
+    CONSTRAINT [PK_Services] PRIMARY KEY ([Id])
+);
+2024-10-07 13:54:26.949 +03:00 [DBG] Disposing transaction.
+2024-10-07 13:54:26.951 +03:00 [DBG] Closing connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:54:26.952 +03:00 [DBG] Closed connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB' (1ms).
+2024-10-07 13:54:26.955 +03:00 [DBG] 'AppointmentDbContext' disposed.
+2024-10-07 13:54:26.958 +03:00 [DBG] Disposing connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:54:26.959 +03:00 [DBG] Disposed connection to database '' on server '' (1ms).
+2024-10-07 13:57:33.981 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-10-07 13:57:34.613 +03:00 [DBG] Entity Framework Core 8.0.8 initialized 'AppointmentDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.8' with options: MigrationsAssembly=Appointment_API.DataAccess 
+2024-10-07 13:57:35.033 +03:00 [DBG] 'AppointmentDbContext' disposed.
+2024-10-07 13:57:49.681 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-10-07 13:57:50.261 +03:00 [DBG] Entity Framework Core 8.0.8 initialized 'AppointmentDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.8' with options: MigrationsAssembly=Appointment_API.DataAccess 
+2024-10-07 13:57:50.280 +03:00 [DBG] Creating DbConnection.
+2024-10-07 13:57:50.311 +03:00 [DBG] Created DbConnection. (28ms).
+2024-10-07 13:57:50.317 +03:00 [DBG] Migrating using database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:57:50.324 +03:00 [DBG] Opening connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:57:50.461 +03:00 [DBG] An error occurred using the connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:57:50.464 +03:00 [DBG] Opening connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:57:50.467 +03:00 [DBG] An error occurred using the connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:57:50.537 +03:00 [DBG] Creating DbConnection.
+2024-10-07 13:57:50.539 +03:00 [DBG] Created DbConnection. (1ms).
+2024-10-07 13:57:50.540 +03:00 [DBG] Opening connection to database 'master' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:57:50.559 +03:00 [DBG] Opened connection to database 'master' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:57:50.566 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-10-07 13:57:50.574 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (7ms).
+2024-10-07 13:57:50.577 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (13ms).
+2024-10-07 13:57:50.584 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [AppointmentDB];
+2024-10-07 13:57:50.771 +03:00 [INF] Executed DbCommand (187ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [AppointmentDB];
+2024-10-07 13:57:50.775 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-10-07 13:57:50.776 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-10-07 13:57:50.777 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (2ms).
+2024-10-07 13:57:50.778 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [AppointmentDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2024-10-07 13:57:50.842 +03:00 [INF] Executed DbCommand (64ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [AppointmentDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2024-10-07 13:57:50.847 +03:00 [DBG] Closing connection to database 'master' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:57:50.856 +03:00 [DBG] Closed connection to database 'master' on server '(localdb)\MSSQLLocalDB' (6ms).
+2024-10-07 13:57:50.861 +03:00 [DBG] Disposing connection to database 'master' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:57:50.863 +03:00 [DBG] Disposed connection to database '' on server '' (1ms).
+2024-10-07 13:57:50.864 +03:00 [DBG] Opening connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:57:50.922 +03:00 [DBG] Opened connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:57:50.923 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-10-07 13:57:50.924 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-10-07 13:57:50.925 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (1ms).
+2024-10-07 13:57:50.926 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-10-07 13:57:50.933 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-10-07 13:57:50.935 +03:00 [DBG] Closing connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:57:50.936 +03:00 [DBG] Closed connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB' (1ms).
+2024-10-07 13:57:50.981 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-10-07 13:57:50.983 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (2ms).
+2024-10-07 13:57:50.984 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (3ms).
+2024-10-07 13:57:50.985 +03:00 [DBG] Opening connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:57:50.987 +03:00 [DBG] Opened connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:57:50.988 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2024-10-07 13:57:50.994 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2024-10-07 13:57:50.996 +03:00 [DBG] Closing connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:57:50.997 +03:00 [DBG] Closed connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB' (1ms).
+2024-10-07 13:57:50.999 +03:00 [DBG] Opening connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:57:51.000 +03:00 [DBG] Opened connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:57:51.001 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-10-07 13:57:51.002 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-10-07 13:57:51.004 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (2ms).
+2024-10-07 13:57:51.005 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-10-07 13:57:51.007 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-10-07 13:57:51.009 +03:00 [DBG] Closing connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:57:51.011 +03:00 [DBG] Closed connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB' (1ms).
+2024-10-07 13:57:51.020 +03:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2024-10-07 13:57:51.022 +03:00 [DBG] Created DbCommand for 'ExecuteScalar' (2ms).
+2024-10-07 13:57:51.023 +03:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (3ms).
+2024-10-07 13:57:51.024 +03:00 [DBG] Opening connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:57:51.026 +03:00 [DBG] Opened connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:57:51.028 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-10-07 13:57:51.040 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-10-07 13:57:51.043 +03:00 [DBG] Closing connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:57:51.046 +03:00 [DBG] Closed connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB' (2ms).
+2024-10-07 13:57:51.048 +03:00 [DBG] Opening connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:57:51.051 +03:00 [DBG] Opened connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:57:51.052 +03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-10-07 13:57:51.053 +03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-10-07 13:57:51.054 +03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (2ms).
+2024-10-07 13:57:51.056 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-10-07 13:57:51.060 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-10-07 13:57:51.064 +03:00 [DBG] Closing data reader to 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:57:51.066 +03:00 [DBG] A data reader for 'AppointmentDB' on server '(localdb)\MSSQLLocalDB' is being disposed after spending 2ms reading results.
+2024-10-07 13:57:51.068 +03:00 [DBG] Closing connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:57:51.069 +03:00 [DBG] Closed connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB' (1ms).
+2024-10-07 13:57:51.078 +03:00 [INF] Applying migration '20241007105734_Init'.
+2024-10-07 13:57:51.105 +03:00 [DBG] Opening connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:57:51.107 +03:00 [DBG] Opened connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:57:51.110 +03:00 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2024-10-07 13:57:51.116 +03:00 [DBG] Began transaction with isolation level 'ReadCommitted'.
+2024-10-07 13:57:51.117 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-10-07 13:57:51.118 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-10-07 13:57:51.121 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (3ms).
+2024-10-07 13:57:51.122 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Doctors] (
+    [Guid] uniqueidentifier NOT NULL,
+    [Doctro_Name] nvarchar(100) NOT NULL,
+    [Specialization_Name] nvarchar(100) NOT NULL,
+    CONSTRAINT [PK_Doctors] PRIMARY KEY ([Guid])
+);
+2024-10-07 13:57:51.126 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Doctors] (
+    [Guid] uniqueidentifier NOT NULL,
+    [Doctro_Name] nvarchar(100) NOT NULL,
+    [Specialization_Name] nvarchar(100) NOT NULL,
+    CONSTRAINT [PK_Doctors] PRIMARY KEY ([Guid])
+);
+2024-10-07 13:57:51.130 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-10-07 13:57:51.131 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (1ms).
+2024-10-07 13:57:51.132 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (2ms).
+2024-10-07 13:57:51.133 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Patients] (
+    [Id] uniqueidentifier NOT NULL,
+    [Patient_Name] nvarchar(100) NOT NULL,
+    [Number_Phone] nvarchar(15) NOT NULL,
+    CONSTRAINT [PK_Patients] PRIMARY KEY ([Id])
+);
+2024-10-07 13:57:51.137 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Patients] (
+    [Id] uniqueidentifier NOT NULL,
+    [Patient_Name] nvarchar(100) NOT NULL,
+    [Number_Phone] nvarchar(15) NOT NULL,
+    CONSTRAINT [PK_Patients] PRIMARY KEY ([Id])
+);
+2024-10-07 13:57:51.139 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-10-07 13:57:51.140 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-10-07 13:57:51.141 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (2ms).
+2024-10-07 13:57:51.142 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Services] (
+    [Id] uniqueidentifier NOT NULL,
+    [Service_Name] nvarchar(100) NOT NULL,
+    [Service_Price] decimal(10,2) NOT NULL,
+    CONSTRAINT [PK_Services] PRIMARY KEY ([Id])
+);
+2024-10-07 13:57:51.147 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Services] (
+    [Id] uniqueidentifier NOT NULL,
+    [Service_Name] nvarchar(100) NOT NULL,
+    [Service_Price] decimal(10,2) NOT NULL,
+    CONSTRAINT [PK_Services] PRIMARY KEY ([Id])
+);
+2024-10-07 13:57:51.150 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-10-07 13:57:51.151 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (1ms).
+2024-10-07 13:57:51.152 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (2ms).
+2024-10-07 13:57:51.153 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Appointments] (
+    [Id] uniqueidentifier NOT NULL,
+    [Date] date NOT NULL,
+    [Time] time NOT NULL,
+    [IsApproved] bit NOT NULL,
+    [PatientId] uniqueidentifier NOT NULL,
+    [DoctorId] uniqueidentifier NOT NULL,
+    [ServiceId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_Appointments] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Appointments_Doctors_DoctorId] FOREIGN KEY ([DoctorId]) REFERENCES [Doctors] ([Guid]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Appointments_Patients_PatientId] FOREIGN KEY ([PatientId]) REFERENCES [Patients] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Appointments_Services_ServiceId] FOREIGN KEY ([ServiceId]) REFERENCES [Services] ([Id]) ON DELETE CASCADE
+);
+2024-10-07 13:57:51.159 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Appointments] (
+    [Id] uniqueidentifier NOT NULL,
+    [Date] date NOT NULL,
+    [Time] time NOT NULL,
+    [IsApproved] bit NOT NULL,
+    [PatientId] uniqueidentifier NOT NULL,
+    [DoctorId] uniqueidentifier NOT NULL,
+    [ServiceId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_Appointments] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Appointments_Doctors_DoctorId] FOREIGN KEY ([DoctorId]) REFERENCES [Doctors] ([Guid]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Appointments_Patients_PatientId] FOREIGN KEY ([PatientId]) REFERENCES [Patients] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Appointments_Services_ServiceId] FOREIGN KEY ([ServiceId]) REFERENCES [Services] ([Id]) ON DELETE CASCADE
+);
+2024-10-07 13:57:51.163 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-10-07 13:57:51.164 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-10-07 13:57:51.165 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (1ms).
+2024-10-07 13:57:51.167 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Results] (
+    [Id] uniqueidentifier NOT NULL,
+    [Complaints] nvarchar(500) NOT NULL,
+    [Conclusion] nvarchar(1000) NOT NULL,
+    [Recommendations] nvarchar(1000) NOT NULL,
+    [AppointmentId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_Results] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Results_Appointments_AppointmentId] FOREIGN KEY ([AppointmentId]) REFERENCES [Appointments] ([Id]) ON DELETE CASCADE
+);
+2024-10-07 13:57:51.173 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Results] (
+    [Id] uniqueidentifier NOT NULL,
+    [Complaints] nvarchar(500) NOT NULL,
+    [Conclusion] nvarchar(1000) NOT NULL,
+    [Recommendations] nvarchar(1000) NOT NULL,
+    [AppointmentId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_Results] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Results_Appointments_AppointmentId] FOREIGN KEY ([AppointmentId]) REFERENCES [Appointments] ([Id]) ON DELETE CASCADE
+);
+2024-10-07 13:57:51.176 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-10-07 13:57:51.177 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (1ms).
+2024-10-07 13:57:51.179 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (3ms).
+2024-10-07 13:57:51.181 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Appointments_DoctorId] ON [Appointments] ([DoctorId]);
+2024-10-07 13:57:51.184 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Appointments_DoctorId] ON [Appointments] ([DoctorId]);
+2024-10-07 13:57:51.186 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-10-07 13:57:51.188 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (1ms).
+2024-10-07 13:57:51.189 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (2ms).
+2024-10-07 13:57:51.190 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Appointments_PatientId] ON [Appointments] ([PatientId]);
+2024-10-07 13:57:51.193 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Appointments_PatientId] ON [Appointments] ([PatientId]);
+2024-10-07 13:57:51.196 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-10-07 13:57:51.197 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-10-07 13:57:51.199 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (2ms).
+2024-10-07 13:57:51.200 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Appointments_ServiceId] ON [Appointments] ([ServiceId]);
+2024-10-07 13:57:51.203 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Appointments_ServiceId] ON [Appointments] ([ServiceId]);
+2024-10-07 13:57:51.204 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-10-07 13:57:51.205 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-10-07 13:57:51.207 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (2ms).
+2024-10-07 13:57:51.208 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Results_AppointmentId] ON [Results] ([AppointmentId]);
+2024-10-07 13:57:51.210 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Results_AppointmentId] ON [Results] ([AppointmentId]);
+2024-10-07 13:57:51.213 +03:00 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2024-10-07 13:57:51.214 +03:00 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2024-10-07 13:57:51.215 +03:00 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (2ms).
+2024-10-07 13:57:51.216 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241007105734_Init', N'8.0.8');
+2024-10-07 13:57:51.219 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241007105734_Init', N'8.0.8');
+2024-10-07 13:57:51.222 +03:00 [DBG] Committing transaction.
+2024-10-07 13:57:51.225 +03:00 [DBG] Committed transaction.
+2024-10-07 13:57:51.227 +03:00 [DBG] Disposing transaction.
+2024-10-07 13:57:51.229 +03:00 [DBG] Closing connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:57:51.231 +03:00 [DBG] Closed connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB' (1ms).
+2024-10-07 13:57:51.234 +03:00 [DBG] 'AppointmentDbContext' disposed.
+2024-10-07 13:57:51.236 +03:00 [DBG] Disposing connection to database 'AppointmentDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-07 13:57:51.237 +03:00 [DBG] Disposed connection to database '' on server '' (1ms).

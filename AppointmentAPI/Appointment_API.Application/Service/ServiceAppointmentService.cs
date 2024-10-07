@@ -1,4 +1,5 @@
-﻿using Appointment_API.DataAccess.Repository;
+﻿using Appointment_API.DataAccess.IService;
+using Appointment_API.DataAccess.Repository;
 using Appointment_API.Domain.Model;
 using CSharpFunctionalExtensions;
 using System;
@@ -27,18 +28,6 @@ namespace Appointment_API.Application.Service
         public async Task<Result> DeleteService(Guid id)
         {
             var result = await _serviceRepository.Delete(id);
-            return result;
-        }
-
-        public async Task<Result<List<ServiceAppointment>>> GetAllServices()
-        {
-            var result = await _serviceRepository.GetAll();
-            return result;
-        }
-
-        public async Task<Result<ServiceAppointment>> GetServiceById(Guid id)
-        {
-            var result = await _serviceRepository.GetById(id);
             return result;
         }
 

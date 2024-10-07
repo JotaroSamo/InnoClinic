@@ -10,12 +10,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MassTransit.AspNetCore" Version="7.3.1" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.2.5" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.20.1" />
+    <PackageReference Include="Serilog" Version="4.0.2" />
+    <PackageReference Include="Serilog.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="6.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\..\ProfileAPI\Profile_API.DataAccess\Profile_API.DataAccess.csproj" />
+    <ProjectReference Include="..\Appointment_API.Application\Appointment_API.Application.csproj" />
+    <ProjectReference Include="..\Appointment_API.DataAccess\Appointment_API.DataAccess.csproj" />
+    <ProjectReference Include="..\Appointment_API.Infrastructure\Appointment_API.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

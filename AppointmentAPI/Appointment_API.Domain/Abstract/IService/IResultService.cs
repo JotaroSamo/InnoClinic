@@ -1,7 +1,7 @@
 ﻿using Appointment_API.Domain.Model;
 using CSharpFunctionalExtensions;
 
-namespace Appointment_API.Application.Service
+namespace Appointment_API.DataAccess.IService
 {
     public interface IResultService
     {

@@ -50,30 +50,7 @@ namespace Appointment_API.DataAccess.Repository
             return Result.Success("Patient deleted successfully.");
         }
 
-        public async Task<Result<List<PatientAppointment>>> GetAll()
-        {
-            var patientEntities = await _context.Patients
-                .Include(p => p.Appointments)
-                .ToListAsync();
-            var patients = _mapper.Map<List<PatientAppointment>>(patientEntities);
-            return Result.Success(patients);
-        }
-
-        public async Task<Result<PatientAppointment>> GetById(Guid id)
-        {
-            var patientEntity = await _context.Patients.AsNoTracking()
-                .Include(p => p.Appointments)
-                .FirstOrDefaultAsync(p => p.Id == id);
-
-            if (patientEntity is null)
-            {
-                return Result.Failure<PatientAppointment>("Patient not found!");
-            }
-
-            var patient = _mapper.Map<PatientAppointment>(patientEntity);
-            return Result.Success(patient);
-        }
-
+     
         public async Task<Result<PatientAppointment>> Update(PatientAppointment patient)
         {
             var patientEntity = await _context.Patients

@@ -1,4 +1,5 @@
-﻿using Appointment_API.DataAccess.Repository;
+﻿using Appointment_API.DataAccess.IService;
+using Appointment_API.DataAccess.Repository;
 using Appointment_API.Domain.Model;
 using CSharpFunctionalExtensions;
 using System;

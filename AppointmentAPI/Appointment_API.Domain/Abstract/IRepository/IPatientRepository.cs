@@ -7,8 +7,6 @@ namespace Appointment_API.DataAccess.Repository
     {
         Task<Result<PatientAppointment>> Create(PatientAppointment patient);
         Task<Result> Delete(Guid id);
-        Task<Result<List<PatientAppointment>>> GetAll();
-        Task<Result<PatientAppointment>> GetById(Guid id);
         Task<Result<PatientAppointment>> Update(PatientAppointment patient);
     }
 }

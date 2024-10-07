@@ -1,4 +1,5 @@
-﻿using Appointment_API.DataAccess.Repository;
+﻿using Appointment_API.DataAccess.IService;
+using Appointment_API.DataAccess.Repository;
 using Appointment_API.Domain.Model;
 using CSharpFunctionalExtensions;
 using System;
@@ -30,17 +31,6 @@ namespace Appointment_API.Application.Service
             return result;
         }
 
-        public async Task<Result<List<PatientAppointment>>> GetAllPatients()
-        {
-            var result = await _patienRepository.GetAll();
-            return result;
-        }
-
-        public async Task<Result<PatientAppointment>> GetPatientById(Guid id)
-        {
-            var result = await _patienRepository.GetById(id);
-            return result;
-        }
 
         public async Task<Result<PatientAppointment>> UpdatePatient(PatientAppointment patient)
         {

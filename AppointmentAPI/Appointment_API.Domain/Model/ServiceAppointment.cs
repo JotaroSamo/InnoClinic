@@ -11,7 +11,7 @@ namespace Appointment_API.Domain.Model
         public Guid Id { get; set; }
         public string Service_Name { get; set; } = string.Empty;
 
-        public float Service_Price { get; set; }
+        public decimal Service_Price { get; set; }
 
         public ICollection<Appointment>? Appointments { get; set; }
     }
