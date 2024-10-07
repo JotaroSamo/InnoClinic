@@ -5,7 +5,7 @@ namespace Profile_API.Contract.Request.Update
 {
     public record UpdateDoctorRequest
     {
-        public UpdateDoctorRequest(Guid id, string firstName, string lastName, string middleName, DateTime dateOfBirth,DateTime careerStartYear, Status status, Guid specializationId, string officeAddress, string officeRegistryPhoneNumber, Guid accountId)
+        public UpdateDoctorRequest(Guid id, string firstName, string lastName, string middleName, DateOnly dateOfBirth, DateOnly careerStartYear, Status status, Guid specializationId, string officeAddress, string officeRegistryPhoneNumber, Guid accountId)
         {
             Id = id;
             FirstName = firstName;
@@ -30,9 +30,9 @@ namespace Profile_API.Contract.Request.Update
         [Required]
         public string MiddleName { get; set; } = string.Empty;
         [Required]
-        public DateTime DateOfBirth { get; set; }
+        public DateOnly DateOfBirth { get; set; }
         [Required]
-        public DateTime CareerStartYear { get; set; }
+        public DateOnly CareerStartYear { get; set; }
         [Required]
         public Status Status { get; set; }
         [Required]

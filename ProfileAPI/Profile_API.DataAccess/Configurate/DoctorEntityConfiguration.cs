@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Profile_API.Domain.Models;
+using System.Reflection.Emit;
 
 namespace Profile_API.DataAccess.Configurate
 {
@@ -30,12 +32,19 @@ namespace Profile_API.DataAccess.Configurate
                    .HasMaxLength(100); // можно настроить длину отчества
 
             // Конфигурация для даты рождения
-            builder.Property(d => d.DateOfBirth)
-                   .IsRequired();
+            builder
+                .Property(d => d.DateOfBirth)
+               .HasConversion(
+                   d => d.ToDateTime(TimeOnly.MinValue), // Преобразование в DateTime для хранения
+                   d => DateOnly.FromDateTime(d) // Преобразование из DateTime
+               );
 
-            // Конфигурация для CareerStartYear
-            builder.Property(d => d.CareerStartYear)
-                   .IsRequired();
+            builder
+                .Property(d => d.CareerStartYear)
+                .HasConversion(
+                    d => d.ToDateTime(TimeOnly.MinValue),
+                    d => DateOnly.FromDateTime(d)
+                );
 
             // Конфигурация для статуса
             builder.Property(d => d.Status)

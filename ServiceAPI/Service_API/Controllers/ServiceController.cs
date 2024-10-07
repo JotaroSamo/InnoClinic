@@ -42,7 +42,7 @@ namespace Service_API.Controllers
             }
 
             _logger.LogInformation("Successfully retrieved all services: {Services}", JsonSerializer.Serialize(result.Value));
-            return Ok(result.Value);
+            return Ok(result.Value.ToArray());
         }
 
         [HttpGet("GetById/{id}")]
