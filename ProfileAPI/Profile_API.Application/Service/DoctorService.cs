@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Profile_API.Application.Service
 {
-    public class DoctorService : IDoctorService
+    public class DoctorService : IDoctorAppointmentService
     {
         private readonly IDoctorRepository _doctorRepository;
 

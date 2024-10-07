@@ -3,7 +3,7 @@ using Profile_API.Domain.Models;
 
 namespace Profile_API.Application.Service
 {
-    public interface IDoctorService
+    public interface IDoctorAppointmentService
     {
         Task<Result<Doctor>> CreateDoctorAsync(Doctor doctor);
         Task<Result> DeleteDoctorAsync(Guid id);

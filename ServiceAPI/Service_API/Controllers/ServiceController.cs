@@ -1,4 +1,6 @@
 ﻿using FluentValidation;
+using Global.Dto;
+using MassTransit;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -19,12 +21,14 @@ namespace Service_API.Controllers
         private readonly IServiceService _serviceService;
         private readonly IValidator<Service> _serviceValidator;
         private readonly ILogger<ServiceController> _logger;
+        private readonly IBus _bus;
 
-        public ServiceController(IServiceService serviceService, IValidator<Service> serviceValidator, ILogger<ServiceController> logger)
+        public ServiceController(IServiceService serviceService, IValidator<Service> serviceValidator, ILogger<ServiceController> logger, IBus bus)
         {
             _serviceService = serviceService;
             _serviceValidator = serviceValidator;
             _logger = logger;
+            _bus = bus;
         }
 
         [HttpGet("GetAll")]
@@ -38,7 +42,7 @@ namespace Service_API.Controllers
             }
 
             _logger.LogInformation("Successfully retrieved all services: {Services}", JsonSerializer.Serialize(result.Value));
-            return Ok(result.Value);
+            return Ok(result.Value.ToArray());
         }
 
         [HttpGet("GetById/{id}")]
@@ -81,7 +85,17 @@ namespace Service_API.Controllers
                 _logger.LogError("Failed to create service: {Error}", result.Error);
                 return BadRequest(result.Error);
             }
-
+            var publish = new CreateService
+            {
+                Service = new ServiceAppointmentDto
+                {
+                    Id = result.Value.Id,
+                    Service_Name = result.Value.ServiceName,
+                    Service_Price = (decimal)result.Value.Price,
+                    
+                }
+            };
+            await _bus.Publish(publish);
             _logger.LogInformation("Successfully created service: {Service}", JsonSerializer.Serialize(result.Value));
             return CreatedAtAction(nameof(GetById), new { id = result.Value.Id }, result.Value);
         }
@@ -112,7 +126,17 @@ namespace Service_API.Controllers
                 _logger.LogWarning("Failed to update service with ID {Id}: {Error}", request.Id, result.Error);
                 return NotFound(result.Error);
             }
+            var publish = new UpdateService
+            {
+                Service = new ServiceAppointmentDto
+                {
+                    Id = result.Value.Id,
+                    Service_Name = result.Value.ServiceName,
+                    Service_Price = (decimal)result.Value.Price,
 
+                }
+            };
+            await _bus.Publish(publish);
             _logger.LogInformation("Successfully updated service: {Service}", JsonSerializer.Serialize(result.Value));
             return Ok(result.Value);
         }
@@ -126,7 +150,11 @@ namespace Service_API.Controllers
                 _logger.LogWarning("Failed to delete service with ID {Id}: {Error}", id, result.Error);
                 return NotFound(result.Error);
             }
-
+            var publish = new DeleteService
+            {
+                Id = id
+            };
+            await _bus.Publish(publish);
             _logger.LogInformation("Successfully deleted service with ID {Id}", id);
             return NoContent();
         }

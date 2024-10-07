@@ -3,6 +3,8 @@
 namespace Profile_API.Controllers
 {
     using FluentValidation;
+    using Global.Dto;
+    using MassTransit;
     using Microsoft.AspNetCore.Mvc;
     using Profile_API.Application.Service;
     using Profile_API.Contract.Request.Create;
@@ -16,15 +18,17 @@ namespace Profile_API.Controllers
     [Route("api/[controller]")]
     public class DoctorController : ControllerBase
     {
-        private readonly IDoctorService _doctorService;
+        private readonly IDoctorAppointmentService _doctorService;
         private readonly IValidator<Doctor> _doctorValidator;
         private readonly ILogger<DoctorController> _logger;
+        private readonly IBus _bus;
 
-        public DoctorController(IDoctorService doctorService, IValidator<Doctor> doctorValidator, ILogger<DoctorController> logger)
+        public DoctorController(IDoctorAppointmentService doctorService, IValidator<Doctor> doctorValidator, ILogger<DoctorController> logger, IBus bus)
         {
             _doctorService = doctorService;
             _doctorValidator = doctorValidator;
             _logger = logger;
+            _bus = bus;
         }
 
         [HttpPost("Create")]
@@ -63,7 +67,17 @@ namespace Profile_API.Controllers
                 _logger.LogError("Failed to create doctor: {Error}", result.Error);
                 return BadRequest(result.Error);
             }
-
+            var busDoctor = await _doctorService.GetDoctorByIdAsync(result.Value.Id);
+            var publish = new CreateDoctor
+            {
+                Doctor = new DoctorAppointmentDto
+                {
+                    Id = busDoctor.Value.Id,
+                    Doctro_Name = busDoctor.Value.FirstName + " " + busDoctor.Value.LastName + " " + busDoctor.Value.MiddleName,
+                    Specialization_Name = busDoctor.Value.Specialization.SpecializationName
+                }
+            };
+            await _bus.Publish(publish);
             _logger.LogInformation("Doctor created successfully: {DoctorId}", result.Value.Id);
             return CreatedAtAction(nameof(GetById), new { id = result.Value.Id }, result.Value);
         }
@@ -133,7 +147,17 @@ namespace Profile_API.Controllers
                 _logger.LogError("Failed to update doctor: {Error}", result.Error);
                 return BadRequest(result.Error);
             }
-
+            var busDoctor = await _doctorService.GetDoctorByIdAsync(result.Value.Id);
+            var publish = new UpdateDoctor
+            {
+                Doctor = new DoctorAppointmentDto
+                {
+                    Id = busDoctor.Value.Id,
+                    Doctro_Name = busDoctor.Value.FirstName + " " + busDoctor.Value.LastName + " " + busDoctor.Value.MiddleName,
+                    Specialization_Name = busDoctor.Value.Specialization.SpecializationName
+                }
+            };
+            await _bus.Publish(publish);
             _logger.LogInformation("Doctor updated successfully: {DoctorId}", result.Value.Id);
             return Ok(result.Value);
         }
@@ -147,7 +171,12 @@ namespace Profile_API.Controllers
                 _logger.LogWarning("Failed to delete doctor with ID {Id}: {Error}", id, result.Error);
                 return NotFound(result.Error);
             }
-
+    
+            var publish = new DeleteDoctor
+            {
+                Id = id,
+            };
+            await _bus.Publish(publish);
             _logger.LogInformation("Doctor with ID {Id} deleted successfully", id);
             return NoContent();
         }

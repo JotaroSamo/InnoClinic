@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 
 namespace Profile_API.DataAccess.Entity
 {
-   public class DoctorEntity
-   {
+    public class DoctorEntity
+    {
         [Required]
         public Guid Id { get; set; }
         [Required]
@@ -20,8 +20,9 @@ namespace Profile_API.DataAccess.Entity
         [Required]
         public string MiddleName { get; set; } = string.Empty;
         [Required]
-        public DateTime DateOfBirth { get; set; }
-        public DateTime CareerStartYear { get; set; }
+        public DateOnly DateOfBirth { get; set; }
+        [Required]
+        public DateOnly CareerStartYear { get; set; }
         [Required]
         public Status Status { get; set; }
         [Required]

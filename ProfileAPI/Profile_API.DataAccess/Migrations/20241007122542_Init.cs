@@ -38,7 +38,7 @@ namespace Profile_API.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    SpecializationName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SpecializationName = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     IsActive = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
@@ -50,8 +50,7 @@ namespace Profile_API.DataAccess.Migrations
                 name: "Patients",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     FirstName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     MiddleName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
@@ -103,7 +102,7 @@ namespace Profile_API.DataAccess.Migrations
                     LastName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     MiddleName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     DateOfBirth = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CareerStartYear = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CareerStartYear = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Status = table.Column<int>(type: "int", nullable: false),
                     SpecializationId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     OfficeId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -129,6 +128,12 @@ namespace Profile_API.DataAccess.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_Accounts_Email",
+                table: "Accounts",
+                column: "Email",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Doctors_AccountId",
                 table: "Doctors",
                 column: "AccountId",
@@ -149,6 +154,12 @@ namespace Profile_API.DataAccess.Migrations
                 name: "IX_Receptionists_AccountId",
                 table: "Receptionists",
                 column: "AccountId",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Specializations_SpecializationName",
+                table: "Specializations",
+                column: "SpecializationName",
                 unique: true);
         }
 

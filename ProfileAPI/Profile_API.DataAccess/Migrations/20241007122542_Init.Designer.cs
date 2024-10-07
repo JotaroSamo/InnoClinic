@@ -12,8 +12,8 @@ using Profile_API.DataAccess;
 namespace Profile_API.DataAccess.Migrations
 {
     [DbContext(typeof(ProfileDbContext))]
-    [Migration("20240927084841_AddSpecializationEntityConfiguration")]
-    partial class AddSpecializationEntityConfiguration
+    [Migration("20241007122542_Init")]
+    partial class Init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

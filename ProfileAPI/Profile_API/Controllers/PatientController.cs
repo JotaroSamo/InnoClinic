@@ -1,4 +1,6 @@
 ﻿using FluentValidation;
+using Global.Dto;
+using MassTransit;
 using Microsoft.AspNetCore.Mvc;
 using Profile_API.Application.Service;
 using Profile_API.Contract.Request.Create;
@@ -14,12 +16,14 @@ namespace Profile_API.Controllers
         private readonly IPatientService _patientService;
         private readonly IValidator<Patient> _patientValidator; // Добавьте валидатор для валидации сущности Patient
         private readonly ILogger<PatientController> _logger; // Добавьте логгер для логирования действий
+        private readonly IBus _bus;
 
-        public PatientController(IPatientService patientService, IValidator<Patient> patientValidator, ILogger<PatientController> logger)
+        public PatientController(IPatientService patientService, IValidator<Patient> patientValidator, ILogger<PatientController> logger, IBus bus)
         {
             _patientService = patientService;
             _patientValidator = patientValidator;
             _logger = logger;
+            _bus = bus;
         }
 
         [HttpPost("Create")]
@@ -55,7 +59,18 @@ namespace Profile_API.Controllers
                 _logger.LogError("Failed to create patient: {Error}", result.Error);
                 return BadRequest(result.Error);
             }
-
+            var busPatient = await _patientService.GetPatientByIdAsync(result.Value.Id);
+            var publish = new CreatePatient
+            {
+                Patient = new PatientAppointmentDto
+                {
+                    Id= busPatient.Value.Id,
+                    Patient_Name = busPatient.Value.FirstName + " " + busPatient.Value.LastName + " " + busPatient.Value.MiddleName,
+                    Number_Phone = busPatient.Value.Account.PhoneNumber
+                    
+                }
+            };
+            await _bus.Publish(publish);
             _logger.LogInformation("Patient created successfully: {PatientId}", result.Value.Id);
             return CreatedAtAction(nameof(GetById), new { id = result.Value.Id }, result.Value);
         }
@@ -122,7 +137,18 @@ namespace Profile_API.Controllers
                 _logger.LogError("Failed to update patient: {Error}", result.Error);
                 return BadRequest(result.Error);
             }
+            var busPatient = await _patientService.GetPatientByIdAsync(result.Value.Id);
+            var publish = new UpdatePatient
+            {
+                Patient = new PatientAppointmentDto
+                {
+                    Id = busPatient.Value.Id,
+                    Patient_Name = busPatient.Value.FirstName + " " + busPatient.Value.LastName + " " + busPatient.Value.MiddleName,
+                    Number_Phone = busPatient.Value.Account.PhoneNumber
 
+                }
+            };
+            await _bus.Publish(publish);
             _logger.LogInformation("Patient updated successfully: {PatientId}", result.Value.Id);
             return Ok(result.Value);
         }
@@ -136,7 +162,12 @@ namespace Profile_API.Controllers
                 _logger.LogWarning("Failed to delete patient with ID {Id}: {Error}", id, result.Error);
                 return NotFound(result.Error);
             }
-
+           
+            var publish = new DeletePatient
+            {
+                Id = id
+            };
+            await _bus.Publish(publish);
             _logger.LogInformation("Patient with ID {Id} deleted successfully", id);
             return NoContent();
         }

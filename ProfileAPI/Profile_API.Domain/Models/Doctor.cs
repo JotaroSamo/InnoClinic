@@ -16,8 +16,8 @@ public class Doctor
     [Required]
     public string MiddleName { get; set; } = string.Empty;
     [Required]
-    public DateTime DateOfBirth { get; set; }
-    public DateTime CareerStartYear { get; set; }
+    public DateOnly DateOfBirth { get; set; }
+    public DateOnly CareerStartYear { get; set; }
     [Required]
     public Status Status { get; set; }
     public Guid SpecializationId { get; set; }

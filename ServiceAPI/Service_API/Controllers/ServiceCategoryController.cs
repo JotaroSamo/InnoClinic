@@ -1,4 +1,6 @@
 ﻿using FluentValidation;
+using Global.Dto;
+using MassTransit;
 using Microsoft.AspNetCore.Mvc;
 using Service_API.Contract.Request.Create;
 using Service_API.Contract.Request.Update;
@@ -16,6 +18,7 @@ namespace Service_API.Controllers
         private readonly IValidator<ServiceCategory> _serviceCategoryValidator;
         private readonly ILogger<ServiceCategoryController> _logger; // Добавляем ILogger
 
+
         public ServiceCategoryController(IServiceCategoryService serviceCategoryService,
                                          IValidator<ServiceCategory> serviceCategoryValidator,
                                          ILogger<ServiceCategoryController> logger) // Внедряем ILogger
@@ -23,6 +26,7 @@ namespace Service_API.Controllers
             _serviceCategoryService = serviceCategoryService;
             _serviceCategoryValidator = serviceCategoryValidator;
             _logger = logger; // Инициализируем ILogger
+      
         }
 
         [HttpGet("GetAll")]
@@ -80,7 +84,7 @@ namespace Service_API.Controllers
                 _logger.LogError("Failed to create service category: {Error}", result.Error); // Логируем ошибку
                 return BadRequest(result.Error);
             }
-
+           
             _logger.LogInformation("Created service category: {Category}", result.Value); // Логируем успешное завершение
             return Ok(result.Value);
         }
