@@ -2,6 +2,7 @@
 using Document_API.Contract.Request.Create;
 using Document_API.Contract.Request.Update;
 using Document_API.Domain.Model;
+using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Document_API.Controllers
