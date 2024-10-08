@@ -11,7 +11,7 @@ namespace Document_API.DataAccess.Entity
     public class DocumentEntity
     {
         [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
+
         public Guid Id { get; set; }
 
         [BsonElement("url")]
