@@ -61,9 +61,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Appointment_API.Application
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Appointment_API.Infrastructure", "AppointmentAPI\Appointment_API.Infrastructure\Appointment_API.Infrastructure.csproj", "{30D101EF-79BA-4258-987C-6D4CBB88DA0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Appointment_API.DataAccess", "AppointmentAPI\Appointment_API.DataAccess\Appointment_API.DataAccess.csproj", "{8242CE7F-ABD7-4909-AA03-99C528452D28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Appointment_API.DataAccess", "AppointmentAPI\Appointment_API.DataAccess\Appointment_API.DataAccess.csproj", "{8242CE7F-ABD7-4909-AA03-99C528452D28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Appointment_API.Domain", "AppointmentAPI\Appointment_API.Domain\Appointment_API.Domain.csproj", "{D3778250-D6B5-4FB1-8882-0970E6248989}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Appointment_API.Domain", "AppointmentAPI\Appointment_API.Domain\Appointment_API.Domain.csproj", "{D3778250-D6B5-4FB1-8882-0970E6248989}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DocumentAPI", "DocumentAPI", "{780A0188-1695-43DC-A6E5-17076D3A22D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Document_API", "DocumentAPI\Document_API\Document_API.csproj", "{8E1CC48A-5D24-403D-B3CC-2003773D4411}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Document_API.Domain", "DocumentAPI\Document_API.Domain\Document_API.Domain.csproj", "{92730CB1-0841-4915-92D8-79A1E0B56E96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Document_API.Application", "DocumentAPI\Document_API.Application\Document_API.Application.csproj", "{F3B102C6-329E-449D-847E-279A146DA78F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Document_API.DataAccess", "DocumentAPI\Document_API.DataAccess\Document_API.DataAccess.csproj", "{172F4683-2BE4-4714-A98B-AE6520609963}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Document_API.Infrasructure", "DocumentAPI\Document_API.Infrasructure\Document_API.Infrasructure.csproj", "{91F6652A-E585-4772-BA3F-5851D55EBAC1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -171,6 +183,26 @@ Global
 		{D3778250-D6B5-4FB1-8882-0970E6248989}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3778250-D6B5-4FB1-8882-0970E6248989}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3778250-D6B5-4FB1-8882-0970E6248989}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E1CC48A-5D24-403D-B3CC-2003773D4411}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E1CC48A-5D24-403D-B3CC-2003773D4411}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E1CC48A-5D24-403D-B3CC-2003773D4411}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E1CC48A-5D24-403D-B3CC-2003773D4411}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92730CB1-0841-4915-92D8-79A1E0B56E96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92730CB1-0841-4915-92D8-79A1E0B56E96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92730CB1-0841-4915-92D8-79A1E0B56E96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92730CB1-0841-4915-92D8-79A1E0B56E96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3B102C6-329E-449D-847E-279A146DA78F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3B102C6-329E-449D-847E-279A146DA78F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3B102C6-329E-449D-847E-279A146DA78F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3B102C6-329E-449D-847E-279A146DA78F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{172F4683-2BE4-4714-A98B-AE6520609963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{172F4683-2BE4-4714-A98B-AE6520609963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{172F4683-2BE4-4714-A98B-AE6520609963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{172F4683-2BE4-4714-A98B-AE6520609963}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91F6652A-E585-4772-BA3F-5851D55EBAC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91F6652A-E585-4772-BA3F-5851D55EBAC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91F6652A-E585-4772-BA3F-5851D55EBAC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91F6652A-E585-4772-BA3F-5851D55EBAC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -200,6 +232,11 @@ Global
 		{30D101EF-79BA-4258-987C-6D4CBB88DA0F} = {8B0C06A8-36F9-4F87-BEC4-7C0E0A7057A1}
 		{8242CE7F-ABD7-4909-AA03-99C528452D28} = {8B0C06A8-36F9-4F87-BEC4-7C0E0A7057A1}
 		{D3778250-D6B5-4FB1-8882-0970E6248989} = {8B0C06A8-36F9-4F87-BEC4-7C0E0A7057A1}
+		{8E1CC48A-5D24-403D-B3CC-2003773D4411} = {780A0188-1695-43DC-A6E5-17076D3A22D8}
+		{92730CB1-0841-4915-92D8-79A1E0B56E96} = {780A0188-1695-43DC-A6E5-17076D3A22D8}
+		{F3B102C6-329E-449D-847E-279A146DA78F} = {780A0188-1695-43DC-A6E5-17076D3A22D8}
+		{172F4683-2BE4-4714-A98B-AE6520609963} = {780A0188-1695-43DC-A6E5-17076D3A22D8}
+		{91F6652A-E585-4772-BA3F-5851D55EBAC1} = {780A0188-1695-43DC-A6E5-17076D3A22D8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B429EDA8-79DD-45B6-8A8F-A78132872EF1}
