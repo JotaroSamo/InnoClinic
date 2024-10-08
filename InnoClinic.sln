@@ -67,7 +67,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Appointment_API.Domain", "A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DocumentAPI", "DocumentAPI", "{780A0188-1695-43DC-A6E5-17076D3A22D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Document_API", "DocumentAPI\Dovument_API\Document_API.csproj", "{8E1CC48A-5D24-403D-B3CC-2003773D4411}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Document_API", "DocumentAPI\Document_API\Document_API.csproj", "{8E1CC48A-5D24-403D-B3CC-2003773D4411}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Document_API.Domain", "DocumentAPI\Document_API.Domain\Document_API.Domain.csproj", "{92730CB1-0841-4915-92D8-79A1E0B56E96}"
 EndProject
