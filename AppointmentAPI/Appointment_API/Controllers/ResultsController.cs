@@ -7,6 +7,8 @@ using Appointment_API.Contract.Request.Update;
 using Appointment_API.DataAccess.IService;
 using Appointment_API.Application.Service;
 using Appointment_API.Contract.Request.Create;
+using Appointment_API.Domain.Abstract.IService;
+using Appointment_API.Domain.Model;
 
 namespace Appointment_API.Controllers
 {
@@ -18,14 +20,17 @@ namespace Appointment_API.Controllers
         private readonly IResultService _resultsService; // Сервис для работы с результатами
         private readonly IValidator<Res> _resultsValidator; // Валидатор для Results
         private readonly ILogger<ResultsController> _logger; // Логгер
+        private readonly IEmailService _emailService;
 
         public ResultsController(IResultService resultsService,
                                  IValidator<Res> resultsValidator,
-                                 ILogger<ResultsController> logger)
+                                 ILogger<ResultsController> logger,
+                                 IEmailService emailService)
         {
             _resultsService = resultsService;
             _resultsValidator = resultsValidator;
             _logger = logger;
+            _emailService = emailService;
         }
 
         [HttpGet("GetAll")]
@@ -65,7 +70,7 @@ namespace Appointment_API.Controllers
         {
             var resultEntity = new Res
             {
-                
+                Id = Guid.NewGuid(),
                 Complaints = request.Complaints,
                 Conclusion = request.Conclusion,
                 Recommendations = request.Recommendations,
@@ -85,7 +90,8 @@ namespace Appointment_API.Controllers
                 _logger.LogError("Failed to create result: {Error}", result.Error); // Логируем ошибку
                 return BadRequest(result.Error);
             }
-
+            var sendEmailResult = await _resultsService.GetResultById(resultEntity.Id);
+            await _emailService.SendAppointmentResultOnEmail(sendEmailResult.Value);
             _logger.LogInformation("Created result: {Result}", result.Value); // Логируем успешное завершение
             return Ok(result.Value);
         }

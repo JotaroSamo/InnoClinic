@@ -1,6 +1,8 @@
 ﻿using Appointment_API.Contract.Request.Create;
 using Appointment_API.Contract.Request.Update;
 using Appointment_API.DataAccess.IService;
+using Appointment_API.Domain.Abstract.I;
+using Appointment_API.Domain.Abstract.IService;
 using Appointment_API.Domain.Model;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
@@ -14,14 +16,17 @@ namespace Appointment_API.Controllers
         private readonly IAppointmentService _appointmentService;
         private readonly IValidator<Appointment> _appointmentValidator;
         private readonly ILogger<AppointmentController> _logger; // Добавляем ILogger
+        private readonly IEmailService _emailService;
 
         public AppointmentController(IAppointmentService appointmentService,
                                      IValidator<Appointment> appointmentValidator,
-                                     ILogger<AppointmentController> logger) // Внедряем ILogger
+                                     ILogger<AppointmentController> logger,
+                                     IEmailService emailService) // Внедряем ILogger
         {
             _appointmentService = appointmentService;
             _appointmentValidator = appointmentValidator;
             _logger = logger; // Инициализируем ILogger
+            _emailService = emailService;
         }
 
         [HttpGet("GetAll")]
@@ -60,7 +65,7 @@ namespace Appointment_API.Controllers
         public async Task<IActionResult> Create(CreateAppointmentRequest request)
         {
             var appointment = new Appointment
-            {
+            {   Id = Guid.NewGuid(),
                 Date = request.Date,
                 Time = request.Time,
                 IsApproved = request.IsApproved,
@@ -81,7 +86,8 @@ namespace Appointment_API.Controllers
                 _logger.LogError("Failed to create appointment: {Error}", result.Error); // Логируем ошибку
                 return BadRequest(result.Error);
             }
-
+             var sendEmailAppointment = await _appointmentService.GetByIdAppointment(appointment.Id);
+             await _emailService.SendNotificationAboutAppointmentToEmail(sendEmailAppointment.Value);
             _logger.LogInformation("Created appointment: {Appointment}", result.Value); // Логируем успешное завершение
             return Ok(result.Value);
         }

@@ -66,7 +66,8 @@ namespace Profile_API.Controllers
                 {
                     Id= busPatient.Value.Id,
                     Patient_Name = busPatient.Value.FirstName + " " + busPatient.Value.LastName + " " + busPatient.Value.MiddleName,
-                    Number_Phone = busPatient.Value.Account.PhoneNumber
+                    Number_Phone = busPatient.Value.Account.PhoneNumber,
+                    Patient_Email = busPatient.Value.Account.Email,
                     
                 }
             };
@@ -144,7 +145,8 @@ namespace Profile_API.Controllers
                 {
                     Id = busPatient.Value.Id,
                     Patient_Name = busPatient.Value.FirstName + " " + busPatient.Value.LastName + " " + busPatient.Value.MiddleName,
-                    Number_Phone = busPatient.Value.Account.PhoneNumber
+                    Number_Phone = busPatient.Value.Account.PhoneNumber,
+                    Patient_Email = busPatient.Value.Account.Email
 
                 }
             };
