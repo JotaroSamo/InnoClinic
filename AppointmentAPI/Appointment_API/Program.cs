@@ -3,9 +3,11 @@ using Appointment_API.Consumer;
 using Appointment_API.DataAccess;
 using Appointment_API.DataAccess.IService;
 using Appointment_API.DataAccess.Repository;
+using Appointment_API.Domain.Abstract.IService;
 using Appointment_API.Infrastructure.Validator;
 using FluentValidation.AspNetCore;
 using MassTransit;
+using MassTransit.Caching;
 using Microsoft.EntityFrameworkCore;
 using Profile_API.DataAccess.Mapper;
 using Serilog;
@@ -57,6 +59,8 @@ builder.Services.AddScoped<IServiceRepository, ServiceRepository>();
 // Регистрация сервиса и репозитория для Result
 builder.Services.AddScoped<IResultService, ResultService>();
 builder.Services.AddScoped<IResultRepository, ResultRepository>();
+
+builder.Services.AddScoped<IEmailService, EmailService>();
 
 builder.Services.AddAutoMapper(typeof(DomainProfile));
 

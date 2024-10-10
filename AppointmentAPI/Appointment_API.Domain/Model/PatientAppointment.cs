@@ -16,6 +16,9 @@ namespace Appointment_API.Domain.Model
         [Phone]
         public string Number_Phone { get; set; } = string.Empty;
 
+        [EmailAddress]
+        public string Patient_Email { get; set; } = string.Empty;
+
         public ICollection<Appointment>? Appointments { get; set; }
     }
 }

@@ -22,7 +22,9 @@ namespace Appointment_API.Consumer
             {
                 Id = message.Patient.Id,
                 Patient_Name = message.Patient.Patient_Name,
-                Number_Phone = message.Patient.Number_Phone
+                Number_Phone = message.Patient.Number_Phone,
+                Patient_Email = message.Patient.Patient_Email,
+                
             };
 
             // Создание аккаунта

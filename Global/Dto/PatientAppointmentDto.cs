@@ -13,6 +13,7 @@ namespace Global.Dto
 
         public string Patient_Name { get; set; } = string.Empty;
         public string Number_Phone { get; set; } = string.Empty;
+        public string Patient_Email { get; set; } = string.Empty;
     }
     public class CreatePatient
     {

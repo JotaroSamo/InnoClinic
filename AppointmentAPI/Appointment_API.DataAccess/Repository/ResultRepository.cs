@@ -65,7 +65,7 @@ namespace Appointment_API.DataAccess.Repository
         public async Task<Result<Results>> GetById(Guid id)
         {
             var resultEntity = await _context.Results.AsNoTracking()
-                .Include(r => r.Appointment)
+                .Include(r => r.Appointment).ThenInclude(p=>p.Patient)
                 .FirstOrDefaultAsync(r => r.Id == id);
 
             if (resultEntity is null)
