@@ -4,16 +4,7 @@ namespace Appointment_API.Contract.Request.Update
 {
     public record UpdateAppointmentRequest
     {
-        public UpdateAppointmentRequest(Guid id, DateOnly date, TimeOnly time, bool isApproved, Guid patientId, Guid doctorId, Guid serviceId)
-        {
-            Id = id;
-            Date = date;
-            Time = time;
-            IsApproved = isApproved;
-            PatientId = patientId;
-            DoctorId = doctorId;
-            ServiceId = serviceId;
-        }
+
 
         [Required]
         public Guid Id { get; set; }

@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <PackageReference Include="CSharpFunctionalExtensions" Version="3.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="8.0.10" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
     <PackageReference Include="Moq" Version="4.20.72" />
     <PackageReference Include="xunit" Version="2.9.2" />
@@ -18,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AppointmentAPI\Appointment_API\Appointment_API.csproj" />
     <ProjectReference Include="..\AuthAPI\Auth_API.Application\Auth_API.Application.csproj" />
     <ProjectReference Include="..\AuthAPI\Auth_API.DataAccess\Auth_API.DataAccess.csproj" />
     <ProjectReference Include="..\AuthAPI\Auth_API.Domain\Auth_API.Domain.csproj" />
