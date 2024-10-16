@@ -6,7 +6,28 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//// Добавление конфигурации JWT
+//var key = Encoding.ASCII.GetBytes(builder.Configuration["Jwt:Key"]);
 
+//builder.Services.AddAuthentication(options =>
+//{
+//    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+//    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+//})
+//.AddJwtBearer(options =>
+//{
+//    options.RequireHttpsMetadata = false;
+//    options.SaveToken = true;
+//    options.TokenValidationParameters = new TokenValidationParameters
+//    {
+//        ValidateIssuerSigningKey = true,
+//        IssuerSigningKey = new SymmetricSecurityKey(key),
+//        ValidateIssuer = false,
+//        ValidateAudience = false
+//    };
+//});
+
+// Добавление Ocelot с конфигурацией
 
 var ocelotConfiguration = new ConfigurationBuilder()
     .SetBasePath(Directory.GetCurrentDirectory()) // Устанавливает базовый путь для поиска файлов
