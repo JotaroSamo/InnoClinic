@@ -7,11 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="itext7" Version="8.0.5" />
-    <PackageReference Include="iTextSharp" Version="5.5.13.4" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Appointment_API.Domain\Appointment_API.Domain.csproj" />
   </ItemGroup>
 
