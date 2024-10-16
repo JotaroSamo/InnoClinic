@@ -1,7 +1,7 @@
 ﻿using Appointment_API.Contract.Request.Create;
 using Appointment_API.Contract.Request.Update;
 using Appointment_API.DataAccess.IService;
-using Appointment_API.Domain.Abstract;
+using Appointment_API.Domain.Abstract.I;
 using Appointment_API.Domain.Abstract.IService;
 using Appointment_API.Domain.Model;
 using FluentValidation;

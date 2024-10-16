@@ -5,7 +5,15 @@ namespace Appointment_API.Contract.Request.Create
 {
     public record CreateAppointmentRequest
     {
-
+        public CreateAppointmentRequest(DateOnly date, TimeOnly time, bool isApproved, Guid patientId, Guid doctorId, Guid serviceId)
+        {
+            Date = date;
+            Time = time;
+            IsApproved = isApproved;
+            PatientId = patientId;
+            DoctorId = doctorId;
+            ServiceId = serviceId;
+        }
 
         [Required]
         public DateOnly Date { get; set; }
