@@ -129,8 +129,8 @@ public class AppointmentControllerTests
             Date = DateOnly.FromDateTime(DateTime.Now),
             Time = TimeOnly.FromDateTime(DateTime.Now),
             IsApproved = true,
-            DoctorId = Guid.NewGuid(), // Замените на существующий ID
-            PatientId = Guid.NewGuid()  // Замените на существующий ID
+            DoctorId = Guid.NewGuid(), 
+            PatientId = Guid.NewGuid() 
         };
 
         var appointment = new Appointment
