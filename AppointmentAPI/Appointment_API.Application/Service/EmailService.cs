@@ -8,9 +8,6 @@ using System.Threading.Tasks;
 using Appointment_API.Domain.Model;
 using CSharpFunctionalExtensions;
 using Appointment_API.Domain.Abstract.IService;
-using iText.Kernel.Pdf;
-using iText.Layout;
-using iText.Layout.Element;
 
 
 namespace Appointment_API.Application.Service
@@ -50,61 +47,26 @@ namespace Appointment_API.Application.Service
 
         public async Task SendAppointmentResultOnEmail(Results result)
         {
-            string filePath = $"AppointmentResults_{result.Appointment.Id}.pdf"; // Путь к PDF-файлу
-
-            // Создание PDF-файла
-            CreatePdf(filePath, result);
-
-            // Подготовка email-сообщения
             MailAddress from = new MailAddress(SENDER_EMAIL, "InnoClinic");
             MailAddress to = new MailAddress(result.Appointment.Patient.Patient_Email);
-            MailMessage m = new MailMessage(from, to)
-            {
-                Subject = "Your Appointment Results from InnoClinic",
-                IsBodyHtml = true,
-                Body = $"<h3>Hello, dear {result.Appointment.Patient.Patient_Name}!</h3>" +
-                       $"<p>We hope you're well. Here are the results from your recent appointment:</p>" +
-                       $"<p><strong>Complaints:</strong> {result.Complaints}</p>" +
-                       $"<p><strong>Conclusion:</strong> {result.Conclusion}</p>" +
-                       $"<p><strong>Recommendations:</strong> {result.Recommendations}</p>" +
-                       $"<p>If you have any questions or need further assistance, please don't hesitate to reach out to us.</p>" +
-                       $"<p>Thank you for choosing InnoClinic. Take care!</p>"
-            };
+            MailMessage m = new MailMessage(from, to);
+            m.Subject = "Your Appointment Results from InnoClinic";
+            m.IsBodyHtml = true;
+            m.Body = $"<h3>Hello, dear {result.Appointment.Patient.Patient_Name}!</h3>" +
+                     $"<p>We hope you're well. Here are the results from your recent appointment:</p>" +
+                     $"<p><strong>Complaints:</strong> {result.Complaints}</p>" +
+                     $"<p><strong>Conclusion:</strong> {result.Conclusion}</p>" +
+                     $"<p><strong>Recommendations:</strong> {result.Recommendations}</p>" +
+                     $"<p>If you have any questions or need further assistance, please don't hesitate to reach out to us.</p>" +
+                     $"<p>Thank you for choosing InnoClinic. Take care!</p>";
 
-            // Добавляем вложение PDF-файла
-            if (File.Exists(filePath))
-            {
-                Attachment attachment = new Attachment(filePath);
-                m.Attachments.Add(attachment);
-            }
             using (SmtpClient smtp = new SmtpClient(SMTP_SERVER, SMTP_PORT))
             {
                 smtp.Credentials = new NetworkCredential(SENDER_EMAIL, PASSWORD);
                 smtp.EnableSsl = true;
                 await smtp.SendMailAsync(m);
             }
-
-            // Удаление файла после отправки
-            File.Delete(filePath);
         }
-        private void CreatePdf(string filePath, Results result)
-        {
-            using (var writer = new PdfWriter(filePath))
-            using (var pdf = new PdfDocument(writer))
-            {
-                var document = new Document(pdf);
-
-                // Заголовок и текст PDF
-                document.Add(new Paragraph("Appointment Results"));
-                document.Add(new Paragraph($"Complaints: {result.Complaints}"));
-                document.Add(new Paragraph($"Conclusion: {result.Conclusion}"));
-                document.Add(new Paragraph($"Recommendations: {result.Recommendations}"));
-
-                // Закрытие документа
-                document.Close();
-            }
-        }
-
 
     }
 }
