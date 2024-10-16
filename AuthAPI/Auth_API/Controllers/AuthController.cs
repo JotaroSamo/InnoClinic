@@ -49,7 +49,7 @@ namespace Auth_API.Controllers
                 Password = user.Value.HashPassword,
             };
 
-            await _bus.Publish(message); // Используйте _bus для отправки сообщения
+            //await _bus.Publish(message); // Используйте _bus для отправки сообщения
             return Ok(user.Value);
         }
 
@@ -89,7 +89,7 @@ namespace Auth_API.Controllers
         }
 
         [HttpGet("GetUsers")]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> GetUsers()
         {
             _logger.LogInformation("Getting list of users");
