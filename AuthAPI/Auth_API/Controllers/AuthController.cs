@@ -31,7 +31,7 @@ namespace Auth_API.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register([FromForm] UserRegisterRequest userRequest)
+        public async Task<IActionResult> Register([FromBody] UserRegisterRequest userRequest)
         {
             _logger.LogInformation("Registering user with email {Email}", userRequest.Email);
             var user = await _userService.RegisterAsync(userRequest.Email, userRequest.Password);
@@ -54,7 +54,7 @@ namespace Auth_API.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login([FromForm] UserLoginRequest model)
+        public async Task<IActionResult> Login([FromBody] UserLoginRequest model)
         {
             _logger.LogInformation("Logging in user with email {Email}", model.Email);
             var tokens = await _userService.LoginAsync(model.Email, model.Password);
@@ -66,7 +66,7 @@ namespace Auth_API.Controllers
             _logger.LogInformation("User logged in successfully with email {Email}", model.Email);
             Response.Cookies.Append("AccessToken", tokens.Value.AccessToken);
             Response.Cookies.Append("RefreshToken", tokens.Value.RefreshToken);
-            return Ok();
+            return Ok(new { tokens.Value.AccessToken, tokens.Value.RefreshToken });
         }
 
         [HttpPost("refresh-token")]
@@ -85,7 +85,7 @@ namespace Auth_API.Controllers
             Response.Cookies.Append("AccessToken", tokens.Value.AccessToken);
             Response.Cookies.Append("RefreshToken", tokens.Value.RefreshToken);
             _logger.LogInformation("Tokens refreshed successfully");
-            return Ok();
+            return Ok( new { tokens.Value.AccessToken, tokens.Value.RefreshToken });
         }
 
         [HttpGet("GetUsers")]
