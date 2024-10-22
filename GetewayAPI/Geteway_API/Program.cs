@@ -20,7 +20,16 @@ builder.Services.AddOcelot(ocelotConfiguration);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
+});
 var app = builder.Build();
 
 // Настройка middleware
@@ -35,6 +44,7 @@ app.UseHttpsRedirection();
 // Включаем аутентификацию и авторизацию
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseCors("AllowAllOrigins");
 
 // Подключаем Ocelot
 await app.UseOcelot();
