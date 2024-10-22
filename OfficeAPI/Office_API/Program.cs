@@ -30,6 +30,9 @@ builder.Services.AddDbContext<OfficeDbContext>(options =>
 builder.Services.AddScoped<IOfficeRepositories, OfficeRepositories>();
 builder.Services.AddScoped<IOfficeService, OfficeService>();
 builder.Services.AddAutoMapper(typeof(DomainProfile));
+
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

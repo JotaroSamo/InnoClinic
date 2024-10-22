@@ -121,18 +121,18 @@
       "UpstreamPathTemplate": "/receptionist/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
     },
-    {
-      "DownstreamPathTemplate": "/api/specialization/{everything}",
-      "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5005
-        }
-      ],
-      "UpstreamPathTemplate": "/specialization/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
-    },
+    //{
+    //  "DownstreamPathTemplate": "/api/specialization/{everything}",
+    //  "DownstreamScheme": "https",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 5005
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/specialization/{everything}",
+    //  "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    //},
     {
       "DownstreamPathTemplate": "/api/servicecategory/{everything}",
       "DownstreamScheme": "https",
