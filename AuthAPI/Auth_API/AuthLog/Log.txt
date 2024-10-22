@@ -10771,3 +10771,631 @@ RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified end
    at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
    at RabbitMQ.Client.ConnectionFactory.CreateConnection(IList`1 hostnames, String clientProvidedName)
    at MassTransit.RabbitMqTransport.ConnectionContextFactory.CreateConnection(ISupervisor supervisor) in /_/src/Transports/MassTransit.RabbitMqTransport/RabbitMqTransport/ConnectionContextFactory.cs:line 85
+2024-10-22 13:06:58.143 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-10-22 13:06:58.286 +03:00 [DBG] Hosting starting
+2024-10-22 13:06:58.341 +03:00 [INF] User profile is available. Using 'C:\Users\HONOR\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-10-22 13:06:58.675 +03:00 [DBG] Reading data from file 'C:\Users\HONOR\AppData\Local\ASP.NET\DataProtection-Keys\key-1f0fb92a-53a3-4b50-9cbc-67b4aaaa11fc.xml'.
+2024-10-22 13:06:58.729 +03:00 [DBG] Reading data from file 'C:\Users\HONOR\AppData\Local\ASP.NET\DataProtection-Keys\key-94d38a1a-98f5-4adc-b518-97226d91b272.xml'.
+2024-10-22 13:06:58.747 +03:00 [DBG] Reading data from file 'C:\Users\HONOR\AppData\Local\ASP.NET\DataProtection-Keys\key-9613504d-1c46-49b9-b775-1671ba264c50.xml'.
+2024-10-22 13:06:58.768 +03:00 [DBG] Reading data from file 'C:\Users\HONOR\AppData\Local\ASP.NET\DataProtection-Keys\key-9eb758b3-3963-43eb-bfeb-ef3440b3abae.xml'.
+2024-10-22 13:06:58.788 +03:00 [DBG] Reading data from file 'C:\Users\HONOR\AppData\Local\ASP.NET\DataProtection-Keys\key-d2db69fb-1c58-4ee1-a6c9-3beb254e7838.xml'.
+2024-10-22 13:06:58.813 +03:00 [DBG] Found key {1f0fb92a-53a3-4b50-9cbc-67b4aaaa11fc}.
+2024-10-22 13:06:58.824 +03:00 [DBG] Found key {94d38a1a-98f5-4adc-b518-97226d91b272}.
+2024-10-22 13:06:58.825 +03:00 [DBG] Found key {9613504d-1c46-49b9-b775-1671ba264c50}.
+2024-10-22 13:06:58.826 +03:00 [DBG] Found key {9eb758b3-3963-43eb-bfeb-ef3440b3abae}.
+2024-10-22 13:06:58.828 +03:00 [DBG] Found key {d2db69fb-1c58-4ee1-a6c9-3beb254e7838}.
+2024-10-22 13:06:58.837 +03:00 [DBG] Considering key {94d38a1a-98f5-4adc-b518-97226d91b272} with expiration date 2024-12-08 07:32:33Z as default key.
+2024-10-22 13:06:58.843 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-10-22 13:06:58.847 +03:00 [DBG] Decrypting secret element using Windows DPAPI.
+2024-10-22 13:06:58.851 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-10-22 13:06:58.869 +03:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-10-22 13:06:58.875 +03:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-10-22 13:06:58.881 +03:00 [DBG] Using key {94d38a1a-98f5-4adc-b518-97226d91b272} as the default key.
+2024-10-22 13:06:58.884 +03:00 [DBG] Key ring with default key {94d38a1a-98f5-4adc-b518-97226d91b272} was loaded during application startup.
+2024-10-22 13:06:58.887 +03:00 [DBG] Starting bus instances: IBus
+2024-10-22 13:06:58.895 +03:00 [DBG] Starting bus: "rabbitmq://localhost/"
+2024-10-22 13:06:58.972 +03:00 [DBG] Connect: guest@localhost:5672/
+2024-10-22 13:06:59.208 +03:00 [DBG] Using development certificate: CN=localhost (Thumbprint: C642C2C87225D7E761F2C7EBC1EFD0479CA0DDE2)
+2024-10-22 13:06:59.269 +03:00 [INF] Now listening on: https://localhost:5001
+2024-10-22 13:06:59.271 +03:00 [INF] Now listening on: http://localhost:5151
+2024-10-22 13:06:59.272 +03:00 [DBG] Loaded hosting startup assembly Auth_API
+2024-10-22 13:06:59.273 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2024-10-22 13:06:59.274 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-10-22 13:06:59.275 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-10-22 13:06:59.337 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-22 13:06:59.339 +03:00 [INF] Hosting environment: Development
+2024-10-22 13:06:59.341 +03:00 [INF] Content root path: C:\Users\HONOR\Source\Repos\InnoClinic\AuthAPI\Auth_API
+2024-10-22 13:06:59.343 +03:00 [DBG] Hosting started
+2024-10-22 13:06:59.698 +03:00 [DBG] Connection id "0HN7IG52B3PJJ" accepted.
+2024-10-22 13:06:59.701 +03:00 [DBG] Connection id "0HN7IG52B3PJJ" started.
+2024-10-22 13:06:59.726 +03:00 [DBG] Connection id "0HN7IG52B3PJJ" received FIN.
+2024-10-22 13:06:59.750 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-10-22 13:06:59.833 +03:00 [DBG] Connection id "0HN7IG52B3PJJ" stopped.
+2024-10-22 13:06:59.838 +03:00 [DBG] Connection id "0HN7IG52B3PJJ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-10-22 13:07:00.720 +03:00 [DBG] Connection id "0HN7IG52B3PJK" accepted.
+2024-10-22 13:07:00.730 +03:00 [DBG] Connection id "0HN7IG52B3PJK" started.
+2024-10-22 13:07:00.777 +03:00 [DBG] Connection id "0HN7IG52B3PJK" received FIN.
+2024-10-22 13:07:00.778 +03:00 [DBG] Connection id "0HN7IG52B3PJL" accepted.
+2024-10-22 13:07:00.791 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-10-22 13:07:00.792 +03:00 [DBG] Connection id "0HN7IG52B3PJL" started.
+2024-10-22 13:07:00.796 +03:00 [DBG] Connection id "0HN7IG52B3PJK" stopped.
+2024-10-22 13:07:00.803 +03:00 [DBG] Connection id "0HN7IG52B3PJK" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-10-22 13:07:00.809 +03:00 [DBG] Connection id "0HN7IG52B3PJL" received FIN.
+2024-10-22 13:07:00.811 +03:00 [DBG] Connection id "0HN7IG52B3PJM" accepted.
+2024-10-22 13:07:00.812 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-10-22 13:07:00.813 +03:00 [DBG] Connection id "0HN7IG52B3PJM" started.
+2024-10-22 13:07:00.823 +03:00 [DBG] Connection id "0HN7IG52B3PJL" stopped.
+2024-10-22 13:07:00.825 +03:00 [DBG] Connection id "0HN7IG52B3PJL" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-10-22 13:07:00.840 +03:00 [DBG] Connection 0HN7IG52B3PJM established using the following protocol: "Tls13"
+2024-10-22 13:07:00.930 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - null null
+2024-10-22 13:07:01.107 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-10-22 13:07:01.132 +03:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-10-22 13:07:01.137 +03:00 [DBG] Request did not match any endpoints
+2024-10-22 13:07:01.245 +03:00 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-10-22 13:07:01.248 +03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-10-22 13:07:01.319 +03:00 [DBG] Response markup was updated to include Browser Link script injection.
+2024-10-22 13:07:01.323 +03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2024-10-22 13:07:01.328 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - 200 null text/html;charset=utf-8 405.4895ms
+2024-10-22 13:07:01.379 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-22 13:07:01.438 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - 200 13751 application/javascript; charset=utf-8 59.3041ms
+2024-10-22 13:07:03.897 +03:00 [WRN] Connection Failed: "rabbitmq://localhost/"
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed
+ ---> System.Net.Sockets.SocketException (10061): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at RabbitMQ.Client.TcpClientAdapter.ConnectAsync(String host, Int32 port)
+   at RabbitMQ.Client.Impl.TaskExtensions.TimeoutAfter(Task task, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingAddressFamily(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout, AddressFamily family)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingIPv4(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler..ctor(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.Framing.Impl.IProtocolExtensions.CreateFrameHandler(IProtocol protocol, AmqpTcpEndpoint endpoint, ArrayPool`1 pool, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandler(AmqpTcpEndpoint endpoint)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IList`1 hostnames, String clientProvidedName)
+   at MassTransit.RabbitMqTransport.ConnectionContextFactory.CreateConnection(ISupervisor supervisor) in /_/src/Transports/MassTransit.RabbitMqTransport/RabbitMqTransport/ConnectionContextFactory.cs:line 85
+2024-10-22 13:07:03.964 +03:00 [DBG] Endpoint Faulted: "rabbitmq://localhost/DEDSEC_AuthAPI_bus_ko9yyybzk94rpeembdqxfykryf?temporary=true"
+MassTransit.RabbitMqConnectionException: Broker unreachable: guest@localhost:5672/
+ ---> RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed
+ ---> System.Net.Sockets.SocketException (10061): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at RabbitMQ.Client.TcpClientAdapter.ConnectAsync(String host, Int32 port)
+   at RabbitMQ.Client.Impl.TaskExtensions.TimeoutAfter(Task task, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingAddressFamily(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout, AddressFamily family)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingIPv4(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler..ctor(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.Framing.Impl.IProtocolExtensions.CreateFrameHandler(IProtocol protocol, AmqpTcpEndpoint endpoint, ArrayPool`1 pool, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandler(AmqpTcpEndpoint endpoint)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IList`1 hostnames, String clientProvidedName)
+   at MassTransit.RabbitMqTransport.ConnectionContextFactory.CreateConnection(ISupervisor supervisor) in /_/src/Transports/MassTransit.RabbitMqTransport/RabbitMqTransport/ConnectionContextFactory.cs:line 85
+   --- End of inner exception stack trace ---
+   at MassTransit.RabbitMqTransport.ConnectionContextFactory.CreateConnection(ISupervisor supervisor) in /_/src/Transports/MassTransit.RabbitMqTransport/RabbitMqTransport/ConnectionContextFactory.cs:line 111
+   at MassTransit.Internals.TaskExtensions.<>c__DisplayClass2_0`1.<<OrCanceled>g__WaitAsync|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at MassTransit.Internals.TaskExtensions.<>c__DisplayClass2_0`1.<<OrCanceled>g__WaitAsync|0>d.MoveNext() in /_/src/MassTransit.Abstractions/Internals/Extensions/TaskExtensions.cs:line 72
+--- End of stack trace from previous location ---
+   at MassTransit.RabbitMqTransport.ConnectionContextFactory.CreateSharedConnection(Task`1 context, CancellationToken cancellationToken) in /_/src/Transports/MassTransit.RabbitMqTransport/RabbitMqTransport/ConnectionContextFactory.cs:line 57
+   at MassTransit.Agents.PipeContextSupervisor`1.Send(IPipe`1 pipe, CancellationToken cancellationToken) in /_/src/MassTransit/Agents/PipeContextSupervisor.cs:line 51
+   at MassTransit.Agents.PipeContextSupervisor`1.Send(IPipe`1 pipe, CancellationToken cancellationToken) in /_/src/MassTransit/Agents/PipeContextSupervisor.cs:line 61
+   at MassTransit.Agents.PipeContextSupervisor`1.Send(IPipe`1 pipe, CancellationToken cancellationToken) in /_/src/MassTransit/Agents/PipeContextSupervisor.cs:line 67
+   at MassTransit.SupervisorExtensions.<>c__DisplayClass5_0`2.<<CreateAgent>g__HandleSupervisorTask|0>d.MoveNext() in /_/src/MassTransit/SupervisorExtensions.cs:line 139
+--- End of stack trace from previous location ---
+   at MassTransit.Agents.PipeContextSupervisor`1.Send(IPipe`1 pipe, CancellationToken cancellationToken) in /_/src/MassTransit/Agents/PipeContextSupervisor.cs:line 61
+   at MassTransit.SupervisorExtensions.CreateAgent[T,TAgent](ISupervisor`1 supervisor, IAsyncPipeContextAgent`1 asyncContext, Func`3 agentFactory, CancellationToken cancellationToken) in /_/src/MassTransit/SupervisorExtensions.cs:line 158
+   at MassTransit.Agents.PipeContextSupervisor`1.Send(IPipe`1 pipe, CancellationToken cancellationToken) in /_/src/MassTransit/Agents/PipeContextSupervisor.cs:line 67
+   at MassTransit.Transports.TransportStartExtensions.OnTransportStartup[T](ReceiveEndpointContext context, ITransportSupervisor`1 supervisor, CancellationToken cancellationToken) in /_/src/MassTransit/Transports/TransportStartExtensions.cs:line 19
+   at MassTransit.Transports.ReceiveTransport`1.ReceiveTransportAgent.RunTransport() in /_/src/MassTransit/Transports/ReceiveTransport.cs:line 192
+2024-10-22 13:07:08.727 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - null null
+2024-10-22 13:07:08.919 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - 200 null text/javascript; charset=UTF-8 191.6628ms
+2024-10-22 13:07:09.004 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - null null
+2024-10-22 13:07:09.007 +03:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-10-22 13:07:09.008 +03:00 [DBG] Request did not match any endpoints
+2024-10-22 13:07:09.268 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 263.9319ms
+2024-10-22 13:07:10.499 +03:00 [DBG] Connect: guest@localhost:5672/
+2024-10-22 13:07:14.581 +03:00 [WRN] Connection Failed: "rabbitmq://localhost/"
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed
+ ---> System.Net.Sockets.SocketException (10061): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at RabbitMQ.Client.TcpClientAdapter.ConnectAsync(String host, Int32 port)
+   at RabbitMQ.Client.Impl.TaskExtensions.TimeoutAfter(Task task, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingAddressFamily(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout, AddressFamily family)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingIPv4(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler..ctor(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.Framing.Impl.IProtocolExtensions.CreateFrameHandler(IProtocol protocol, AmqpTcpEndpoint endpoint, ArrayPool`1 pool, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandler(AmqpTcpEndpoint endpoint)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IList`1 hostnames, String clientProvidedName)
+   at MassTransit.RabbitMqTransport.ConnectionContextFactory.CreateConnection(ISupervisor supervisor) in /_/src/Transports/MassTransit.RabbitMqTransport/RabbitMqTransport/ConnectionContextFactory.cs:line 85
+2024-10-22 13:07:18.933 +03:00 [DBG] Connection id "0HN7IG52B3PJM" received FIN.
+2024-10-22 13:07:18.948 +03:00 [DBG] The connection queue processing loop for 0HN7IG52B3PJM completed.
+2024-10-22 13:07:18.952 +03:00 [DBG] Connection id "0HN7IG52B3PJM" is closed. The last processed stream ID was 7.
+2024-10-22 13:07:18.954 +03:00 [DBG] Connection id "0HN7IG52B3PJM" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-10-22 13:07:18.958 +03:00 [DBG] Connection id "0HN7IG52B3PJM" stopped.
+2024-10-22 13:07:25.249 +03:00 [DBG] Connect: guest@localhost:5672/
+2024-10-22 13:07:29.346 +03:00 [WRN] Connection Failed: "rabbitmq://localhost/"
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed
+ ---> System.Net.Sockets.SocketException (10061): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at RabbitMQ.Client.TcpClientAdapter.ConnectAsync(String host, Int32 port)
+   at RabbitMQ.Client.Impl.TaskExtensions.TimeoutAfter(Task task, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingAddressFamily(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout, AddressFamily family)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingIPv4(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler..ctor(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.Framing.Impl.IProtocolExtensions.CreateFrameHandler(IProtocol protocol, AmqpTcpEndpoint endpoint, ArrayPool`1 pool, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandler(AmqpTcpEndpoint endpoint)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IList`1 hostnames, String clientProvidedName)
+   at MassTransit.RabbitMqTransport.ConnectionContextFactory.CreateConnection(ISupervisor supervisor) in /_/src/Transports/MassTransit.RabbitMqTransport/RabbitMqTransport/ConnectionContextFactory.cs:line 85
+2024-10-22 13:07:44.987 +03:00 [DBG] Connect: guest@localhost:5672/
+2024-10-22 13:07:49.098 +03:00 [WRN] Connection Failed: "rabbitmq://localhost/"
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed
+ ---> System.Net.Sockets.SocketException (10061): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at RabbitMQ.Client.TcpClientAdapter.ConnectAsync(String host, Int32 port)
+   at RabbitMQ.Client.Impl.TaskExtensions.TimeoutAfter(Task task, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingAddressFamily(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout, AddressFamily family)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingIPv4(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler..ctor(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.Framing.Impl.IProtocolExtensions.CreateFrameHandler(IProtocol protocol, AmqpTcpEndpoint endpoint, ArrayPool`1 pool, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandler(AmqpTcpEndpoint endpoint)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IList`1 hostnames, String clientProvidedName)
+   at MassTransit.RabbitMqTransport.ConnectionContextFactory.CreateConnection(ISupervisor supervisor) in /_/src/Transports/MassTransit.RabbitMqTransport/RabbitMqTransport/ConnectionContextFactory.cs:line 85
+2024-10-22 13:07:49.265 +03:00 [DBG] Connection id "0HN7IG52B3PJN" accepted.
+2024-10-22 13:07:49.267 +03:00 [DBG] Connection id "0HN7IG52B3PJN" started.
+2024-10-22 13:07:49.272 +03:00 [DBG] Connection id "0HN7IG52B3PJN" received FIN.
+2024-10-22 13:07:49.274 +03:00 [DBG] Connection id "0HN7IG52B3PJO" accepted.
+2024-10-22 13:07:49.278 +03:00 [DBG] Connection id "0HN7IG52B3PJO" started.
+2024-10-22 13:07:49.278 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090326): Получено непредвиденное сообщение или оно имеет неправильный формат.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-10-22 13:07:49.283 +03:00 [DBG] Connection 0HN7IG52B3PJO established using the following protocol: "Tls13"
+2024-10-22 13:07:49.286 +03:00 [DBG] Connection id "0HN7IG52B3PJN" stopped.
+2024-10-22 13:07:49.292 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/Auth/register - application/json 91
+2024-10-22 13:07:49.292 +03:00 [DBG] Connection id "0HN7IG52B3PJN" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-10-22 13:07:49.307 +03:00 [DBG] 1 candidate(s) found for the request path '/api/Auth/register'
+2024-10-22 13:07:49.311 +03:00 [DBG] Endpoint 'Auth_API.Controllers.AuthController.Register (Auth_API)' with route pattern 'api/Auth/register' is valid for the request path '/api/Auth/register'
+2024-10-22 13:07:49.315 +03:00 [DBG] Request matched endpoint 'Auth_API.Controllers.AuthController.Register (Auth_API)'
+2024-10-22 13:07:49.318 +03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-10-22 13:07:49.470 +03:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-10-22 13:07:49.476 +03:00 [INF] Executing endpoint 'Auth_API.Controllers.AuthController.Register (Auth_API)'
+2024-10-22 13:07:49.514 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Auth_API.Contract.UserRegisterRequest) on controller Auth_API.Controllers.AuthController (Auth_API).
+2024-10-22 13:07:49.518 +03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-10-22 13:07:49.520 +03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-10-22 13:07:49.522 +03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-10-22 13:07:49.526 +03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-10-22 13:07:49.527 +03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-10-22 13:07:49.531 +03:00 [DBG] Executing controller factory for controller Auth_API.Controllers.AuthController (Auth_API)
+2024-10-22 13:07:49.728 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-10-22 13:07:49.855 +03:00 [DBG] Executed controller factory for controller Auth_API.Controllers.AuthController (Auth_API)
+2024-10-22 13:07:49.875 +03:00 [DBG] Attempting to bind parameter 'userRequest' of type 'Auth_API.Contract.UserRegisterRequest' ...
+2024-10-22 13:07:49.879 +03:00 [DBG] Attempting to bind parameter 'userRequest' of type 'Auth_API.Contract.UserRegisterRequest' using the name '' in request data ...
+2024-10-22 13:07:49.883 +03:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-10-22 13:07:49.889 +03:00 [DBG] Connection id "0HN7IG52B3PJO", Request id "0HN7IG52B3PJO:00000001": started reading request body.
+2024-10-22 13:07:49.891 +03:00 [DBG] Connection id "0HN7IG52B3PJO", Request id "0HN7IG52B3PJO:00000001": done reading request body.
+2024-10-22 13:07:49.897 +03:00 [DBG] JSON input formatter succeeded, deserializing to type 'Auth_API.Contract.UserRegisterRequest'
+2024-10-22 13:07:49.898 +03:00 [DBG] Done attempting to bind parameter 'userRequest' of type 'Auth_API.Contract.UserRegisterRequest'.
+2024-10-22 13:07:49.900 +03:00 [DBG] Done attempting to bind parameter 'userRequest' of type 'Auth_API.Contract.UserRegisterRequest'.
+2024-10-22 13:07:49.901 +03:00 [DBG] Attempting to validate the bound parameter 'userRequest' of type 'Auth_API.Contract.UserRegisterRequest' ...
+2024-10-22 13:07:49.913 +03:00 [DBG] Done attempting to validate the bound parameter 'userRequest' of type 'Auth_API.Contract.UserRegisterRequest'.
+2024-10-22 13:07:49.999 +03:00 [INF] Registering user with email qwerty@gmai.com
+2024-10-22 13:08:01.296 +03:00 [DBG] Entity Framework Core 8.0.8 initialized 'AuthDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.8' with options: MigrationsAssembly=Auth_API.DataAccess 
+2024-10-22 13:08:01.408 +03:00 [DBG] Context 'AuthDBContext' started tracking 'UserEntity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-10-22 13:08:01.413 +03:00 [DBG] SaveChanges starting for 'AuthDBContext'.
+2024-10-22 13:08:01.418 +03:00 [DBG] DetectChanges starting for 'AuthDBContext'.
+2024-10-22 13:08:01.433 +03:00 [DBG] DetectChanges completed for 'AuthDBContext'.
+2024-10-22 13:08:01.509 +03:00 [DBG] Creating DbConnection.
+2024-10-22 13:08:01.578 +03:00 [DBG] Created DbConnection. (66ms).
+2024-10-22 13:08:01.582 +03:00 [DBG] Opening connection to database 'AuthDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-22 13:08:03.229 +03:00 [DBG] Opened connection to database 'AuthDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-22 13:08:03.241 +03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-10-22 13:08:03.248 +03:00 [DBG] Created DbCommand for 'ExecuteReader' (7ms).
+2024-10-22 13:08:03.265 +03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (24ms).
+2024-10-22 13:08:03.279 +03:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 256), @p2='?' (Size = 256), @p3='?' (Size = 4000), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [Email], [HashPassword], [RefreshToken], [Role])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2024-10-22 13:08:03.363 +03:00 [INF] Executed DbCommand (88ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 256), @p2='?' (Size = 256), @p3='?' (Size = 4000), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [Email], [HashPassword], [RefreshToken], [Role])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2024-10-22 13:08:03.373 +03:00 [DBG] Closing data reader to 'AuthDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-22 13:08:03.384 +03:00 [DBG] A data reader for 'AuthDB' on server '(localdb)\MSSQLLocalDB' is being disposed after spending 11ms reading results.
+2024-10-22 13:08:03.390 +03:00 [DBG] Closing connection to database 'AuthDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-22 13:08:03.399 +03:00 [DBG] Closed connection to database 'AuthDB' on server '(localdb)\MSSQLLocalDB' (8ms).
+2024-10-22 13:08:03.411 +03:00 [DBG] An entity of type 'UserEntity' tracked by 'AuthDBContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-10-22 13:08:03.415 +03:00 [DBG] SaveChanges completed for 'AuthDBContext' with 1 entities written to the database.
+2024-10-22 13:08:17.119 +03:00 [INF] User registered successfully with email qwerty@gmai.com
+2024-10-22 13:08:17.129 +03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-10-22 13:08:17.133 +03:00 [DBG] No information found on request to perform content negotiation.
+2024-10-22 13:08:17.135 +03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-10-22 13:08:17.136 +03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-10-22 13:08:17.138 +03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-10-22 13:08:17.140 +03:00 [INF] Executing OkObjectResult, writing value of type 'Auth_API.Domain.Entity.User'.
+2024-10-22 13:08:17.151 +03:00 [INF] Executed action Auth_API.Controllers.AuthController.Register (Auth_API) in 27616.8858ms
+2024-10-22 13:08:17.153 +03:00 [INF] Executed endpoint 'Auth_API.Controllers.AuthController.Register (Auth_API)'
+2024-10-22 13:08:17.159 +03:00 [DBG] 'AuthDBContext' disposed.
+2024-10-22 13:08:17.165 +03:00 [DBG] Disposing connection to database 'AuthDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-22 13:08:17.170 +03:00 [DBG] Disposed connection to database '' on server '' (4ms).
+2024-10-22 13:08:17.176 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/Auth/register - 200 null application/json; charset=utf-8 27884.2008ms
+2024-10-22 13:08:17.855 +03:00 [DBG] Connect: guest@localhost:5672/
+2024-10-22 13:08:21.919 +03:00 [WRN] Connection Failed: "rabbitmq://localhost/"
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed
+ ---> System.Net.Sockets.SocketException (10061): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at RabbitMQ.Client.TcpClientAdapter.ConnectAsync(String host, Int32 port)
+   at RabbitMQ.Client.Impl.TaskExtensions.TimeoutAfter(Task task, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingAddressFamily(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout, AddressFamily family)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingIPv4(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler..ctor(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.Framing.Impl.IProtocolExtensions.CreateFrameHandler(IProtocol protocol, AmqpTcpEndpoint endpoint, ArrayPool`1 pool, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandler(AmqpTcpEndpoint endpoint)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IList`1 hostnames, String clientProvidedName)
+   at MassTransit.RabbitMqTransport.ConnectionContextFactory.CreateConnection(ISupervisor supervisor) in /_/src/Transports/MassTransit.RabbitMqTransport/RabbitMqTransport/ConnectionContextFactory.cs:line 85
+2024-10-22 13:08:35.435 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/Auth/login - application/json 58
+2024-10-22 13:08:35.440 +03:00 [DBG] 1 candidate(s) found for the request path '/api/Auth/login'
+2024-10-22 13:08:35.442 +03:00 [DBG] Endpoint 'Auth_API.Controllers.AuthController.Login (Auth_API)' with route pattern 'api/Auth/login' is valid for the request path '/api/Auth/login'
+2024-10-22 13:08:35.445 +03:00 [DBG] Request matched endpoint 'Auth_API.Controllers.AuthController.Login (Auth_API)'
+2024-10-22 13:08:35.448 +03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-10-22 13:08:35.452 +03:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-10-22 13:08:35.453 +03:00 [INF] Executing endpoint 'Auth_API.Controllers.AuthController.Login (Auth_API)'
+2024-10-22 13:08:35.458 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Auth_API.Contract.UserLoginRequest) on controller Auth_API.Controllers.AuthController (Auth_API).
+2024-10-22 13:08:35.460 +03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-10-22 13:08:35.461 +03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-10-22 13:08:35.465 +03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-10-22 13:08:35.470 +03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-10-22 13:08:35.472 +03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-10-22 13:08:35.475 +03:00 [DBG] Executing controller factory for controller Auth_API.Controllers.AuthController (Auth_API)
+2024-10-22 13:08:35.478 +03:00 [DBG] Executed controller factory for controller Auth_API.Controllers.AuthController (Auth_API)
+2024-10-22 13:08:35.480 +03:00 [DBG] Attempting to bind parameter 'model' of type 'Auth_API.Contract.UserLoginRequest' ...
+2024-10-22 13:08:35.482 +03:00 [DBG] Attempting to bind parameter 'model' of type 'Auth_API.Contract.UserLoginRequest' using the name '' in request data ...
+2024-10-22 13:08:35.484 +03:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-10-22 13:08:35.486 +03:00 [DBG] Connection id "0HN7IG52B3PJO", Request id "0HN7IG52B3PJO:00000003": started reading request body.
+2024-10-22 13:08:35.487 +03:00 [DBG] Connection id "0HN7IG52B3PJO", Request id "0HN7IG52B3PJO:00000003": done reading request body.
+2024-10-22 13:08:35.490 +03:00 [DBG] JSON input formatter succeeded, deserializing to type 'Auth_API.Contract.UserLoginRequest'
+2024-10-22 13:08:35.491 +03:00 [DBG] Done attempting to bind parameter 'model' of type 'Auth_API.Contract.UserLoginRequest'.
+2024-10-22 13:08:35.492 +03:00 [DBG] Done attempting to bind parameter 'model' of type 'Auth_API.Contract.UserLoginRequest'.
+2024-10-22 13:08:35.495 +03:00 [DBG] Attempting to validate the bound parameter 'model' of type 'Auth_API.Contract.UserLoginRequest' ...
+2024-10-22 13:08:35.500 +03:00 [DBG] Done attempting to validate the bound parameter 'model' of type 'Auth_API.Contract.UserLoginRequest'.
+2024-10-22 13:08:35.505 +03:00 [INF] Logging in user with email qwerty@gmai.com
+2024-10-22 13:09:02.663 +03:00 [DBG] Connect: guest@localhost:5672/
+2024-10-22 13:09:12.354 +03:00 [WRN] Connection Failed: "rabbitmq://localhost/"
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed
+ ---> System.Net.Sockets.SocketException (10061): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at RabbitMQ.Client.TcpClientAdapter.ConnectAsync(String host, Int32 port)
+   at RabbitMQ.Client.Impl.TaskExtensions.TimeoutAfter(Task task, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingAddressFamily(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout, AddressFamily family)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingIPv4(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler..ctor(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.Framing.Impl.IProtocolExtensions.CreateFrameHandler(IProtocol protocol, AmqpTcpEndpoint endpoint, ArrayPool`1 pool, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandler(AmqpTcpEndpoint endpoint)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IList`1 hostnames, String clientProvidedName)
+   at MassTransit.RabbitMqTransport.ConnectionContextFactory.CreateConnection(ISupervisor supervisor) in /_/src/Transports/MassTransit.RabbitMqTransport/RabbitMqTransport/ConnectionContextFactory.cs:line 85
+2024-10-22 13:09:25.202 +03:00 [DBG] Entity Framework Core 8.0.8 initialized 'AuthDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.8' with options: MigrationsAssembly=Auth_API.DataAccess 
+2024-10-22 13:09:25.391 +03:00 [DBG] Compiling query expression: 
+'DbSet<UserEntity>()
+    .FirstOrDefault(e => object.Equals(
+        objA: EF.Property<object>(e, "Id"), 
+        objB: __get_Item_0))'
+2024-10-22 13:09:25.826 +03:00 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<UserEntity>(
+    asyncEnumerable: new SingleQueryingEnumerable<UserEntity>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: UserEntity.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: UserEntity.Email (string) Required Index MaxLength(256), 1], [Property: UserEntity.HashPassword (string) Required MaxLength(256), 2], [Property: UserEntity.RefreshToken (string) Required, 3], [Property: UserEntity.Role (Role) Required, 4] }
+            SELECT TOP(1) u.Id, u.Email, u.HashPassword, u.RefreshToken, u.Role
+            FROM Users AS u
+            WHERE u.Id == @__get_Item_0), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, UserEntity>, 
+        Auth_API.DataAccess.AuthDBContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2024-10-22 13:09:25.882 +03:00 [DBG] Creating DbConnection.
+2024-10-22 13:09:25.884 +03:00 [DBG] Created DbConnection. (1ms).
+2024-10-22 13:09:25.885 +03:00 [DBG] Opening connection to database 'AuthDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-22 13:09:25.889 +03:00 [DBG] Opened connection to database 'AuthDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-22 13:09:25.893 +03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-10-22 13:09:25.895 +03:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2024-10-22 13:09:25.897 +03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2024-10-22 13:09:25.899 +03:00 [DBG] Executing DbCommand [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[HashPassword], [u].[RefreshToken], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__get_Item_0
+2024-10-22 13:09:25.915 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[HashPassword], [u].[RefreshToken], [u].[Role]
+FROM [Users] AS [u]
+WHERE [u].[Id] = @__get_Item_0
+2024-10-22 13:09:25.954 +03:00 [DBG] Context 'AuthDBContext' started tracking 'UserEntity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-10-22 13:09:25.961 +03:00 [DBG] Closing data reader to 'AuthDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-22 13:09:25.964 +03:00 [DBG] A data reader for 'AuthDB' on server '(localdb)\MSSQLLocalDB' is being disposed after spending 31ms reading results.
+2024-10-22 13:09:25.965 +03:00 [DBG] Closing connection to database 'AuthDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-22 13:09:25.967 +03:00 [DBG] Closed connection to database 'AuthDB' on server '(localdb)\MSSQLLocalDB' (1ms).
+2024-10-22 13:09:27.046 +03:00 [DBG] SaveChanges starting for 'AuthDBContext'.
+2024-10-22 13:09:27.047 +03:00 [DBG] DetectChanges starting for 'AuthDBContext'.
+2024-10-22 13:09:27.051 +03:00 [DBG] The unchanged property 'UserEntity.RefreshToken' was detected as changed and will be marked as modified. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2024-10-22 13:09:27.054 +03:00 [DBG] An entity of type 'UserEntity' tracked by 'AuthDBContext' changed state from '"Unchanged"' to '"Modified"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-10-22 13:09:27.056 +03:00 [DBG] DetectChanges completed for 'AuthDBContext'.
+2024-10-22 13:09:27.067 +03:00 [DBG] Opening connection to database 'AuthDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-22 13:09:27.068 +03:00 [DBG] Opened connection to database 'AuthDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-22 13:09:27.070 +03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-10-22 13:09:27.071 +03:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2024-10-22 13:09:27.072 +03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (2ms).
+2024-10-22 13:09:27.074 +03:00 [DBG] Executing DbCommand [Parameters=[@p1='?' (DbType = Guid), @p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [RefreshToken] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2024-10-22 13:09:27.081 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [RefreshToken] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2024-10-22 13:09:27.113 +03:00 [DBG] Closing data reader to 'AuthDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-22 13:09:27.115 +03:00 [DBG] A data reader for 'AuthDB' on server '(localdb)\MSSQLLocalDB' is being disposed after spending 6ms reading results.
+2024-10-22 13:09:27.117 +03:00 [DBG] Closing connection to database 'AuthDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-22 13:09:27.119 +03:00 [DBG] Closed connection to database 'AuthDB' on server '(localdb)\MSSQLLocalDB' (1ms).
+2024-10-22 13:09:27.122 +03:00 [DBG] An entity of type 'UserEntity' tracked by 'AuthDBContext' changed state from '"Modified"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-10-22 13:09:27.125 +03:00 [DBG] SaveChanges completed for 'AuthDBContext' with 1 entities written to the database.
+2024-10-22 13:09:34.212 +03:00 [INF] User logged in successfully with email qwerty@gmai.com
+2024-10-22 13:09:36.349 +03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-10-22 13:09:36.352 +03:00 [DBG] No information found on request to perform content negotiation.
+2024-10-22 13:09:36.353 +03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-10-22 13:09:36.354 +03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-10-22 13:09:36.356 +03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-10-22 13:09:36.358 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-10-22 13:09:36.413 +03:00 [INF] Executed action Auth_API.Controllers.AuthController.Login (Auth_API) in 60937.6019ms
+2024-10-22 13:09:36.414 +03:00 [INF] Executed endpoint 'Auth_API.Controllers.AuthController.Login (Auth_API)'
+2024-10-22 13:09:36.416 +03:00 [DBG] 'AuthDBContext' disposed.
+2024-10-22 13:09:36.417 +03:00 [DBG] Disposing connection to database 'AuthDB' on server '(localdb)\MSSQLLocalDB'.
+2024-10-22 13:09:36.420 +03:00 [DBG] Disposed connection to database '' on server '' (2ms).
+2024-10-22 13:09:36.422 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/Auth/login - 200 null application/json; charset=utf-8 60986.6892ms
+2024-10-22 13:09:44.103 +03:00 [DBG] Connection id "0HN7IG52B3PJO" received FIN.
+2024-10-22 13:09:44.105 +03:00 [DBG] Connection id "0HN7IG52B3PJO" is closed. The last processed stream ID was 3.
+2024-10-22 13:09:44.105 +03:00 [DBG] The connection queue processing loop for 0HN7IG52B3PJO completed.
+2024-10-22 13:09:44.107 +03:00 [DBG] Connection id "0HN7IG52B3PJO" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-10-22 13:09:44.117 +03:00 [DBG] Connection id "0HN7IG52B3PJO" stopped.
+2024-10-22 13:09:45.136 +03:00 [DBG] Connect: guest@localhost:5672/
+2024-10-22 13:09:49.235 +03:00 [WRN] Connection Failed: "rabbitmq://localhost/"
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed
+ ---> System.Net.Sockets.SocketException (10061): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at RabbitMQ.Client.TcpClientAdapter.ConnectAsync(String host, Int32 port)
+   at RabbitMQ.Client.Impl.TaskExtensions.TimeoutAfter(Task task, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingAddressFamily(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout, AddressFamily family)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingIPv4(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler..ctor(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.Framing.Impl.IProtocolExtensions.CreateFrameHandler(IProtocol protocol, AmqpTcpEndpoint endpoint, ArrayPool`1 pool, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandler(AmqpTcpEndpoint endpoint)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IList`1 hostnames, String clientProvidedName)
+   at MassTransit.RabbitMqTransport.ConnectionContextFactory.CreateConnection(ISupervisor supervisor) in /_/src/Transports/MassTransit.RabbitMqTransport/RabbitMqTransport/ConnectionContextFactory.cs:line 85
+2024-10-22 13:09:56.274 +03:00 [DBG] Connection id "0HN7IG52B3PJP" accepted.
+2024-10-22 13:09:56.277 +03:00 [DBG] Connection id "0HN7IG52B3PJP" started.
+2024-10-22 13:09:56.283 +03:00 [DBG] Connection id "0HN7IG52B3PJP" received FIN.
+2024-10-22 13:09:56.284 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090326): Получено непредвиденное сообщение или оно имеет неправильный формат.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-10-22 13:09:56.289 +03:00 [DBG] Connection id "0HN7IG52B3PJP" stopped.
+2024-10-22 13:09:56.291 +03:00 [DBG] Connection id "0HN7IG52B3PJP" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-10-22 13:09:56.462 +03:00 [DBG] Connection id "0HN7IG52B3PJQ" accepted.
+2024-10-22 13:09:56.467 +03:00 [DBG] Connection id "0HN7IG52B3PJQ" started.
+2024-10-22 13:09:56.473 +03:00 [DBG] Connection id "0HN7IG52B3PJQ" received FIN.
+2024-10-22 13:09:56.473 +03:00 [DBG] Connection id "0HN7IG52B3PJR" accepted.
+2024-10-22 13:09:56.482 +03:00 [DBG] Connection id "0HN7IG52B3PJR" started.
+2024-10-22 13:09:56.486 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-10-22 13:09:56.488 +03:00 [DBG] Connection 0HN7IG52B3PJR established using the following protocol: "Tls13"
+2024-10-22 13:09:56.492 +03:00 [DBG] Connection id "0HN7IG52B3PJQ" stopped.
+2024-10-22 13:09:56.499 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/favicon.ico - null null
+2024-10-22 13:09:56.499 +03:00 [DBG] Connection id "0HN7IG52B3PJQ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-10-22 13:09:56.506 +03:00 [DBG] No candidates found for the request path '/favicon.ico'
+2024-10-22 13:09:56.509 +03:00 [DBG] Request did not match any endpoints
+2024-10-22 13:09:56.511 +03:00 [DBG] The request path  does not match the path filter
+2024-10-22 13:09:56.582 +03:00 [DBG] Successfully validated the token.
+2024-10-22 13:09:56.585 +03:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-10-22 13:09:56.587 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/favicon.ico - 404 0 null 87.776ms
+2024-10-22 13:09:56.590 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5001/favicon.ico, Response status code: 404
+2024-10-22 13:09:59.112 +03:00 [DBG] Connection id "0HN7IG52B3PJR" received FIN.
+2024-10-22 13:09:59.114 +03:00 [DBG] Connection id "0HN7IG52B3PJR" is closed. The last processed stream ID was 1.
+2024-10-22 13:09:59.114 +03:00 [DBG] The connection queue processing loop for 0HN7IG52B3PJR completed.
+2024-10-22 13:09:59.115 +03:00 [DBG] Connection id "0HN7IG52B3PJR" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-10-22 13:09:59.127 +03:00 [DBG] Connection id "0HN7IG52B3PJR" stopped.
+2024-10-22 13:10:20.276 +03:00 [DBG] Connect: guest@localhost:5672/
+2024-10-22 13:10:24.364 +03:00 [WRN] Connection Failed: "rabbitmq://localhost/"
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed
+ ---> System.Net.Sockets.SocketException (10061): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at RabbitMQ.Client.TcpClientAdapter.ConnectAsync(String host, Int32 port)
+   at RabbitMQ.Client.Impl.TaskExtensions.TimeoutAfter(Task task, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingAddressFamily(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout, AddressFamily family)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingIPv4(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler..ctor(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.Framing.Impl.IProtocolExtensions.CreateFrameHandler(IProtocol protocol, AmqpTcpEndpoint endpoint, ArrayPool`1 pool, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandler(AmqpTcpEndpoint endpoint)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IList`1 hostnames, String clientProvidedName)
+   at MassTransit.RabbitMqTransport.ConnectionContextFactory.CreateConnection(ISupervisor supervisor) in /_/src/Transports/MassTransit.RabbitMqTransport/RabbitMqTransport/ConnectionContextFactory.cs:line 85
+2024-10-22 13:10:36.637 +03:00 [DBG] Connection id "0HN7IG52B3PJS" accepted.
+2024-10-22 13:10:37.018 +03:00 [DBG] Connection id "0HN7IG52B3PJS" started.
+2024-10-22 13:10:37.119 +03:00 [DBG] Connection id "0HN7IG52B3PJS" received FIN.
+2024-10-22 13:10:37.121 +03:00 [DBG] Connection id "0HN7IG52B3PJT" accepted.
+2024-10-22 13:10:37.149 +03:00 [DBG] Connection id "0HN7IG52B3PJT" started.
+2024-10-22 13:10:37.155 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-10-22 13:10:37.214 +03:00 [DBG] Connection id "0HN7IG52B3PJU" accepted.
+2024-10-22 13:10:37.269 +03:00 [DBG] Connection id "0HN7IG52B3PJS" stopped.
+2024-10-22 13:10:37.270 +03:00 [DBG] Connection id "0HN7IG52B3PJU" received FIN.
+2024-10-22 13:10:37.273 +03:00 [DBG] Connection 0HN7IG52B3PJT established using the following protocol: "Tls13"
+2024-10-22 13:10:37.285 +03:00 [DBG] Connection id "0HN7IG52B3PJU" started.
+2024-10-22 13:10:37.285 +03:00 [DBG] Connection id "0HN7IG52B3PJS" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-10-22 13:10:37.316 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-10-22 13:10:37.316 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - null null
+2024-10-22 13:10:37.318 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - null null
+2024-10-22 13:10:37.320 +03:00 [DBG] Connection id "0HN7IG52B3PJU" stopped.
+2024-10-22 13:10:37.327 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - 200 13751 application/javascript; charset=utf-8 10.7734ms
+2024-10-22 13:10:37.327 +03:00 [DBG] Connection id "0HN7IG52B3PJU" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-10-22 13:10:37.343 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - 200 null text/javascript; charset=UTF-8 24.9933ms
